@@ -3,7 +3,9 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
-permissions: read-all|write-all
+permissions:
+  contents: read
+  pull-requests: write
 jobs:
   protobuf:
     name: Update Protobufs
