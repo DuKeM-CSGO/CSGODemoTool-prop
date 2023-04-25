@@ -10,7 +10,7 @@ jobs:
     env:
       GameTracking_dir: /tmp/GameTracking-CSGO
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Download latest Protobufs
         run: |
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CSGO.git $GameTracking_dir
@@ -41,10 +41,8 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
             protobuf: updated to ${{ env.COMMIT_SHA }}
-
-            see https://github.com/SteamDatabase/GameTracking-CSGO
           body: |
-            see https://github.com/SteamDatabase/GameTracking-CSGO
+            protobuf: updated to ${{ env.COMMIT_SHA }}
 
       - name: Print PR outputs
         if: env.PROTOBUFS_CHANGED == 'true'
