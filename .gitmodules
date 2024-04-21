@@ -1,12 +1,12 @@
-[submodule "gperftools"]
-	path = gperftools
-	url = https://github.com/gperftools/gperftools.git
-[submodule "cryptopp"]
-	path = cryptopp
+[submodule "release/cryptopp"]
+	path = release/cryptopp
 	url = https://github.com/weidai11/cryptopp.git
-[submodule "protobuf"]
-	path = protobuf
-	url = https://github.com/protocolbuffers/protobuf.git
-[submodule "snappy"]
-	path = snappy
+[submodule "release/snappy"]
+	path = release/snappy
 	url = https://github.com/google/snappy.git
+[submodule "release/gperftools"]
+	path = release/gperftools
+	url = https://github.com/gperftools/gperftools.git
+[submodule "release/protobuf"]
+	path = release/protobuf
+	url = https://github.com/protocolbuffers/protobuf.git
