@@ -1,3 +1,6 @@
+[submodule "release/absl"]
+	path = release/absl
+	url = https://github.com/abseil/abseil-cpp.git
 [submodule "release/cryptopp"]
 	path = release/cryptopp
 	url = https://github.com/weidai11/cryptopp.git
