@@ -10,3 +10,6 @@
 [submodule "release/protobuf"]
 	path = release/protobuf
 	url = https://github.com/protocolbuffers/protobuf.git
+[submodule "release/FunctionTraits"]
+	path = release/FunctionTraits
+	url = https://github.com/HexadigmSystems/FunctionTraits.git
