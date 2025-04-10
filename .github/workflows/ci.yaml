@@ -11,7 +11,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # TODO: Migration
-          $repolist = [ordered]@(
+          $repolist = @(
             @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
             @{repo_name = "weidai11/cryptopp"; display_name=""},
             @{repo_name = "microsoft/Detours"; display_name="detours"},
