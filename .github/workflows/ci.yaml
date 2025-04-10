@@ -77,10 +77,11 @@ jobs:
       - name: Format to markdown
         run: |
           Import-Module MarkdownPS, PSWriteHTML
+          Get-Module -Name PSWriteHTML -ListAvailable | Select-Object Name, Version, ModuleBase, Path
           
           $content = Get-Content -Path result.json | ConvertFrom-Json
           
           New-HTML -Title "Employee Data" -FilePath output.html {
-            New-HTMLTable -DataTable $content
+            New-HTMLTable -DataTable $content -DataStore HTML
           }
           Get-Content output.html
