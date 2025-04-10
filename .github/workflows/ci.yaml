@@ -81,6 +81,6 @@ jobs:
           $content = Get-Content -Path result.json | ConvertFrom-Json
           
           New-HTML -Title "Employee Data" -FilePath output.html {
-            New-HTMLTable -Data $content
+            New-HTMLTable -DataTable $content
           }
           Get-Content output.html
