@@ -16,7 +16,10 @@ jobs:
           )
           $repo_list | ForEach-Object {
             $repo = $_.repo_name
-            #git ls-remote --tags https://github.com/$($repo).git
-            $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
-            Write-Output $release_info
+            $tags = git ls-remote --tags --sort=-v:refname https://github.com/$($repo).git
+            # TODO: handle tags
+            $release_info = gh release view --repo $repo --json tagName,publishedAt,isPrerelease
+            $release_info | ConvertFrom-Json | ForEach-Object {
+              $_ | Format-Table -AutoSize
+            }
           }
