@@ -10,14 +10,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $repo_list = @(
+          # TODO: Migration
+          [ordered]@(
+            @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
+            @{repo_name = "weidai11/cryptopp"; display_name=""},
+            @{repo_name = "microsoft/Detours"; display_name="detours"},
+            @{repo_name = "gperftools/gperftools"; display_name=""},
             @{repo_name = "protocolbuffers/protobuf"; display_name=""},
-            @{repo_name = "weidai11/cryptopp"; display_name=""}
-          )
-          $repo_list | ForEach-Object {
+            @{repo_name = "google/snappy"; display_name=""},
+            @{repo_name = "NVIDIA/stdexec"; display_name=""}
+          ) | ForEach-Object {
             $repo = $_.repo_name
-            $tags = git ls-remote --tags --sort=-v:refname https://github.com/$($repo).git
+            
+            $repo_info = gh repo view $repo --json license
+            $repo_info | ConvertFrom-Json | ForEach-Object {
+              $_ | Format-Table -AutoSize
+            }
+
             # TODO: handle tags
+            # $tags = git ls-remote --tags --sort=-v:refname https://github.com/$($repo).git
+
             $release_info = gh release view --repo $repo --json tagName,publishedAt,isPrerelease
             $release_info | ConvertFrom-Json | ForEach-Object {
               $_ | Format-Table -AutoSize
