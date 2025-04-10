@@ -24,16 +24,7 @@ jobs:
             $repo = $_.repo_name
             Write-Output $repo
             $repo_info = gh repo view $repo --json latestRelease | ConvertFrom-Json
-            $repo_info.latestRelease | ForEach-Object {
+            $repo_info.latestRelease.Keys | ForEach-Object {
               Write-Output $_
             }
-
-            # TODO: handle tags
-            # $tags = git ls-remote --tags --sort=-v:refname https://github.com/$($repo).git
-
-            #$release_info = gh release view --repo $repo --json tagName,publishedAt,isPrerelease
-            
-            #$release_info | ConvertFrom-Json | ForEach-Object {
-            #  $_ | Format-Table -AutoSize
-            #}
           }
