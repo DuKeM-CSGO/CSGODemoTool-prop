@@ -14,9 +14,9 @@ jobs:
             @{repo_name = "protocolbuffers/protobuf"; display_name=""},
             @{repo_name = "weidai11/cryptopp"; display_name=""}
           )
-          $repo_list.PSObject.Properties | ForEach-Object {
+          $repo_list | ForEach-Object {
             $repo = $_.repo_name
-            #git ls-remote --tags https://github.com/$repo.git
-            $release_info = gh release view --repo $($repo) --json tagName,publishedAt,assets,isPrerelease
+            #git ls-remote --tags https://github.com/$($repo).git
+            $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
             Write-Output $release_info
           }
