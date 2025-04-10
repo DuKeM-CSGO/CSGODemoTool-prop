@@ -35,14 +35,16 @@ jobs:
                $_.display_name = ($_.repo_name -split '/')[1]
             }
             $repo_info = gh repo view $repo --json latestRelease,licenseInfo | ConvertFrom-Json
-            Write-Host $repo_info.licenseInfo
             $release = $repo_info.latestRelease
             $result.Add([ordered]@{
               display_name = $_.display_name;
               repo_name = $_.repo_name;
               tag_name = $release.tagName;
-              publish_time = $release.publishedAt
+              publish_time = $release.publishedAt;
+              license = $repo_info.licenseInfo.key
             })
           }
 
-          $result | Sort-Object -Property display_name | Format-Table -AutoSize
+          $result | Sort-Object -Property display_name | Foreach-Object{
+            Write-Host $_
+          }
