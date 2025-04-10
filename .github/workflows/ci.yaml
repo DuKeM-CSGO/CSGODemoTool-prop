@@ -23,9 +23,11 @@ jobs:
           $repolist | ForEach-Object {
             $repo = $_.repo_name
             
-            $repo_info = gh repo view $repo --json licenseInfo,latestRelease
+            $repo_info = gh repo view $repo --json latestRelease
             $repo_info | ConvertFrom-Json | ForEach-Object {
-              $_ | Format-Table -AutoSize
+              $_ | ForEach-Object {
+                $_ | Format-Table -AutoSize
+              }
             }
 
             # TODO: handle tags
