@@ -82,16 +82,6 @@ jobs:
           }
 
           $result | ConvertTo-Json | Out-File -FilePath result.json
-
-      - name: Test for PSWriteHTML
-        run: |
-          Import-Module MarkdownPS, PSWriteHTML
-          
-          $content = Get-Content -Path result.json | ConvertFrom-Json
-          
-          $_c = New-HTML -Title "Employee Data" -FilePath output.html {
-            New-HTMLTable -DataTable $content -DataStore HTML
-          } -ShowHTML -Online
           
       - name: Format to markdown
         run: |
