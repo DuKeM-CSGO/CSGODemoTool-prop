@@ -24,5 +24,5 @@ jobs:
             $repo = $_.repo_name
             Write-Output $repo
             $repo_info = gh repo view $repo --json latestRelease | ConvertFrom-Json
-            $repo_info.latestRelease.Keys | ForEach-Object { Write-Host $_ }
+            Write-Host $repo_info.latestRelease
           }
