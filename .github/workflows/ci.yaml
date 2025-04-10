@@ -13,10 +13,8 @@ jobs:
             @{repo_name = "weidai11/cryptopp"; display_name=""}
           )
           $repo_list.PSObject.Properties | ForEach-Object {
-            $_.GetEnumerator() | ForEach-Object {
-              $repo = $($_.repo_name)
-              ::git ls-remote --tags https://github.com/$repo.git
-              $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
-              Write-Output $release_info
-            }
+            $repo = $($_.repo_name)
+            ::git ls-remote --tags https://github.com/$repo.git
+            $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
+            Write-Output $release_info
           }
