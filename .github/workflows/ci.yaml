@@ -9,8 +9,6 @@ jobs:
       - name: Check Third-party Repo
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_STEP_DEBUG: true
-          ACTIONS_RUNNER_DEBUG: true
         run: |
           $repo_list = @(
             @{repo_name = "protocolbuffers/protobuf"; display_name=""},
@@ -19,6 +17,6 @@ jobs:
           $repo_list.PSObject.Properties | ForEach-Object {
             $repo = $_.repo_name
             #git ls-remote --tags https://github.com/$repo.git
-            $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
+            $release_info = gh release view --repo $($repo) --json tagName,publishedAt,assets,isPrerelease
             Write-Output $release_info
           }
