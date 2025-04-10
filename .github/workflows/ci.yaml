@@ -45,6 +45,6 @@ jobs:
             })
           }
 
-          $result | Sort-Object -Property display_name | Foreach-Object{
-            Write-Host $_
+          $result | Sort-Object -Property display_name | Foreach-Object {
+            Write-Host $_.values
           }
