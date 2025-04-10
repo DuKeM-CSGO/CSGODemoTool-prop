@@ -14,7 +14,7 @@ jobs:
           )
           $repo_list.PSObject.Properties | ForEach-Object {
             $repo = $($_.repo_name)
-            ::git ls-remote --tags https://github.com/$repo.git
+            #git ls-remote --tags https://github.com/$repo.git
             $release_info = gh release view --repo $repo --json tagName,publishedAt,assets,isPrerelease
             Write-Output $release_info
           }
