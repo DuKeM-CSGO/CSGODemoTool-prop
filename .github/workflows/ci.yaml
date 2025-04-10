@@ -34,7 +34,8 @@ jobs:
             if ((-not $_.ContainsKey("display_name")) -or ($_.display_name -eq "")) {
                $_.display_name = ($_.repo_name -split '/')[1]
             }
-            $repo_info = gh repo view $repo --json latestRelease | ConvertFrom-Json
+            $repo_info = gh repo view $repo --json latestRelease,licenseInfo | ConvertFrom-Json
+            Write-Host $repo_info.licenseInfo
             $release = $repo_info.latestRelease
             $result.Add([ordered]@{
               display_name = $_.display_name;
