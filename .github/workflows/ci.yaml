@@ -30,14 +30,12 @@ jobs:
             }
             $repo_info = gh repo view $repo --json latestRelease | ConvertFrom-Json
             $release = $repo_info.latestRelease
-            $result.Add(@{
-              repo_name = $_.repo_name;
+            $result.Add([ordered]@{
               display_name = $_.display_name;
+              repo_name = $_.repo_name;
               tag_name = $release.tagName;
               publish_time = $release.publishedAt
             })
           }
 
-          $result | Sort-Object -Property display_name | ForEach-Object {
-            $_ | Format-Table -AutoSize
-          }
+          $result | Sort-Object -Property display_name | Format-Table -AutoSize
