@@ -23,7 +23,7 @@ jobs:
           $repolist | ForEach-Object {
             $repo = $_.repo_name
             
-            $repo_info = gh repo view $repo --json license
+            $repo_info = gh repo view $repo --json licenseInfo,latestRelease
             $repo_info | ConvertFrom-Json | ForEach-Object {
               $_ | Format-Table -AutoSize
             }
@@ -31,8 +31,9 @@ jobs:
             # TODO: handle tags
             # $tags = git ls-remote --tags --sort=-v:refname https://github.com/$($repo).git
 
-            $release_info = gh release view --repo $repo --json tagName,publishedAt,isPrerelease
-            $release_info | ConvertFrom-Json | ForEach-Object {
-              $_ | Format-Table -AutoSize
-            }
+            #$release_info = gh release view --repo $repo --json tagName,publishedAt,isPrerelease
+            
+            #$release_info | ConvertFrom-Json | ForEach-Object {
+            #  $_ | Format-Table -AutoSize
+            #}
           }
