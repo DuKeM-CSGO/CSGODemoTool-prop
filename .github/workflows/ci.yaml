@@ -7,13 +7,18 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
+
+      - name: Set env
+        run: |
+          $docPath = [Environment]::GetFolderPath('MyDocuments')
+          echo "DOC_PATH=$docPath" >> $env:GITHUB_ENV
         
       - name: Cache PSWriteHTML module
         id: cache-module
-        uses: actions/cache@v4.2.3
+        uses: actions/cache@v4
         with:
-          path: ${{ runner.environment.USERPROFILE }}\Documents\PowerShell\Modules\PSWriteHTML
+          path: ${{ env.DOC_PATH }}\PowerShell\Modules\PSWriteHTML
           key: ${{ runner.os }}-pswritehtml-v1
           restore-keys: |
             ${{ runner.os }}-
@@ -74,7 +79,7 @@ jobs:
             })
           }
 
-          $result | Sort-Object -Property display_name | ConvertTo-Json | Out-File -FilePath result.json
+          $result | ConvertTo-Json | Out-File -FilePath result.json
 
       - name: Test for PSWriteHTML
         run: |
@@ -94,5 +99,5 @@ jobs:
           $markdown = ""
           
           $markdown += New-MDHeader "Tables"
-          $markdown += $content | New-MDTable
+          $markdown += $content | Sort-Object -Property display_name | New-MDTable
           Write-Host $markdown
