@@ -81,13 +81,6 @@ jobs:
           $content = Get-Content -Path result.json | ConvertFrom-Json
           
           New-HTML -Title "Employee Data" -FilePath output.html {
-            New-HTMLTable -DataTable $content {
-              TableStyle -BorderCollapse collapse -Border '1px solid #333'
-              TableHeadStyle -FontWeight bold -BackgroundColor '#f5f5f5'
-              TableBodyStyle `
-                -TextAlign center `
-                -WhiteSpace nowrap `
-                -Padding '8px'
-            }
+            New-HTMLTable -Data $content
           }
           Get-Content output.html
