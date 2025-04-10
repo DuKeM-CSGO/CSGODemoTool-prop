@@ -13,7 +13,7 @@ jobs:
         id: cache-module
         uses: actions/cache@v4.2.3
         with:
-          path: ${{ env.USERPROFILE }}\Documents\PowerShell\Modules
+          path: ${{ env.USERPROFILE }}\Documents\PowerShell\Modules\PSWriteHTML
           key: pswritehtml-v1-windows
       
       - name: Install PSWriteHTML (if cache miss)
@@ -77,11 +77,11 @@ jobs:
       - name: Format to markdown
         run: |
           Import-Module MarkdownPS, PSWriteHTML
-          Get-Module -Name PSWriteHTML -ListAvailable | Select-Object Name, Version, ModuleBase, Path
+          Get-Module -Name PSWriteHTML -ListAvailable | Select-Object Name, Version, Path
           
           $content = Get-Content -Path result.json | ConvertFrom-Json
           
           New-HTML -Title "Employee Data" -FilePath output.html {
             New-HTMLTable -DataTable $content -DataStore HTML
-          }
+          } -ShowHTML
           Get-Content output.html
