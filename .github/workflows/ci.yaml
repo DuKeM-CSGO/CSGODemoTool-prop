@@ -74,7 +74,7 @@ jobs:
 
           $result | Sort-Object -Property display_name | ConvertTo-Json | Out-File -FilePath result.json
 
-      - name: Format to markdown
+      - name: Test for PSWriteHTML
         run: |
           Import-Module MarkdownPS, PSWriteHTML
           
@@ -83,4 +83,7 @@ jobs:
           New-HTML -Title "Employee Data" -FilePath output.html {
             New-HTMLTable -DataTable $content -DataStore HTML
           } -ShowHTML -Online
-          Get-Content output.html
+          
+      - name: Format to markdown
+        run: |
+          Import-Module MarkdownPS
