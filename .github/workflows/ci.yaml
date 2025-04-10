@@ -20,7 +20,13 @@ jobs:
             @{repo_name = "gperftools/gperftools"},
             @{repo_name = "protocolbuffers/protobuf"},
             @{repo_name = "google/snappy"},
-            @{repo_name = "NVIDIA/stdexec"}
+            @{repo_name = "NVIDIA/stdexec"},
+            @{repo_name = "hackers-painters/katana-parser" ; display_name="katana_parser"},
+            @{repo_name = "nlohmann/json"; display_name="nlohmann_json"},
+            @{repo_name = "SteamDatabase/GameTracking-CSGO"; display_name="gametracking_csgo"},
+            @{repo_name = "microsoft/proxy"; display_name="proxy3"},
+            @{repo_name = "microsoft/stl"; display_name="microsoft_stl"},
+            @{repo_name = "alibaba/yalantinglibs"}
           )
           
           $repolist | ForEach-Object {
