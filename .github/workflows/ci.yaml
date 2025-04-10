@@ -11,7 +11,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # TODO: Migration
-          @repolist = [ordered]@(
+          $repolist = [ordered]@(
             @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
             @{repo_name = "weidai11/cryptopp"; display_name=""},
             @{repo_name = "microsoft/Detours"; display_name="detours"},
@@ -20,7 +20,7 @@ jobs:
             @{repo_name = "google/snappy"; display_name=""},
             @{repo_name = "NVIDIA/stdexec"; display_name=""}
           )
-          @repolist | ForEach-Object {
+          $repolist | ForEach-Object {
             $repo = $_.repo_name
             
             $repo_info = gh repo view $repo --json license
