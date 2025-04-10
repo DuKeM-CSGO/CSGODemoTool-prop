@@ -10,19 +10,34 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          $result = [System.Collections.Generic.List[object]]@()
+          
           # TODO: Migration
           $repolist = @(
             @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
-            @{repo_name = "weidai11/cryptopp"; display_name=""},
+            @{repo_name = "weidai11/cryptopp"},
             @{repo_name = "microsoft/Detours"; display_name="detours"},
-            @{repo_name = "gperftools/gperftools"; display_name=""},
-            @{repo_name = "protocolbuffers/protobuf"; display_name=""},
-            @{repo_name = "google/snappy"; display_name=""},
-            @{repo_name = "NVIDIA/stdexec"; display_name=""}
+            @{repo_name = "gperftools/gperftools"},
+            @{repo_name = "protocolbuffers/protobuf"},
+            @{repo_name = "google/snappy"},
+            @{repo_name = "NVIDIA/stdexec"}
           )
+          
           $repolist | ForEach-Object {
             $repo = $_.repo_name
-            Write-Output $repo
+            if ((-not $_.ContainsKey("display_name")) -or ($_.display_name -eq "")) {
+               $_.display_name = ($_.repo_name -split '/')[1]
+            }
             $repo_info = gh repo view $repo --json latestRelease | ConvertFrom-Json
-            Write-Host $repo_info.latestRelease
+            $release = $repo_info.latestRelease
+            $result.Add(@{
+              repo_name = $_.repo_name;
+              display_name = $_.display_name;
+              tag_name = $release.tagName;
+              publish_time = $release.publishedAt
+            })
+          }
+
+          $result | Sort-Object -Property display_name | ForEach-Object {
+            $_ | Format-Table -AutoSize
           }
