@@ -10,11 +10,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set env
+        if: false
         run: |
           $docPath = [Environment]::GetFolderPath('MyDocuments')
           echo "DOC_PATH=$docPath" >> $env:GITHUB_ENV
         
       - name: Cache PSWriteHTML module
+        if: false
         id: cache-module
         uses: actions/cache@v4
         with:
@@ -24,7 +26,7 @@ jobs:
             ${{ runner.os }}-
       
       - name: Install PSWriteHTML (if cache miss)
-        if: steps.cache-module.outputs.cache-hit != 'true'
+        if: false #steps.cache-module.outputs.cache-hit != 'true'
         shell: pwsh
         run: |
           Install-Module PSWriteHTML `
@@ -99,5 +101,5 @@ jobs:
           $markdown = ""
           
           $markdown += New-MDHeader "Tables"
-          $markdown += $content | Sort-Object -Property display_name | New-MDTable
+          $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
           Write-Host $markdown
