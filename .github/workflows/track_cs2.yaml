@@ -20,7 +20,6 @@ jobs:
         run: |
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git "$env:GameTracking_dir"
           
-          dir GameTracking\CS2
           xcopy  "$env:GameTracking_dir" "GameTracking\CS2" /E /I /H /Y
           
           $changes = git status --porcelain
