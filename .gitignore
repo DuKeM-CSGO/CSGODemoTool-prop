@@ -1,0 +1,4 @@
+# Test binary
+.git/
+build/
+external_project/
