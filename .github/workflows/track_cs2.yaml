@@ -8,7 +8,8 @@ jobs:
     name: Track CS2
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
       - name: Set tracking dir
         shell: pwsh
@@ -20,7 +21,8 @@ jobs:
         run: |
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git "$env:GameTracking_dir"
           
-          xcopy  "$env:GameTracking_dir" "GameTracking\CS2" /E /I /H /Y
+          DEL "$env:GameTracking_dir\*.*" /F /Q
+          XCOPY "$env:GameTracking_dir" "GameTracking\CS2" /E /I /H /Y
           
           $changes = git status --porcelain
           if (-not $changes) {
@@ -41,14 +43,14 @@ jobs:
 
       - name: Create Pull Request
         if: env.TRACKING_CHANGED == 'true'
-        uses: peter-evans/create-pull-request@v7
+        use: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "GameTracking-CS2: updated to ${{ env.COMMIT_SHA }}"
           base: master
           branch: update-tracking-cs2
           delete-branch: true
-          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           commit-message: |
             GameTracking-CS2: updated to ${{ env.COMMIT_SHA }}
