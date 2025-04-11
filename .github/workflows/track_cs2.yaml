@@ -24,10 +24,8 @@ jobs:
           "$env:GameTracking_dir" | Get-ChildItem -Force -Directory | Where-Object {
             -not $_.FullName.Contains(".git")
           } | ForEach-Object {
-            Write-Host $_.FullName
-            XCOPY $_.FullName "GameTracking\CS2" /E /I /H /Y
+            XCOPY $_.FullName "GameTracking\CS2" /E /I /H /Y /Q
           }
-          exit 0
           
           $changes = git status --porcelain
           if (-not $changes) {
