@@ -7,10 +7,13 @@ jobs:
   tracking:
     name: Track CS2
     runs-on: windows-latest
-    env:
-      GameTracking_dir: ${{ runner.temp }}\GameTracking-CS2
     steps:
       - uses: actions/checkout@v4
+	  
+      - name: Set tracking dir
+        shell: pwsh
+        run: |
+          echo "GameTracking_dir=${{ runner.temp }}\GameTracking-CS2" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: Clone latest repo
         shell: pwsh
