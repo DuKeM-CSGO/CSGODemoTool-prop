@@ -22,6 +22,7 @@ jobs:
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git "$env:GameTracking_dir"
           
           "$env:GameTracking_dir" | Get-ChildItem -Filter *.* | ForEach-Object {
+            $_.FullName | Write-Host
             $_.FullName | Remove-Item -Force
           }
           exit 0
