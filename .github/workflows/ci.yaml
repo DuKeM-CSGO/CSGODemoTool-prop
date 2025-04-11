@@ -73,11 +73,11 @@ jobs:
             }
             
             $result.Add([ordered]@{
-              display_name = $_.display_name;
-              repo_name = $_.repo_name;
-              tag_name = $release.tagName;
-              publish_time = $release.publishedAt;
-              license = $license
+              Name = $_.display_name;
+              RealName = $_.repo_name;
+              Version = $release.tagName;
+              PublishTime = ($release.publishedAt -split ' ')[0];
+              License = $license
             })
           }
 
