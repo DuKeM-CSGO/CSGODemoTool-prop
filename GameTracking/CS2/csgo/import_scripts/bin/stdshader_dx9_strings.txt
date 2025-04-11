@@ -1,0 +1,3788 @@
+                          
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ Base Class Array'
+ Base Class Descriptor at (
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+ Type Descriptor'
+ delete
+ delete[]
+ new
+!GnA
+!IsX360() && bFog && ( g_pHardwareConfig->GetDXSupportLevel() <= 90 )
+!bAlphaClip && IsX360() && !nColorDepth
+!bGenerateBaseTexture && !bGenerateNormalMap
+!bUseStaticControlFlow
+!bUsingEditor
+!params[info.m_nUnlit]->GetIntValue()
+#D5p
+$AAENABLE
+$AAINTERNAL1
+$AAINTERNAL2
+$AAINTERNAL3
+$ABOVEWATER
+$ADDBASETEXTURE2
+$ADDBUMPMAPS
+$ADDOVERBLEND
+$ADDSELF
+$AIMATCAMERA
+$ALBEDO
+$ALLOVERPAINTJOB
+$ALLOWDIFFUSEMODULATION
+$ALLOWFENCERENDERSTATEHACK
+$ALLOWLOCALCONTRAST
+$ALLOWNOISE
+$ALLOWVIGNETTE
+$ALPHA
+$ALPHABLEND
+$ALPHADEPTH
+$ALPHAMASK
+$ALPHAMASKTEXTURE
+$ALPHAMASKTEXTUREFRAME
+$ALPHASHARPENFACTOR
+$ALPHATESTED
+$ALPHATESTREFERENCE
+$ALPHATRAILFADE
+$ALPHA_BLEND
+$ALPHA_BLEND_COLOR_OVERLAY
+$ALTERNATEVIEWMATRIX
+$AMBIENTOCCLCOLOR
+$AMBIENTOCCLTEXTURE
+$AMBIENTOCCLUSION
+$AMBIENTONLY
+$AMBIENTREFLECTIONBOOST
+$AMBIENTREFLECTIONBOUNCECENTER
+$AMBIENTREFLECTIONBOUNCECOLOR
+$ANIMATEARMPULSES
+$ANISODIRTEXTURE
+$ANISOTROPYAMOUNT
+$AOMAP
+$AOMODE
+$AOPASS
+$AOSCREENBUFFER
+$AOTEXTURE
+$ARMATURE
+$ARMCOLOR
+$ARMWIDEN
+$ARMWIDTHBIAS
+$ARMWIDTHEXP
+$ARMWIDTHSCALE
+$ATTENFACTORS
+$AUTOEXPOSE_MAX
+$AUTOEXPOSE_MIN
+$BACKINGTEXTURE
+$BACKSURFACE
+$BASEALPHAENVMAPMASKMINMAXEXP
+$BASEALPHAENVMASK
+$BASEALPHAPHONGMASK
+$BASEALPHASELFILLUMMASK
+$BASECOLORTINT
+$BASEDIFFUSEOVERRIDE
+$BASEMAPALPHAPHONGMASK
+$BASEMAPLUMINANCEPHONGMASK
+$BASETEXTURE
+$BASETEXTURE2
+$BASETEXTURE3
+$BASETEXTURE4
+$BASETEXTUREOFFSET
+$BASETEXTURESCALE
+$BASETEXTURETRANSFORM2
+$BBMAX
+$BBMIN
+$BEACHFOAM
+$BIAS
+$BLENDFRAMES
+$BLENDMODULATETEXTURE
+$BLENDMODULATETRANSFORM
+$BLENDOPMIN
+$BLENDSOFTNESS
+$BLENDSTATE
+$BLENDTINTBYBASEALPHA
+$BLENDWITHSMOKEGRENADE
+$BLENDWITHSMOKEGRENADEPOSENTITY
+$BLENDWITHSMOKEGRENADEPOSSMOKE
+$BLOBBYSHADOWS
+$BLOOMAMOUNT
+$BLOOMENABLE
+$BLOOMEXP
+$BLOOMEXPONENT
+$BLOOMSATURATION
+$BLOOMTEXTURE
+$BLOOMTINTENABLE
+$BLOOMTYPE
+$BLOOMWIDTH
+$BLURAMOUNT
+$BLURREDTEXTURE
+$BLURREDVIGNETTEENABLE
+$BLURREDVIGNETTESCALE
+$BLURTEXTURE
+$BUMPALPHAENVMASK
+$BUMPCOMPRESS
+$BUMPDETAILSCALE1
+$BUMPDETAILSCALE2
+$BUMPFRAME
+$BUMPFRAME2
+$BUMPMAP
+$BUMPMAP2
+$BUMPMASK
+$BUMPSTRENGTH
+$BUMPSTRETCH
+$BUMPTRANSFORM
+$BUMPTRANSFORM2
+$BUMP_FORCE_ON
+$C0_W
+$C0_X
+$C0_Y
+$C0_Z
+$C1_W
+$C1_X
+$C1_Y
+$C1_Z
+$C2_W
+$C2_X
+$C2_Y
+$C2_Z
+$C3_W
+$C3_X
+$C3_Y
+$C3_Z
+$C4_W
+$C4_X
+$C4_Y
+$C4_Z
+$C5_W
+$C5_X
+$C5_Y
+$C5_Z
+$CAMOCOLOR0
+$CAMOCOLOR1
+$CAMOCOLOR2
+$CAMOCOLOR3
+$CAVITYCONTRAST
+$CBTEXTURE
+$CHANNEL_SELECT
+$CHEAPMODE
+$CHEAPWATERENDDISTANCE
+$CHEAPWATERSTARTDISTANCE
+$CLEARALPHA
+$CLEARCOLOR
+$CLEARDEPTH
+$CLOAKCOLORTINT
+$CLOAKFACTOR
+$CLOAKPASSENABLED
+$COLORGAMMA
+$COLORTINT
+$COLORTINT2
+$COLORTINT3
+$COLORTINT4
+$COLOR_DEPTH
+$COLOR_FLOW_DISPLACEBYNORMALSTRENGTH
+$COLOR_FLOW_LERPEXP
+$COLOR_FLOW_TIMEINTERVALINSECONDS
+$COLOR_FLOW_UVSCALE
+$COLOR_FLOW_UVSCROLLDISTANCE
+$COMPOSITEMODE
+$COMPRESS
+$CONTACTSHADOWS
+$COOKIEFRAMENUM
+$COOKIETEXTURE
+$COPYALPHA
+$CORNEABUMPSTRENGTH
+$CORNEATEXTURE
+$CROPFACTOR
+$CROSSHAIRCOLORADAPT
+$CROSSHAIRCOLORTINT
+$CROSSHAIRMODE
+$CRTEXTURE
+$CUBEPARALLAX
+$CULL
+$CURVATUREWEARBOOST
+$CURVATUREWEARPOWER
+$CUSTOMPAINTJOB
+$DAMAGEDETAILBRIGHTNESSADJUSTMENT
+$DAMAGEDETAILENVBOOST
+$DAMAGEDETAILPHONGBOOST
+$DAMAGEDETAILSATURATION
+$DAMAGEEDGEENVBOOST
+$DAMAGEEDGEPHONGBOOST
+$DAMAGEGRUNGE
+$DAMAGELEVELS1
+$DAMAGELEVELS2
+$DAMAGELEVELS3
+$DAMAGELEVELS4
+$DAMAGENORMALEDGEDEPTH
+$DECAL0BACKINGSCALE
+$DECAL0COORDX
+$DECAL0COORDY
+$DECAL0HIGHLIGHT
+$DECAL0ROTATION
+$DECAL0SCALE
+$DECAL0SQUASH
+$DECAL0TEXTURE
+$DECAL1BACKINGSCALE
+$DECAL1COORDX
+$DECAL1COORDY
+$DECAL1HIGHLIGHT
+$DECAL1ROTATION
+$DECAL1SCALE
+$DECAL1SQUASH
+$DECAL1TEXTURE
+$DECAL2BACKINGSCALE
+$DECAL2COORDX
+$DECAL2COORDY
+$DECAL2HIGHLIGHT
+$DECAL2ROTATION
+$DECAL2SCALE
+$DECAL2SQUASH
+$DECAL2TEXTURE
+$DECALBACKINGTEXTURE
+$DECALBLENDMODE
+$DECALMASKTEXTURE
+$DECALSTYLE
+$DECALTEXTURE
+$DEFERREDSHADOWS
+$DELTA
+$DELTASCALE
+$DEPTHBLEND
+$DEPTHBLENDSCALE
+$DEPTHBLURENABLE
+$DEPTHBLURFOCALDISTANCE
+$DEPTHBLURSTRENGTH
+$DEPTHTEST
+$DEPTHTEXTURE
+$DEPTH_FEATHER
+$DESATBASETINT
+$DESATURATEENABLE
+$DESATURATEWITHBASEALPHA
+$DESATURATION
+$DETAIL
+$DETAIL1
+$DETAIL1BLENDFACTOR
+$DETAIL1BLENDMODE
+$DETAIL1FRAME
+$DETAIL1SCALE
+$DETAIL1TEXTURETRANSFORM
+$DETAIL2
+$DETAIL2BLENDFACTOR
+$DETAIL2BLENDMODE
+$DETAIL2FRAME
+$DETAIL2SCALE
+$DETAIL2TEXTURETRANSFORM
+$DETAILBLENDFACTOR
+$DETAILBLENDFACTOR2
+$DETAILBLENDFACTOR3
+$DETAILBLENDFACTOR4
+$DETAILBLENDMODE
+$DETAILENVBOOST
+$DETAILFRAME
+$DETAILFRAME2
+$DETAILGRUNGE
+$DETAILMETALNESS
+$DETAILNORMAL
+$DETAILNORMALDEPTH
+$DETAILPHONGALBEDOTINT
+$DETAILPHONGBOOST
+$DETAILSCALE
+$DETAILSCALE2
+$DETAILTEXTURETRANSFORM
+$DETAILTINT
+$DETAILTINT2
+$DETAILWARPINDEX
+$DETAIL_ALPHA_MASK_BASE_TEXTURE
+$DIFFUSEBOOST
+$DIFFUSESCALE
+$DILATION
+$DIMENSIONS
+$DISABLECSMLOOKUP
+$DISABLE_COLOR_WRITES
+$DISPLACEMENTMAP
+$DISPLACEMENTWRINKLE
+$DISTANCEALPHA
+$DISTANCEALPHAFROMDETAIL
+$DROPSHADOWDEPTHEXAGGERATION
+$DROPSHADOWHIGHLIGHTSCALE
+$DROPSHADOWOPACITY
+$DROPSHADOWSCALE
+$DUALSEQUENCE
+$DUST_TEXTURE
+$EDGESOFTNESSEND
+$EDGESOFTNESSSTART
+$EDGE_SOFTNESS
+$EMISSIVEBLENDBASETEXTURE
+$EMISSIVEBLENDENABLED
+$EMISSIVEBLENDFLOWTEXTURE
+$EMISSIVEBLENDSCROLLVECTOR
+$EMISSIVEBLENDSTRENGTH
+$EMISSIVEBLENDTEXTURE
+$EMISSIVEBLENDTINT
+$ENABLECLEARCOLOR
+$ENABLESHADOWS
+$ENABLESRGB
+$ENDFADESIZE
+$ENTCENTER
+$ENTITYORIGIN
+$ENVMAP
+$ENVMAPANISOTROPY
+$ENVMAPANISOTROPYSCALE
+$ENVMAPCONTRAST
+$ENVMAPFRAME
+$ENVMAPFRESNEL
+$ENVMAPFRESNELMINMAXEXP
+$ENVMAPLIGHTSCALE
+$ENVMAPLIGHTSCALEMINMAX
+$ENVMAPMASK
+$ENVMAPMASK2
+$ENVMAPMASKFRAME
+$ENVMAPMASKFRAME2
+$ENVMAPMASKINTINTMASKTEXTURE
+$ENVMAPMASKTRANSFORM
+$ENVMAPMASKTRANSFORM2
+$ENVMAPSATURATION
+$ENVMAPTINT
+$EXPONENTMODE
+$EXPOSURE_TEXTURE
+$EXPTEXTURE
+$EXTRACTGREENALPHA
+$EYEBALLRADIUS
+$EYEDIR
+$EYEORIGIN
+$EYEPOSZNEAR
+$EYEUP
+$FADE
+$FADECOLOR
+$FADEOUTONSILHOUETTE
+$FADETOBLACKSCALE
+$FAKERIMBOOST
+$FAKERIMLIGHTSCALEMINMAX
+$FAKERIMTINT
+$FALLOFFAMOUNT
+$FALLOFFDISTANCE
+$FALLOFFOFFSET
+$FARBLURDEPTH
+$FARBLURRADIUS
+$FARFADEINTERVAL
+$FARFOCUSDEPTH
+$FARPLANE
+$FARZ
+$FBTEXTURE
+$FB_TEXTURE
+$FLASHLIGHTCOLOR
+$FLASHLIGHTNOLAMBERT
+$FLASHLIGHTTIME
+$FLASHLIGHTTINT
+$FLESHBORDERNOISESCALE
+$FLESHBORDERSOFTNESS
+$FLESHBORDERTEXTURE1D
+$FLESHBORDERTINT
+$FLESHBORDERWIDTH
+$FLESHCUBETEXTURE
+$FLESHDEBUGFORCEFLESHON
+$FLESHEFFECTCENTERRADIUS1
+$FLESHEFFECTCENTERRADIUS2
+$FLESHEFFECTCENTERRADIUS3
+$FLESHEFFECTCENTERRADIUS4
+$FLESHGLOBALOPACITY
+$FLESHGLOSSBRIGHTNESS
+$FLESHINTERIORENABLED
+$FLESHINTERIORNOISETEXTURE
+$FLESHINTERIORTEXTURE
+$FLESHNORMALTEXTURE
+$FLESHSCROLLSPEED
+$FLESHSUBSURFACETEXTURE
+$FLESHSUBSURFACETINT
+$FLIPFIXUP
+$FLOWBOUNDS
+$FLOWMAP
+$FLOWMAPFRAME
+$FLOWMAPSCROLLRATE
+$FLOW_BUMPSTRENGTH
+$FLOW_CHEAP
+$FLOW_COLOR
+$FLOW_COLOR_INTENSITY
+$FLOW_DEBUG
+$FLOW_LERPEXP
+$FLOW_NOISE_SCALE
+$FLOW_NOISE_TEXTURE
+$FLOW_NORMALUVSCALE
+$FLOW_TIMEINTERVALINSECONDS
+$FLOW_UVSCROLLDISTANCE
+$FLOW_VORTEX1
+$FLOW_VORTEX2
+$FLOW_VORTEX_COLOR
+$FLOW_VORTEX_POS1
+$FLOW_VORTEX_POS2
+$FLOW_VORTEX_SIZE
+$FLOW_WORLDUVSCALE
+$FOGCOLOR
+$FOGEND
+$FOGEXPONENT
+$FOGFADEEND
+$FOGFADESTART
+$FOGSCALE
+$FOGSTART
+$FORCECHEAP
+$FORCEENVMAP
+$FORCEFRESNEL
+$FORCEPHONG
+$FORWARD
+$FRAME2
+$FRAME3
+$FRAME4
+$FRAMETEXTURE
+$FRESNELBUMPSTRENGTH
+$FRESNELOPACITYRANGES
+$FRESNELRANGES
+$FRESNELRANGESTEXTURE
+$FRESNELREFLECTION
+$FRESNELWARPTEXTURE
+$FRONTNDTEXTURE
+$FXAAINTERNALC
+$FXAAINTERNALQ
+$GAMMACOLORREAD
+$GHOSTOVERLAY
+$GLINT
+$GLINTU
+$GLINTV
+$GLITTERCUBE
+$GLITTERMASK
+$GLITTERNORMAL
+$GLITTERSCALE
+$GLITTERTINT
+$GLOSSINESS
+$GLOW
+$GLOWALPHA
+$GLOWCOLOR
+$GLOWEND
+$GLOWSCALE
+$GLOWSTART
+$GLOWX
+$GLOWY
+$GRADIENTCOLORSTOP0
+$GRADIENTCOLORSTOP1
+$GRADIENTCOLORSTOP2
+$GRADIENTMODULATION
+$GRAIN
+$GRAIN_TEXTURE
+$GRIME
+$GRIMEBRIGHTNESSADJUSTMENT
+$GRIMESATURATION
+$GROUNDMAX
+$GROUNDMIN
+$GRUNGE
+$GRUNGEMAX
+$GRUNGESCALE
+$GRUNGETEXTURE
+$GRUNGETEXTURE texcoord transform
+$GRUNGETEXTUREROTATION
+$GRUNGETEXTURETRANSFORM
+$HDRBASETEXTURE
+$HDRCOLORSCALE
+$HDRCOMPRESSEDTEXTURE
+$HDRCOMPRESSEDTEXTURE0
+$HDRCOMPRESSEDTEXTURE1
+$HDRCOMPRESSEDTEXTURE2
+$HIGHLIGHT
+$HIGHLIGHTCYCLE
+$HOLOMASK
+$HOLOSPECTRUM
+$HSLNOISESCALE
+$HUESHIFTAMOUNT
+$IGNOREVERTEXCOLORS
+$ILLUMFACTOR
+$INPUT
+$INPUT_TEXTURE
+$INTENSITY
+$INTERIOR
+$INTERIORAMBIENTSCALE
+$INTERIORBACKGROUNDBOOST
+$INTERIORBACKLIGHTSCALE
+$INTERIORCOLOR
+$INTERIORFOGLIMIT
+$INTERIORFOGNORMALBOOST
+$INTERIORFOGSTRENGTH
+$INTERIORREFRACTBLUR
+$INTERIORREFRACTSTRENGTH
+$INTERNAL_VIGNETTETEXTURE
+$INVERSEDEPTHBLEND
+$INVERTPHONGMASK
+$INVVIEWPROJMAT
+$IRIS
+$IRISFRAME
+$IRISU
+$IRISV
+$ISFLOAT
+$JITTERSEED
+$KERNEL
+$LAYERBORDEROFFSET
+$LAYERBORDERSOFTNESS
+$LAYERBORDERSTRENGTH
+$LAYERBORDERTINT
+$LAYEREDDAMAGEBLEND
+$LAYEREDGENORMAL
+$LAYEREDGEOFFSET
+$LAYEREDGEPUNCHIN
+$LAYEREDGESOFTNESS
+$LAYEREDGESTRENGTH
+$LAYERTINT1
+$LAYERTINT2
+$LEAFCENTER
+$LERPCOLOR1
+$LERPCOLOR2
+$LIGHTMAPWATERFOG
+$LIGHTS
+$LIGHTWARPTEXTURE
+$LIGHT_COLOR
+$LIGHT_POSITION
+$LINEARREAD_BASETEXTURE
+$LINEARREAD_TEXTURE1
+$LINEARREAD_TEXTURE2
+$LINEARREAD_TEXTURE3
+$LINEARWRITE
+$LOCALCONTRASTEDGESCALE
+$LOCALCONTRASTENABLE
+$LOCALCONTRASTMIDTONEMASK
+$LOCALCONTRASTSCALE
+$LOCALCONTRASTVIGNETTEEND
+$LOCALCONTRASTVIGNETTESTART
+$LOCALREFRACT
+$LOCALREFRACTDEPTH
+$LOGO2ENABLED
+$LOGO2ROTATE
+$LOGO2SCALE
+$LOGO2X
+$LOGO2Y
+$LOGOMAP
+$LOGOMASKCRISP
+$LOGOROTATE
+$LOGOSCALE
+$LOGOWEAR
+$LOGOX
+$LOGOY
+$LOWQUALITYFLASHLIGHTSHADOWS
+$LUMBLENDFACTOR2
+$LUMBLENDFACTOR3
+$LUMBLENDFACTOR4
+$MAGNIFYCENTER
+$MAGNIFYENABLE
+$MAGNIFYSCALE
+$MASKED
+$MASKMAP
+$MASKS
+$MASKS1
+$MASKS2
+$MASKSTEXTURE
+$MATERIALMASK
+$MAXDISTANCE
+$MAXFALLOFFAMOUNT
+$MAXLIGHT
+$MAXLUMFRAMEBLEND1
+$MAXLUMFRAMEBLEND2
+$MAXSIZE
+$METALNESS
+$MINIMUMSPRITESIZE
+$MINLIGHT
+$MINSIZE
+$MIRRORABOUTVIEWPORTEDGES
+$MIRRORHORIZONTAL
+$MOD2X
+$MODE
+$MODELDECALIGNOREZ
+$MODELFORMAT
+$MOONDOME
+$MOTIONBLURINTERNAL
+$MOTIONBLURVIEWPORTINTERNAL
+$MRTINDEX
+$MULOUTPUTBYALPHA
+$MULTIPLYCOLOR
+$NCOLORS
+$NEARBLURDEPTH
+$NEARBLURRADIUS
+$NEARFOCUSDEPTH
+$NEARPLANE
+$NEEDSNORMALS
+$NEEDSTANGENTS
+$NEEDSTANGENTT
+$NEWLAYERBLENDING
+$NOCOLORWRITE
+$NODIFFUSEBUMPLIGHTING
+$NOENVMAPMIP
+$NOFRESNEL
+$NOISE
+$NOISEENABLE
+$NOISEMAP
+$NOISESCALE
+$NOISESTRENGTH
+$NOISETEXTURE
+$NOLOWENDLIGHTMAP
+$NORMALMAP
+$NORMALMAP2
+$NOSRGB
+$NOTINT
+$NOVIEWPORTFIXUP
+$NOWRITEZ
+$NUMPLANES
+$NUM_LOOKUPS
+$OFFSETAMOUNT
+$OFFSETMAP
+$OPACITYTEXTURE
+$OPAQUE
+$ORIENTATION
+$ORIENTATIONMATRIX
+$ORIGINALTEXTURE
+$ORIGINFARZ
+$OUTLINE
+$OUTLINEALPHA
+$OUTLINECOLOR
+$OUTLINEEND0
+$OUTLINEEND1
+$OUTLINESTART0
+$OUTLINESTART1
+$OUTPUTINTENSITY
+$OVERBRIGHTFACTOR
+$PAINTPHONGALBEDOBOOST
+$PAINTSTYLE
+$PAINTTEXTURE
+$PAINTTEXTURE texcoord transform
+$PALETTECOLOR1
+$PALETTECOLOR2
+$PALETTECOLOR3
+$PALETTECOLOR4
+$PALETTECOLOR5
+$PALETTECOLOR6
+$PALETTECOLOR7
+$PALETTECOLOR8
+$PANORAMA
+$PARALLAXSTRENGTH
+$PASSCOUNT
+$PATTERN
+$PATTERN1
+$PATTERN1COLOR2
+$PATTERN1COLOR3
+$PATTERN1COLOR4
+$PATTERN1SCALE
+$PATTERN2
+$PATTERN2COLOR1
+$PATTERN2COLOR2
+$PATTERN2COLOR3
+$PATTERN2COLOR4
+$PATTERN2SCALE
+$PATTERNCOLORINDICES
+$PATTERNDETAILINFLUENCE
+$PATTERNPAINTTHICKNESS
+$PATTERNPHONGFACTOR
+$PATTERNREPLACEINDEX
+$PATTERNROTATION
+$PATTERNSCALE
+$PATTERNTEXTUREROTATION
+$PATTERNTEXTURETRANSFORM
+$PEARLESCENT
+$PEEL
+$PERPARTICLEOUTLINE
+$PHONG
+$PHONGALBEDOBOOST
+$PHONGALBEDOFACTOR
+$PHONGALBEDOTINT
+$PHONGAMOUNT
+$PHONGAMOUNT2
+$PHONGBASETINT
+$PHONGBASETINT2
+$PHONGBOOST
+$PHONGBOOST2
+$PHONGDISABLEHALFLAMBERT
+$PHONGEXPONENT
+$PHONGEXPONENT2
+$PHONGEXPONENTTEXTURE
+$PHONGFRESNELRANGES
+$PHONGINTENSITY
+$PHONGMASKCONTRASTBRIGHTNESS
+$PHONGMASKCONTRASTBRIGHTNESS2
+$PHONGTINT
+$PHONGWARPTEXTURE
+$PIXSHADER
+$PLAYERDATACOLOR
+$PLAYERDATACOLOR_CAMDEPTH
+$PLAYERDATACOLOR_OPACITY
+$PLAYERDATACOLOR_VELOCITY
+$PLAYERDATACOLOR_WSPOSZ
+$POINTSAMPLEMAGFILTER
+$POINTSAMPLE_BASETEXTURE
+$POINTSAMPLE_TEXTURE1
+$POINTSAMPLE_TEXTURE2
+$POINTSAMPLE_TEXTURE3
+$PORTALCOLORGRADIENTDARK
+$PORTALCOLORGRADIENTLIGHT
+$PORTALCOLORSCALE
+$PORTALCOLORTEXTURE
+$PORTALMASKTEXTURE
+$PORTALOPENAMOUNT
+$PORTALSTATIC
+$POSTEXTURE
+$POWERUP
+$PREVIEW
+$PREVIEWIGNOREWEAPONSCALE
+$PREVIEWWEAPONOBJSCALE
+$PREVIEWWEAPONUVSCALE
+$PULSE
+$QUALITY
+$QUATORIENTATION
+$RADIUS
+$RADIUSTRAILFADE
+$RAMPTEXTURE
+$RAYTRACESPHERE
+$RECEIVEFLASHLIGHT
+$REFLECTAMOUNT
+$REFLECTANCE
+$REFLECTENTITIES
+$REFLECTTEXTURE
+$REFLECTTINT
+$REFRACTAMOUNT
+$REFRACTTEXTURE
+$REFRACTTINT
+$REFRACTTINTTEXTURE
+$REFRACTTINTTEXTUREFRAME
+$RELOADZCULL
+$RENDERATTR
+$RENDERFIXZ
+$RIMHALOBOOST
+$RIMHALOBOUNDS
+$RIMLIGHT
+$RIMLIGHTALBEDO
+$RIMLIGHTBOOST
+$RIMLIGHTEXPONENT
+$RIMLIGHTTINT
+$RIMMASK
+$ROTATION
+$ROTATION2
+$ROTATION3
+$ROTATION4
+$SAMPLEOFFSETTEXTURE
+$SATURATION
+$SCALE
+$SCALE2
+$SCALE3
+$SCALE4
+$SCALEBIAS
+$SCALEEDGESOFTNESSBASEDONSCREENRES
+$SCALEOUTLINESOFTNESSBASEDONSCREENRES
+$SCENEDEPTH
+$SCREENBLURSTRENGTH
+$SCREENEFFECTTEXTURE
+$SCROLL1
+$SCROLL2
+$SEAMLESS_BASE
+$SEAMLESS_DETAIL
+$SEAMLESS_SCALE
+$SELFILLUMBOOST
+$SELFILLUMFRESNEL
+$SELFILLUMFRESNELENABLEDTHISFRAME
+$SELFILLUMFRESNELMINMAXEXP
+$SELFILLUMMAP
+$SELFILLUMMASK
+$SELFILLUMMASKSCALE
+$SELFILLUMTINT
+$SELFILLUM_ENVMAPMASK_ALPHA
+$SEPARATEDETAILUVS
+$SEQUENCE_BLEND_MODE
+$SHADERSRGBREAD360
+$SHADOWATTEN
+$SHADOWCONTRAST
+$SHADOWDEPTH
+$SHADOWDEPTHTEXTURE
+$SHADOWFILTERSIZE
+$SHADOWJITTERSEED
+$SHADOWRIMBOOST
+$SHADOWSATURATION
+$SHADOWSATURATIONBOUNDS
+$SHADOWTINT
+$SHARPNESS
+$SHOWALPHA
+$SIDESPEED
+$SILHOUETTECOLOR
+$SILHOUETTETHICKNESS
+$SIMPLEOVERLAY
+$SINGLEPASSFLASHLIGHT
+$SMALLFB
+$SOFTEDGES
+$SOURCEMRTRENDERTARGET
+$SPECMASKTEXTURE
+$SPECTEXTURE
+$SPECTEXTURE2
+$SPECTEXTURE3
+$SPECTEXTURE4
+$SPHERENORMAL
+$SPHERETEXKILLCOMBO
+$SPLINETYPE
+$SPRITEORIENTATION
+$SPRITEORIGIN
+$SPRITERENDERMODE
+$SSBUMP
+$STAGE
+$STARTFADESIZE
+$STATICAMOUNT
+$STATICBLENDTEXTURE
+$STATICBLENDTEXTUREFRAME
+$STITCHTEXTURE
+$STRENGTH
+$STRETCH
+$SURFACETEXTURE
+$SWAPPATTERNMASKS
+$TANGENTSOPACITYRANGES
+$TANGENTTOPACITYRANGES
+$TCSIZE0
+$TCSIZE1
+$TCSIZE2
+$TCSIZE3
+$TCSIZE4
+$TCSIZE5
+$TCSIZE6
+$TCSIZE7
+$TEXTURE0
+$TEXTURE1
+$TEXTURE1_LUMEND
+$TEXTURE1_LUMSTART
+$TEXTURE2
+$TEXTURE2TRANSFORM
+$TEXTURE2_BLENDEND
+$TEXTURE2_BLENDSTART
+$TEXTURE2_BUMPBLENDFACTOR
+$TEXTURE2_LUMEND
+$TEXTURE2_LUMSTART
+$TEXTURE2_UVSCALE
+$TEXTURE3
+$TEXTURE3_BLENDEND
+$TEXTURE3_BLENDMODE
+$TEXTURE3_BLENDSTART
+$TEXTURE3_BUMPBLENDFACTOR
+$TEXTURE3_LUMEND
+$TEXTURE3_LUMSTART
+$TEXTURE3_UVSCALE
+$TEXTURE4
+$TEXTURE4_BLENDEND
+$TEXTURE4_BLENDMODE
+$TEXTURE4_BLENDSTART
+$TEXTURE4_BUMPBLENDFACTOR
+$TEXTURE4_LUMEND
+$TEXTURE4_LUMSTART
+$TEXTURE4_UVSCALE
+$TEXTUREMODE
+$TEXTUREPREVIEW
+$TEXTUREPREVIEW_HIDEALPHA
+$TEXTUREPREVIEW_SCALEX
+$TEXTUREPREVIEW_SCALEY
+$TEXTURETRANSFORM
+$THIRDPERSON
+$TILING
+$TIME
+$TINT
+$TINTMASKTEXTURE
+$TOOLCOLORCORRECTION
+$TOOLMODE
+$TOOLTIME
+$TOWARDCAMERAPUSH
+$TRANSLUCENTFRESNELMINMAXEXP
+$TRANSLUCENT_MATERIAL
+$TREESWAY
+$TREESWAYFALLOFFEXP
+$TREESWAYHEIGHT
+$TREESWAYRADIUS
+$TREESWAYSCRUMBLEFALLOFFEXP
+$TREESWAYSCRUMBLEFREQUENCY
+$TREESWAYSCRUMBLESPEED
+$TREESWAYSCRUMBLESTRENGTH
+$TREESWAYSPEED
+$TREESWAYSPEEDHIGHWINDMULTIPLIER
+$TREESWAYSPEEDLERPEND
+$TREESWAYSPEEDLERPSTART
+$TREESWAYSTARTHEIGHT
+$TREESWAYSTARTRADIUS
+$TREESWAYSTATIC
+$TREESWAYSTRENGTH
+$TV_GAMMA
+$UBERHEIGHTWIDTH
+$UBERLIGHT
+$UBERNEARFAR
+$UBERROUNDNESS
+$UNLIT
+$UNLITFACTOR
+$UNWEARSTRENGTH
+$USEALTERNATEVIEWMATRIX
+$USEINSTANCING
+$USEONSTATICPROP
+$USE_FB_TEXTURE
+$USINGPIXELSHADER
+$UVPROJOFFSET
+$UVSCALE
+$VELOCITY_TEXTURE
+$VERTEXALPHATEST
+$VERTEXCOLORLERP
+$VERTEXCOLORMODULATE
+$VERTEXCOLORPOWER
+$VERTEXFOGAMOUNT
+$VERTEXNORMAL
+$VERTEXSHADER
+$VERTEXTRANSFORM
+$VIEWPROJ
+$VIEWPROJMAT
+$VIGNETTEENABLE
+$VIGNETTE_MIN_BRIGHT
+$VIGNETTE_POWER
+$VOLUMETEXTURETEST
+$VOLUMETRICINTENSITY
+$VOMITCOLOR1
+$VOMITCOLOR2
+$VOMITENABLE
+$VOMITREFRACTSCALE
+$WARPINDEX
+$WARPPARAM
+$WATERBLENDFACTOR
+$WATERDEPTH
+$WEARBIAS
+$WEARDETAILENVBOOST
+$WEARDETAILPHONGBOOST
+$WEAREXPONENT
+$WEARPROGRESS
+$WEARREMAPMAX
+$WEARREMAPMID
+$WEARREMAPMIN
+$WEARTEXTURE
+$WEARTEXTURE texcoord transform
+$WEARTEXTURETRANSFORM
+$WEARWIDTHMAX
+$WEARWIDTHMIN
+$WEIGHT0
+$WEIGHT1
+$WEIGHT2
+$WEIGHT3
+$WEIGHTS
+$WEIGHT_DEFAULT
+$WOODCUT
+$WORLDSPACEBURN
+$WORLDSPACESCALE
+$WORLDSPACETINT
+$WORLDSPACETYPE
+$WORLDSPACEZONE
+$WORLDTOTEXTURE
+$WRITEALPHA
+$WRITEDEPTH
+$WRITEZ
+$YTEXTURE
+$ZFAILENABLE
+$ZOOMANIMATESEQ2
+$alpha
+$baseTexture texcoord offset
+$baseTexture texcoord scale
+$basetexture
+$basetexture2 texcoord transform
+$basetexturetransform
+$blendmodulatetexture texcoord transform
+$bumpmap texcoord transform
+$color
+$color2
+$detail texcoord transform
+$envmapmask texcoord transform
+$envmapmask2 texcoord transform
+$flags2
+$flags_defined
+$flags_defined2
+$flashlighttexture
+$flashlighttextureframe
+$frame
+$normalmap texcoord transform
+$srgbtint
+$texture2 texcoord transform
+%i %i %i %i
+&2@UUUUUU
+&Sgw
+( 8PX
+( IsGameConsole() ) ? ( bCSMEnabled ? 1 : 0 ) : 0
+( IsPS3() ) ? MIN( 2, lightState.m_nNumLights ) : lightState.m_nNumLights
+( IsPS3() ) ? MIN(2, lightState.m_nNumLights) : lightState.m_nNumLights
+( IsPlatformOSX() ? 0 : ( bCSMEnabled ? 1 : 0 ) )
+( bHasVertexColor || bHasVertexAlpha )
+( fPhongAlbedoFactor < 1.0f )
+( g_pHardwareConfig->SupportsCascadedShadowMapping() && !ToolsEnabled() ) ? nCSMQualityComboValue : 0
+( g_pHardwareConfig->SupportsCascadedShadowMapping() && !bSFM && !bHasFlashlight && !bDisableCSMLookup ) ? nCSMQualityComboValue : 0
+( g_pHardwareConfig->SupportsCascadedShadowMapping() && !bSFM && !bHasFlashlight && g_pConfig->nFullbright != 1 && !bDisableCSMLookup ) ? nCSMQualityComboValue : 0
+( int )vertexCompression
+( nPassIdx == 0 )
+( numBones > 0 )
+( numBones > 0 ) && ( nTessellationMode == TESSELLATION_MODE_DISABLED )
+( numBones > 0)
+( numBones > 0) && ( nTessellationMode == TESSELLATION_MODE_DISABLED )
+( pShaderAPI->GetCurrentNumBones() > 0 ) && ( nTessellationMode == TESSELLATION_MODE_DISABLED )
+( params[info.m_nLocalRefract]->GetIntValue() != 0 )
+( shaderFlags & SHADER_USE_CONSTANT_COLOR ) ? true : false
+( shaderFlags & SHADER_USE_VERTEX_COLOR ) ? true : false
+(bCSMEnabled)
+(bHasTexture2)?(1):(0)
+(fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z) && (nBlendType != BT_BLENDADD) && (nBlendType != BT_BLEND) && !bIsAlphaTested
+(g_pHardwareConfig->GetHDRType() == HDR_TYPE_FLOAT) ? true : false
+(int)vertexCompression
+(int)vertexCompression && ( nTessellationMode == TESSELLATION_MODE_DISABLED )
+(null)
+(params[USEALTERNATEVIEWMATRIX]->GetIntValue() != 0)
+)2STud>
+***need to set $abovewater for material %s\n
+*VVw
++*tsJ
+-1000.0
+-nodepthtexture
+-softparticlesdefaultoff
+-tools
+.00cfg
+.?AVCBasePerInstanceContextData@@
+.?AVCBasePerMaterialContextData@@
+.?AVCBaseShader@@
+.?AVCBaseVSShader@@
+.?AVCCustomWeapon_DX9_Context@@
+.?AVCDefaultAccessor@@
+.?AVCEmptyConVar@@
+.?AVCFlashlightShadowDecal_DX9_Context@@
+.?AVCLightmappedGeneric_DX9_Context@@
+.?AVCLightmapped_4WayBlend_DX9_Context@@
+.?AVCLightmapped_terrain_DX9_Context@@
+.?AVCPerInstanceContextData@@
+.?AVCPhong_DX9_Context@@
+.?AVCShader@Aftershock@@
+.?AVCShader@Aftershock_dx9@@
+.?AVCShader@Bik@@
+.?AVCShader@Black@@
+.?AVCShader@Blob@@
+.?AVCShader@Blob_dx9@@
+.?AVCShader@Bloom@@
+.?AVCShader@BlurFilterX@@
+.?AVCShader@BlurFilterY@@
+.?AVCShader@BufferClearObeyStencil@@
+.?AVCShader@BufferClearObeyStencil_DX9@@
+.?AVCShader@Cable@@
+.?AVCShader@Cable_DX9@@
+.?AVCShader@Character@@
+.?AVCShader@CharacterSSAO@@
+.?AVCShader@Cloak@@
+.?AVCShader@Cloak_DX90@@
+.?AVCShader@ColorCorrection@@
+.?AVCShader@ColorOut@@
+.?AVCShader@CustomCharacter@@
+.?AVCShader@CustomClothing@@
+.?AVCShader@CustomWeapon@@
+.?AVCShader@CustomWeapon_dx9@@
+.?AVCShader@DebugMRTTexture@@
+.?AVCShader@DebugMorphAccumulator@@
+.?AVCShader@DebugTextureView@@
+.?AVCShader@DebugTextureView_dx9@@
+.?AVCShader@DecalModulate@@
+.?AVCShader@DecalModulate_dx9@@
+.?AVCShader@DepthOfField@@
+.?AVCShader@DepthOfField_dx9@@
+.?AVCShader@DepthWrite@@
+.?AVCShader@Downsample@@
+.?AVCShader@Downsample_nohdr@@
+.?AVCShader@Embroider@@
+.?AVCShader@Engine_Post@@
+.?AVCShader@Engine_Post_dx9@@
+.?AVCShader@EyeGlint@@
+.?AVCShader@EyeGlint_dx9@@
+.?AVCShader@EyeRefract@@
+.?AVCShader@EyeRefract_dx9@@
+.?AVCShader@Eyes_dx9@@
+.?AVCShader@FilmDust@@
+.?AVCShader@FilmGrain@@
+.?AVCShader@GAMECONTROLS@@
+.?AVCShader@Grass@@
+.?AVCShader@HDRCombineTo16Bit@@
+.?AVCShader@HDRSelectRange@@
+.?AVCShader@HSV@@
+.?AVCShader@IceSurface@@
+.?AVCShader@IceSurface_dx9@@
+.?AVCShader@IntroScreenSpaceEffect@@
+.?AVCShader@LightShafts@@
+.?AVCShader@LightShafts_dx9@@
+.?AVCShader@LightmappedGeneric@@
+.?AVCShader@LightmappedReflective@@
+.?AVCShader@LightmappedReflective_DX90@@
+.?AVCShader@Lightmapped_4WayBlend@@
+.?AVCShader@Lightmapped_terrain@@
+.?AVCShader@Modulate@@
+.?AVCShader@Modulate_DX9@@
+.?AVCShader@MonitorScreen@@
+.?AVCShader@MonitorScreen_DX9@@
+.?AVCShader@MorphAccumulate@@
+.?AVCShader@MorphAccumulate_DX9@@
+.?AVCShader@MorphWeight@@
+.?AVCShader@MorphWeight_DX9@@
+.?AVCShader@MotionBlur@@
+.?AVCShader@MotionBlur_dx9@@
+.?AVCShader@Multiblend@@
+.?AVCShader@Multiblend_DX90@@
+.?AVCShader@ObjectMotionBlur@@
+.?AVCShader@Occlusion@@
+.?AVCShader@Occlusion_DX9@@
+.?AVCShader@PanoramaSSAAResolve@@
+.?AVCShader@ParallaxTest@@
+.?AVCShader@ParticleLitGeneric_DX9@@
+.?AVCShader@ParticleSphere@@
+.?AVCShader@ParticleSphere_DX9@@
+.?AVCShader@Portal@@
+.?AVCShader@PortalRefract@@
+.?AVCShader@PortalRefract_dx9@@
+.?AVCShader@PortalStaticOverlay@@
+.?AVCShader@Portal_DX90@@
+.?AVCShader@Projected@@
+.?AVCShader@Projected_DX90@@
+.?AVCShader@ProtoIce@@
+.?AVCShader@ProtoIce_dx9@@
+.?AVCShader@Prototype@@
+.?AVCShader@Prototype_dx9@@
+.?AVCShader@Refract@@
+.?AVCShader@Refract_DX90@@
+.?AVCShader@Sample4x4@@
+.?AVCShader@Sample4x4_Blend@@
+.?AVCShader@Shadow@@
+.?AVCShader@ShadowBuild@@
+.?AVCShader@ShadowBuild_DX9@@
+.?AVCShader@ShadowModel@@
+.?AVCShader@ShadowModel_DX9@@
+.?AVCShader@ShatteredGlass@@
+.?AVCShader@Sky@@
+.?AVCShader@Sky_HDR_DX9@@
+.?AVCShader@SolidEnergy@@
+.?AVCShader@SolidEnergy_dx9@@
+.?AVCShader@SplineRope@@
+.?AVCShader@Sprite@@
+.?AVCShader@Sprite_DX9@@
+.?AVCShader@Spritecard@@
+.?AVCShader@Teeth@@
+.?AVCShader@Teeth_DX9@@
+.?AVCShader@TreeLeaf@@
+.?AVCShader@UnLitWorld_ScreenSample@@
+.?AVCShader@UnlitGeneric@@
+.?AVCShader@UnlitTwoTexture@@
+.?AVCShader@UnlitTwoTexture_DX9@@
+.?AVCShader@VertexLitGeneric@@
+.?AVCShader@VolumeClouds@@
+.?AVCShader@VolumeClouds_dx9@@
+.?AVCShader@VortWarp@@
+.?AVCShader@VortWarp_DX9@@
+.?AVCShader@Water@@
+.?AVCShader@Water_DX90@@
+.?AVCShader@Water_DX9_HDR@Water_DX90@@
+.?AVCShader@WeaponDecal@@
+.?AVCShader@WeaponDecal_dx9@@
+.?AVCShader@WindowImposter@@
+.?AVCShader@WindowImposter_DX90@@
+.?AVCShader@Wireframe@@
+.?AVCShader@Wireframe_DX9@@
+.?AVCShader@WorldTwoTextureBlend@@
+.?AVCShader@WorldVertexTransition@@
+.?AVCShader@WorldVertexTransition_DX9@@
+.?AVCShader@WriteStencil@@
+.?AVCShader@WriteStencil_DX9@@
+.?AVCShader@WriteZ@@
+.?AVCShader@WriteZ_DX9@@
+.?AVCShader@accumbuff4sample@@
+.?AVCShader@accumbuff5sample@@
+.?AVCShader@eyes@@
+.?AVCShader@flashlight_shadow_decal@@
+.?AVCShader@floatcombine@@
+.?AVCShader@floatcombine_autoexpose@@
+.?AVCShader@floattoscreen@@
+.?AVCShader@floattoscreen_vanilla@@
+.?AVCShader@hsl_filmgrain_pass1@@
+.?AVCShader@hsl_filmgrain_pass2@@
+.?AVCShader@paintblob@@
+.?AVCShader@paintblob_dx9@@
+.?AVCShader@panorama@@
+.?AVCShader@panorama_dx9@@
+.?AVCShader@panoramafancy@@
+.?AVCShader@panoramafancy_dx9@@
+.?AVCShader@screenspace_general@@
+.?AVCShader@screenspace_general_dx9@@
+.?AVCShader@screenspace_zone@@
+.?AVCShader@screenspace_zone_dx9@@
+.?AVCShader@sfm_ambientocclusion_shader@@
+.?AVCShader@sfm_ao_blur_shader@@
+.?AVCShader@sfm_blurfilterx_shader@@
+.?AVCShader@sfm_blurfiltery_shader@@
+.?AVCShader@sfm_downsample_shader@@
+.?AVCShader@sfm_integercombine_shader@@
+.?AVCShader@sfm_shape_shader@@
+.?AVCShader@showz@@
+.?AVCShader@worldimposter@@
+.?AVCShaderDLL@@
+.?AVCShaderDLLVerification@@
+.?AVCShaderLibConVarAccessor@@
+.?AVCSolidEnergy_DX9_Context@@
+.?AVCUtlCStringConversion@@
+.?AVCUtlCharConversion@@
+.?AVCUtlNoEscConversion@@
+.?AVCVertexLitGeneric_DX9_Context@@
+.?AVCWeaponDecal_DX9_Context@@
+.?AVConCommandBase@@
+.?AVConVar@@
+.?AVIConCommandBaseAccessor@@
+.?AVIConVar@@
+.?AVIShader@@
+.?AVIShaderDLL@@
+.?AVIShaderDLLInternal@@
+.?AVIShaderDLLVerification@@
+.?AVtype_info@@
+.CRT$XCA
+.CRT$XCU
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.bss
+.data
+.data$r
+.eBSSE and SSE2 are required.
+.edata
+.gfids$x
+.gfids$y
+.idata$2
+.idata$3
+.idata$4
+.idata$5
+.idata$6
+.rdata
+.rdata$r
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.text$di
+.text$mn
+.text$yd
+.xdata$x
+0 - support three color streams, 1 - use avg of three streams, 2 - single color stream
+0 0 0
+0 = always face camera, 1 = rotate around z, 2= parallel to ground 3=use normal 4=face camera POS
+0 = disable, 1 = default, 2 = visualize phong component only (no diffuse)
+0 == Use diffuse bump lighting, 1 = No diffuse bump lighting
+0 == write z, 1 = no write z
+0 default, 1 used for laying off 360 movies
+0 for no fade out on silhouette, 1 for fade out on sillhouette
+0, 1, or 2 for how much blur you want
+0.0 == multiply by lightmap, 1.0 == multiply by 1
+0.0125
+0.015
+0.02
+0.025
+0.05
+0.06
+0.0f
+0.11
+0.15
+0.25
+0.42
+0.45
+0.59
+0.66
+0?Zk
+0@unused
+0vB-
+0x?9
+1 1 1
+1 = use shader srgb texture reads, 0 = use HW
+1#IND
+1#INF
+1#QNAN
+1#SNAN
+1.0 == mirror, 0.0 == water
+1.0f
+10.0
+1000
+100000.0
+1D ramp texture for controlling fresnel falloff
+1D ramp texture for tinting scalar diffuse term
+1st vomit blend color
+2.0f
+20.0
+2D map for warping specular
+2D rate to scroll $flowmap
+2ieO=
+2st vomit blend color
+333?
+333?333?333?333?
+4 FH>
+4 Hs>p
+4 n\v>sAC4
+400.0
+4@fw>[^R4
+4_rt_WaterRefraction
+4`pC?
+4dsg
+4g%6
+50.0
+5DKB
+5xT~
+700WP
+74 Wu>
+8G5 g
+8~?\v1~?])~?
+9999999
+9a&g
+9q>4(
+:Esp
+:s6X
+;specify that this is the back surface of the blob
+<8bunz8
+<@En[vP
+=3CL4`h
+=87M
+========================================================================\n
+=FA\4
+=Y?DepthOfField
+=btz1@1
+=cos
+=v1f4
+>$flags
+>S]c5
+>Xzv
+>\raO5
+>fBB5`
+>k,F5
+>o3fW
+?$CONTRAST
+?*hiR
+?1mm
+?3ScR.>
+?3xj
+?40V
+?5Wg4p
+?5a1
+?7Tf(
+?8bunz8
+?93l
+?@En[vP
+?AFxD
+?ColorCorrection
+?CustomClothing
+?DevWarning@@YAXPBDZZ
+?G2Q
+?IT$7
+?Ltm
+?MKR
+?PiB
+?Shadow Depth Texture
+?T5cd'j
+?Texture 1
+?Tu7R
+?UUUUUU
+?X&eB
+?X1U
+?c3y
+?c3y?
+?cpv6@
+?fff?
+?gibQ^AX>
+?kAf
+?pEly
+?q42s(
+?rmMx
+?sin
+?u1P
+?uZEeu
+@$PATTERN1COLOR1
+@Amount of the static blend texture to blend into the base texture
+@VNQ
+AA_ENABLE
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABOVEWATER
+ACTIVE
+ADDBASETEXTURE2
+ADDBUMPMAPS
+ADDITIVE
+ADDSELF
+ADDSTATIC
+ALPHACLIP
+ALPHAMASK
+ALPHATESTREF
+AMBIENTREFLECTION
+AMBIENT_LIGHT
+ANIMBLEND
+ANIMBLEND_OR_MAXLUMFRAMEBLEND1
+ANISOTROPY
+AO_MODE
+APPROX_SRGB_ADAPTER
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+AYl=
+A]?VJ
+AccumBuff4Sample_ps20
+AccumBuff4Sample_ps20b
+Activate special mode to use this shader on a static prop
+Add bump map 1 and 2 together, renormalize
+Adetail map 1
+Aftershock
+Aftershock_dx9
+Ai0T
+AiFC.
+Aim at camera using orientation type 1
+Allow noise
+Allow per particle outline control
+Allow per-instance color modulation
+Allow vignette
+Alpha
+Alpha reference value
+Ambient occlusion color
+Amount of screen space ambient occlusion to use (0..1 range)
+Amount of vertex fog to apply
+Amount to brighten the shadow at max dist
+Amount to darken or brighten the teeth
+Amount to scale alpha by between start and end of trail/rope
+Amount to scale radis by between start and end of trail/rope
+Amount to tint Phong * $basetexture
+Amount to tint Phong * $basetexture2
+Amplify or reduce DEPTHBLEND fading. Lower values make harder edges.
+An alpha mask for odd shaped portals
+An effect that 'peels' the sticker in local uv space
+Animation Frame
+Animation Frame for $flashlight
+Apply tint by albedo (controlled by spec exponent texture
+April
+Are shadows enabled?
+Are we opaque? (defaults to 0)
+August
+B=62
+BACK_SURFACE
+BASEALPHAENVMAPMASK
+BASEALPHAENVMASK
+BASEALPHAPHONGMASK
+BASEALPHASELFILLUMMASK
+BASETEXTURE
+BASETEXTURE2
+BLEND
+BLOBBY_SHADOWS
+BLOOMTYPE
+BLUR
+BLURRED_VIGNETTE_ENABLE
+BUILDWORLDIMPOSTER
+BUMPALPHAENVMASK
+BUMPMAP
+BUMPMAP2
+BUMPMASK
+Backing pattern offset for choosing stitch color
+Backing pattern with normal and ao in alpha
+Base Texture Texcoord Transform
+Base Texture with lighting built in
+Base glow alpha amount for glows/shadows with distance alpha.
+Bfe9
+Black
+Blended texture
+Blended texture 3
+Blended texture 4
+Blob
+Blob_dx9
+Bloom
+Bloom scale factor
+Bloom_ps20
+Bloom_ps20b
+BlurFilterX
+BlurFilterY
+BlurFilter_ps20
+BlurFilter_ps20b
+BlurFilter_vs20
+Boost for rim lights
+BufferClearObeyStencil
+BufferClearObeyStencil_DX9
+CASCADED_SHADOW_MAPPING
+CASCADE_SIZE
+CHEAPFILTERING
+CHEAPMODE
+CLEAR_COLOR
+COLORCORRECTION_VERSION_1
+COLORMODULATE
+COLORRAMP
+COLOR_DEPTH
+COLOR_LERP_PS
+COL_CORRECT_NUM_LOOKUPS
+COMPOSITEMODE
+COMPRESSED_VERTS
+CONSTANTBASEDMORPH
+CONSTANTCOLOR
+CONTACT_SHADOW
+CONVERT_FROM_LINEAR
+CONVERT_TO_LINEAR
+CROP
+CSM_BLENDING
+CSM_MODE
+CSM_VIEWMODELQUALITY
+CUBEMAP
+CUSTOM_MODE
+CUtlLinkedList overflow! (exhausted index range)\n
+CUtlLinkedList overflow! (exhausted memory allocator)\n
+Cable
+Cable_DX9
+Cb Bink Texture
+Center for UV projection
+Center of leaf cluster for lighting
+Character
+CharacterSSAO
+Cheap mode for low-spec hardware. Disables certain nice-but-not-fundamentally-vital features such as super-sampling the HDR precision
+Cloak
+Cloak color tint
+Cloak_DX90
+CloseHandle
+Color and alpha
+Color texture
+Color tint
+ColorOut
+CommandLine
+ConVar(%s) defined with infinite float value (%s)\n
+ConVarRef %s doesn't point to an existing ConVar\n
+Contrast and Brightness for Phong Mask generation using $basetexture
+Contrast and Brightness for Phong Mask generation using $basetexture2
+Control drawing of non-ambient light ()
+Cookie Frame number for animated cookies
+Cookie Texture
+CorExitProcess
+Cornea strength
+CqTR;
+Cr Bink Texture
+CreateFileW
+CreateInterface
+Crosshair mode
+Culling control - 0 = nocull, 1 = do cull
+CustomCharacter
+CustomClothing shader cannot run in preview quality mode on non-sm3 hardware.\n
+CustomWeapon
+CustomWeapon_dx9
+Customization color 0
+Customization color 1
+Customization color 2
+Customization color 3
+DECAL
+DECALSTYLE
+DECAL_BLEND_MODE
+DEFERRED_SHADOWS
+DEPTHBLEND
+DEPTH_BLUR_ENABLE
+DEPTH_IN_ALPHA
+DESATBASETINT
+DESATURATEENABLE
+DESATURATEWITHBASEALPHA
+DETAIL
+DETAIL1
+DETAIL1BLENDMODE
+DETAIL2
+DETAIL2BLENDMODE
+DETAILTEXTURE
+DETAIL_ALPHA_MASK_BASE_TEXTURE
+DETAIL_BLEND_MODE
+DIFFUSELIGHTING
+DISTANCEALPHA
+DISTANCEALPHAFROMDETAIL
+DOPIXELFOG
+DOWATERFOG
+DUALSEQUENCE
+DYNAMIC_LIGHT
+DYN_CSM_ENABLED
+DZONE
+D_COLORCORRECTION
+D_GRADIENT_COMPLEX
+D_GRADIENT_TWOSTOP
+D_NUM_BLUR_SAMPLES
+D_NVIDIA_STEREO
+D_PREMULTIPLY_ALPHA
+D_TEX2DBLUR
+D_TEX2DDOWNSAMPLE
+D_TEX2DFASTBLUR
+D_TEX2DPARTICLE
+D_TEXTURETYPE
+D_USEINNERCORNER
+D_USEOPACITYMASK
+D_USEOUTERCORNER
+D_USERADIALCLIP
+D_USERADIALGRADIENT
+DebugMRTTexture
+DebugMorphAccumulator
+DebugTextureInfo001
+DebugTextureView
+DebugTextureView_dx9
+DebugTextureView_ps20
+DebugTextureView_ps20b
+DebugTextureView_vs20
+Decal style: 0 = Plastic/PVC sticker
+Decal texture
+DecalModulate
+DecalModulate_DX9
+DecalModulate_dx9
+December
+DecodePointer
+Degree to which Fresnel should be applied to env map
+DeleteCriticalSection
+Depth is stored in alpha channel
+DepthOfField_dx9
+DepthWrite
+Desaturate basemap and affect tint
+Desaturate with math, turns off color correction
+Desaturation Amount
+Dev only convar async_download_patch_textures
+Dev only convar async_download_sticker_textures
+Dev only convar mat_character_force_AMBIENTREFLECTION
+Dev only convar mat_character_force_ANISOTROPY
+Dev only convar mat_character_force_BASEALPHAENVMASK
+Dev only convar mat_character_force_BASEALPHAPHONGMASK
+Dev only convar mat_character_force_BASEALPHASELFILLUMMASK
+Dev only convar mat_character_force_BUMPALPHAENVMASK
+Dev only convar mat_character_force_CASCADED_SHADOW_MAPPING
+Dev only convar mat_character_force_DYN_CSM_ENABLED
+Dev only convar mat_character_force_ENVMAP
+Dev only convar mat_character_force_FAKERIM
+Dev only convar mat_character_force_FLASHLIGHT
+Dev only convar mat_character_force_FLASHLIGHTDEPTHFILTERMODE
+Dev only convar mat_character_force_FRESNELRANGESTEXTURE
+Dev only convar mat_character_force_NUM_LIGHTS
+Dev only convar mat_character_force_PHONGWARPTEXTURE
+Dev only convar mat_character_force_PIXELFOGTYPE
+Dev only convar mat_character_force_SHADOWSATURATION
+Dev only convar mat_character_force_USEBOUNCECOLOR
+Dev only convar mat_character_force_WRITEWATERFOGTODESTALPHA
+Dev only convar mat_character_num_phong_lights
+Dev only convar mat_character_pretty
+Dev/flat_normal
+Diffuse tint
+Disable half lambert for phong
+Disable tinting
+Disables SRGB conversion of color texture read.
+Disables SRGB conversion of shader results.
+Displacement map
+Displacement map contains wrinkle displacements
+Distance at which shadow starts to fade
+Distance in dest-alpha space [0,1] of focal plane.
+Don't adjust uv's for current viewport
+Downsample
+Downsample_nohdr
+Downsample_nohdr_ps20
+Downsample_nohdr_ps20b
+Downsample_ps20
+Downsample_ps20b
+Downsample_vs20
+Downsampled backbuffer
+Drop shadow between blended layers
+Drop shadow depth exaggeration
+Drop shadow size
+Dynamic ambient occlusion strength
+ENVMAP
+ENVMAPANISOTROPY
+ENVMAPFRESNEL
+ENVMAPMASK
+ENVMAP_MASK
+ERROR: material (%s) has invalid settings - contactShadows and pulse cannot both be set to 1\n
+EXPONENTMODE
+EXTRACTGREENALPHA
+Eb2]A=
+Embroider
+Emissive blend strength
+Emissive scroll vec
+Enable Depthtest
+Enable Flesh interior blend pass
+Enable anisotropic cubemap lookups for macroscopically rough/microscopically smooth surfaces, like wet asphalt
+Enable bloom
+Enable blurred vignette
+Enable computing vertex color by interpolating two color based on vertex r color channel
+Enable emissive blend pass
+Enable glow/shadow for distance coded textures.
+Enable interior layer
+Enable local contrast enhancement
+Enable magnification of refracted image around the $magnifyCenter screen position by $magnifyScale
+Enable new layer blend math
+Enable noise
+Enable normals on layer edge
+Enable outline for distance coded textures.
+Enable phong albedo tint for preview render
+Enable phong shading
+Enable soft edges to distance coded textures.
+Enable software anti-aliasing
+Enable to preview the shader, realtime, on a model
+Enable vignette
+Enable vomit refract
+Enables cloak render in a second pass
+End value for soft edges for distancealpha.
+Engine_Post
+Engine_Post_dx9
+Engine_Post_ps20
+Engine_Post_ps20b
+Engine_Post_ps30
+EnterCriticalSection
+Environment cubemap
+Envmap mask is stored in ting mask texture (instead of normal map alpha)
+Envmap tint
+Error
+EventSystem001
+ExitProcess
+Exponent for rim lights
+Extra boost for rim lights in shadow
+EyeGlint
+EyeGlint_dx9
+EyeRefract
+EyeRefract_dx9
+Eyeball radius for ray casting
+Eyes_dx9
+Eyes_vs20
+Eyes_vs30
+F0$?3=1
+F=J4
+F?cf
+FADEOUTONSILHOUETTE
+FADE_TO_BLACK
+FADE_TYPE
+FAKERIM
+FANCY_BLENDING
+FASTPATH
+FASTPATHENVMAPCONTRAST
+FEMh\f
+FLASHLIGHT
+FLASHLIGHTDEPTHFILTERMODE
+FLASHLIGHTSHADOWS
+FLATTEN_STATIC_CONTROL_FLOW
+FLOAT_BACK_BUFFER
+FLOWMAP
+FLOW_CHEAP
+FLOW_DEBUG
+FOGFADE
+FOGTYPE
+FORCEFRESNEL
+FRESNEL
+FRESNELOPACITY
+FRESNELRANGESTEXTURE
+FRESNEL_WARP
+Far blur plane depth
+Far focus plane depth
+Far plane depth
+February
+Film dust texture
+Film grain texture
+FilmDust
+FilmGrain
+FindClose
+FindFirstFileExA
+FindNextFileA
+First gradient stop and position
+Flags this material as possibly being run through single pass flashlight code
+Flashlight color
+Flashlight pass sets N.L=1.0
+Flesh Debug full flesh
+Flesh Noise UV scalar for border
+Flesh border
+Flesh border 1D texture
+Flesh border Color
+Flesh border softness (> 0.0 && <= 0.5)
+Flesh color texture
+Flesh cubemap texture
+Flesh effect center and radius
+Flesh global opacity
+Flesh gloss brightness
+Flesh noise texture
+Flesh normal texture
+Flesh scroll speed
+Flesh subsurface texture
+Flip decal horizontally
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsSetValue
+FlushFileBuffers
+Force envmap lookup to always use the top-level mip map
+Force low quality flashlight shadows (faster)
+Force no CSM lookup/filter (faster)
+Forces this material to receive flashlights.
+Forces z to be written if set
+Forward direction vector for teeth lighting
+Frame number for $bumpmap
+FreeEnvironmentStringsW
+FreeLibrary
+Friday
+Full framebuffer texture
+Full-screen blur factor
+Full-screen framebuffer to sample from.
+Full-screen velocity buffer to sample from.
+G&iC
+G8D>
+GAMECONTROLS
+GENERATEBASETEXTURE
+GENERATEMASKS1
+GENERATENORMAL
+GYM=
+GameUISystemMgr001
+Gamma for posterization
+GetACP
+GetCPInfo
+GetCPUInformation
+GetCommandLineA
+GetCommandLineW
+GetConsoleCP
+GetConsoleMode
+GetCurrentPackageId
+GetCurrentProcess
+GetCurrentProcessId
+GetCurrentThreadId
+GetEnvironmentStringsW
+GetFileType
+GetLastError
+GetModuleFileNameA
+GetModuleHandleExW
+GetModuleHandleW
+GetOEMCP
+GetProcAddress
+GetProcessHeap
+GetStartupInfoW
+GetStdHandle
+GetStringTypeW
+GetSystemTimeAsFileTime
+Gin>
+Glass/glasswindowbreak070b
+Glitter Mask
+Glitter Normal
+Glitter scale
+Glitter tint
+Glossiness of eye (1 is default, 0 is not glossy at all)
+Grass
+HALFLAMBERT
+HARDWAREFOGBLEND
+HASALPHAMASK
+HASSTATICTEXTURE
+HDRCombineTo16Bit
+HDRCombineTo16Bit_ps20
+HDRCombineTo16Bit_ps20b
+HDRCombineTo16Bit_vs20
+HDRENABLED
+HDRSelectRange
+HDRSelectRange_ps20
+HDRSelectRange_ps20b
+HDRSelectRange_vs20
+HDRTYPE
+HH:mm:ss
+HIGHLIGHT
+HIGH_PRECISION_DEPTH
+Highlight size opposite drop shadow effect
+Highlight the edges of the sticker
+How cloaked?  Zero is not cloaked, 1 is fully cloaked.
+How much the lightmap effects environment map reflection, 0.0 is off, 1.0 will allow complete blackness of the environment map if the lightmap is black
+Ht=c
+I@VortWarp_DX9
+IMEManager001
+IND)ind)
+INITY
+INTERIOR_LAYER
+INVERSEDEPTHBLEND
+ISCUBEMAP
+ISFLOAT
+ISVOLUME
+IS_FLAG_SET( MATERIAL_VAR_HALFLAMBERT )
+IS_FLAG_SET( MATERIAL_VAR_VERTEXCOLOR )
+IT=_9
+IceSurface
+IceSurface_dx9
+IceSurface_ps30
+IceSurface_vs30
+If this is 1, then when detail alpha=0, no base texture is blended and when detail alpha=1, you get detail*base*lightmap
+If we bind a texture here, it overrides base alpha (if any) for self illum
+Indicates a specific customization style: 0 = none, 1 = solid, 2 = hydrographic, 3 = spray, 4 = anodized, 5 = anodized multicolored, 6 = anodized airbrushed, 7 = custom texture, 8 = patina/antiqued
+Indicates whether or not to use alpha channel of exponent texture to mask the rim term
+Inexpensive depth-of-field substitute
+InitializeCriticalSectionAndSpinCount
+InitializeCriticalSectionEx
+InitializeSListHead
+Input texture
+InputStackSystemVersion001
+InputSystemVersion001
+Intensity of volumetrics
+InterlockedFlushSList
+Internal anti-aliasing values set via material proxy
+Internal fxaa Console values set via material proxy
+Internal fxaa Quality values set via material proxy
+Internal motion blur value set by proxy
+IntroScreenSpaceEffect
+IntroScreenSpaceEffect_ps20
+IntroScreenSpaceEffect_ps20b
+Invalid DetailBlendMode in %s, %d not supported!
+Invalid blend mode (%d) using pan_dx 0\n
+Invalid mat_dof_quality value. Resetting to 0.\n
+Invert normals on layer edge
+Is this an uberlight?
+IsBoolSet( info.m_nSeparateDetailUVs, params )
+IsDebuggerPresent
+IsGameConsole() ? ( bCSMEnabled ? 1 : 0 ) : 0
+IsHDREnabled()
+IsPC() ? g_pHardwareConfig->GetShadowFilterMode( false , true ) : SHADOWFILTERMODE_DEFAULT
+IsPlatformOSX() ? Min( 2, lightState.m_nNumLights ) : lightState.m_nNumLights
+IsProcessorFeaturePresent
+IsValidCodePage
+J\;5yTb
+January
+Jl?P
+July
+June
+KERNEL
+KERNEL32.dll
+Kernel type
+LCMapStringEx
+LCMapStringW
+LIGHTING_PREVIEW
+LIGHTMAPWATERFOG
+LIGHTWARPTEXTURE
+LIGHT_WARP
+LINEAR_INPUT
+LINEAR_OUTPUT
+LINEAR_TO_SRGB
+LOCALREFRACT
+LOCAL_CONTRAST_ENABLE
+La8i
+Layer blend softness
+Layer border offset
+Layer border softness
+Layer border strength
+Layer edge normal blend offset
+Layer edge normal blend softness
+Layer edge normal strength
+Le?2
+LeaveCriticalSection
+Lerp color 1
+Lerp color 2
+Light orientation (quaternion)
+Light origin packed with farz
+LightShafts
+LightShafts_dx9
+LightmappedGeneric
+LightmappedReflective
+LightmappedReflective_DX90
+Lightmapped_4WayBlend
+Lightmapped_terrain
+LoadLibraryExW
+Local contrast midtone mask
+Local contrast scale
+LocaleNameToLCID
+Localize_001
+MAGNIFY
+MASKED
+MATCHFRAMEWORK_001
+MAXLUMFRAMEBLEND1
+MAXLUMFRAMEBLEND2
+MDLCache004
+MGiI
+MIRROR
+MIRRORABOUTVIEWPORTEDGES
+MM/dd/yy
+MOD2X
+MODE
+MODEL
+MODELFORMAT
+MORPHING
+MOVING_PULSES
+MRTINDEX
+MULOUTPUTBYALPHA
+MULTITEXTURE
+Magnify refracted image around this screen position
+Magnify refracted image by this factor
+March
+Mask texture
+MatSystemSurface006
+Material uses an out of range $decalblendmode of %d. Should be in [%d,%d].\nGive a programmer a repro case, or look at your modified vmt files\n
+Material uses an out of range $detailblendmode of %d. Should be in [%d,%d].\nGive a programmer a repro case, or look at your modified vmt files\n
+MaterialSystemHardwareConfig013
+Matrix used to orient in orientation mode #2
+Max far blur radius
+Max near blur radius
+Max shadow distance
+Maximum amount of light
+MeshSystem001
+Min/max fresnel range and exponent for vertexlitgeneric
+Minimum amount of light (0-1 value)
+MkK?
+Modulate
+Modulate_DX9
+Monday
+MonitorScreen
+MonitorScreen_DX9
+MorphAccumulate
+MorphAccumulate_DX9
+MorphWeight
+MorphWeight_DX9
+MotionBlur
+MotionBlur_dx9
+Mpm<
+MultiByteToWideChar
+Multiblend
+Multiblend_DX90
+Multiple textures need to be generated for end-use render. Mode determines which one we're working on.
+Multiply output RGB by intensity factor
+Multiply output RGB by output alpha to avoid precision problems
+N4`U
+NAN(IND)
+NAN(SNAN)
+NEARBYPLAYERS
+NOISE_ENABLE
+NORMALMAP
+NORMALMAP2
+NORMALMAPALPHAENVMAPMASK
+NUM_LIGHTS
+NUM_LOOKUPS
+Name of the pixel shader to use
+Name of the vertex shader to use
+Near blur plane depth
+Near focus plane depth
+Near plane depth
+Need to know this to normalize intensity
+Needs CurrentTime Proxy
+NetworkSystemVersion001
+Noise scale
+Noise texture
+Noise texture for non-uniform density
+Normal Map
+Normal map
+November
+Nu?-HF
+Number of colors for posterization
+Number of components in texture coord0
+Number of components in texture coord1
+Number of components in texture coord2
+Number of components in texture coord3
+Number of components in texture coord4
+Number of components in texture coord5
+Number of components in texture coord6
+Number of components in texture coord7
+Number of lookup maps
+Number of passes for this material
+O3`k
+ONLY_PROJECT_POSITION
+OPACITY_TEXTURE
+ORIENTATION
+OUTER_GLOW
+OUTLINE
+ObjectMotionBlur
+Occlusion
+Occlusion_DX9
+October
+Original image
+PACKED_INTERPOLATOR
+PAINT
+PAINTSTYLE
+PALETTIZE
+PEEL
+PERPARTICLEOUTLINE
+PHONG
+PHONGALBEDOFACTORMODE
+PHONGEXPONENTTEXTURE
+PHONGWARPTEXTURE
+PHONG_HALFLAMBERT
+PIXELFOGTYPE
+PORTALGHOSTOVERLAY
+POWERUP
+PREVIEW
+PREVIEWPHONGALBEDOTINT
+PRE_PASS
+PS3REGCOUNT48
+Packed attenuation factors
+Packed uberlight height and width parameters
+Packed uberlight near and far parameters
+Paint-specific toggle for ignoring weapon-specific scales
+PanoramaSSAAResolve
+PanoramaTextServices001
+PanoramaUIClient001
+PanoramaUIEngine001
+Parallax strength
+ParallaxTest
+Parameters for remapping fresnel output
+ParticleLitGeneric_DX9
+ParticleSphere
+ParticleSphere_DX9
+Pattern rotation
+Pattern scale
+Pex?0
+Phong
+Phong Exponent map
+Phong albedo boost
+Phong albedo boost for preview render
+Phong albedo boost value for anodized metallic effect
+Phong albedo overbrightening factor (specular mask channel should be authored to account for this)
+Phong albedo tint
+Phong boost
+Phong boost for preview render
+Phong exponent for Key (CSM Casting) Light - on $basetexture
+Phong exponent for Key (CSM Casting) Light - on $basetexture2
+Phong exponent for local specular lights
+Phong exponent value
+Phong fresnel ranges
+Phong fresnel ranges for preview render
+Phong intensity value
+Phong overbrightening factor (specular mask channel should be authored to account for this)
+Phong tint and amount on $basetexture > 1 to scale phong, .a is diffuseComponent multiplier, 0=> remove diffuse, >1 => overbright diffuse
+Phong tint and amount on $basetexture2 > 1 to scale phong, .a is diffuseComponent multiplier, 0=> remove diffuse, >1 => overbright diffuse
+Phong tint for local specular lights
+Physics2 Interface ActorMgr v0.1
+Physics2 Interface ResourceMgr v0.1
+Physics2 Interface v0.3
+Plat_ExitProcess
+Plat_FloatTime
+Plat_IsInDebugSession
+Point sample texture mag filter
+Points to a material to grab translucency from
+Portal
+Portal color scale
+Portal open amount 0.0-1.0
+Portal static amount 0.0-1.0
+PortalRefract
+PortalRefract_dx9
+PortalStaticOverlay
+Portal_DX90
+Projected
+Projected_DX90
+ProtoIce
+ProtoIce_dx9
+Prototype
+Prototype_dx9
+Pupil dilation (0 is none, 1 is maximal)
+QUALITY
+QUALITY_MODE
+Qkkbal
+Quality level. Selects different algorithms.
+QueryPerformanceCounter
+QueuedLoaderVersion001
+R: Anodized, G: Camo2, B: Camo3, A: Black is paintable, White reveals original basetexture
+R: cavity, G: AO, B: mig shading
+RAYTRACESPHERE
+REFLECT
+REFRACT
+REFRACTALPHA
+REFRACTTINTTEXTURE
+RELOADZCULL
+RF?4
+RG give direction vector, A masks specularity
+RGB: Ambient Occlusion
+RGB: Exponent texture
+RGB: Greyscale wear speed factor, white wears soonest
+RGB: High-precision object-space position
+RGB: Hologram mask texture: R 
+RGB: Hologram spectrum texture
+RGB: Tiling grunge A: spec, black dulls the paint finish
+RIMLIGHT
+RSDS]
+R\vn>
+RaiseException
+Raytrace sphere
+Rd.F
+Refract
+Refract_DX90
+Refract_vs20
+RenderDevice001
+RenderDeviceMgr001
+RenderHardwareConfig001
+RenderSystemSurface001
+ResourceSystem004
+RtlUnwind
+SEAMLESS
+SEAMLESS_BASE
+SEAMLESS_DETAIL
+SECONDARY_NORMAL
+SELFILLUM
+SELFILLUMFRESNEL
+SELFILLUM_ENVMAPMASK_ALPHA
+SELF_ILLUM_FRESNEL
+SELF_ILLUM_PULSE
+SEPARATE_DETAIL_UVS
+SEQUENCE_BLEND_MODE
+SHADER_SRGB_READ
+SHADOWDEPTH
+SHADOWSATURATION
+SHOWALPHA
+SIMPLEOVERLAY
+SKINNING
+SMOKEGRENADEBLEND
+SNAN)
+SOFTEDGES
+SOFT_MASK
+SPECULAR
+SPHERETEXKILLCOMBO
+SPRITECARDVERTEXFOG
+SRGB
+SRGB_INPUT_ADAPTER
+SRGB_OUTPUT_ADAPTER
+STAGE
+STAR_System001
+STATICLIGHT3
+STATIC_LIGHT
+SWAP_PATTERN_MASKS
+S\rYkv
+Sample4x4
+Sample4x4_Blend
+Saturday
+Scale and bias for grain placement
+Scale anisotropy amount for cubemap lookups
+Scale factor for 'seamless' texture mapping. 0 means to use ordinary mapping
+Scale self illum effect strength
+Scale the size of the soft edges based upon resolution. 1024x768 = nominal.
+Scale the size of the soft part of the outline based upon resolution. 1024x768 = nominal.
+Scale value applied to self-illum vertex colours
+SceneSystem_001
+Scroll the highlight effect
+Second gradient stop and position
+Select which color channel to use
+Self illum fresnel
+Self illum fresnel min, max, exp
+Self-illumination tint
+Separate tint mask texture (as opposed to using basetexture alpha)
+September
+Set if this customization style needs a different (non-default) underlying diffuse map for this weapon
+Set to 1 to an exponent texture for the given style rather than a base diffuse
+SetFilePointerEx
+SetLastError
+SetStdHandle
+SetUnhandledExceptionFilter
+ShaderApiFast( pShaderAPI )->GetCurrentNumBones() > 0
+ShaderDLL004
+ShaderSystem002
+Shadow
+Shadow Attenuation
+Shadow filter size
+Shadow jitter seed
+ShadowBuild
+ShadowBuild_DX9
+ShadowModel
+ShadowModel_DX9
+ShatteredGlass
+ShatteredGlass_ps20
+ShatteredGlass_ps20b
+ShatteredGlass_vs20
+Silhouette color tint
+Simulate srgb read in shader code
+Sky_HDR_DX9
+SolidEnergy
+SolidEnergy_dx9
+SoundSystem001
+Special depth handling, intended for rendering bug workarounds for extremely close polygons
+Spherical normal to aid in influencing anisotropic specular highlights in end-use render
+SplineRope
+Sprite
+Sprite_DX9
+Spritecard
+Stage of portal rendering (0, 1, 2)
+Start value for soft edges for distancealpha.
+Stitching pattern with normal and alpha
+Strength of depth-blur effect
+Strength of film grain
+Strength of noise in volumetrics
+Subsurface Color
+Sunday
+Svj>
+TANGENTSOPACITY
+TANGENTSPACE
+TANGENTTOPACITY
+TEETH
+TESSELLATION
+TESSELLATION_MODE_DISABLED
+TEXTURE2
+TEXTURE3_BLENDMODE
+TEXTURE4_BLENDMODE
+THICKPAINT
+THIRDPERSON
+TINTED
+TINTMASKTEXTURE
+TOOL_MODE
+TRANSFORMVERTS
+TRANSLUCENT
+TREESWAY
+TV_GAMMA
+T\t5K
+Take the distance-coded alpha mask from the detail texture.
+Teeth
+Teeth_DX9
+Tells to client code whether the shader is using DX8 vertex/pixel shaders or not
+TerminateProcess
+Texcoord transform
+Texture 2
+Texture 3
+The alternate view matrix to use when $usealternateviewmatrix is enabled
+The dark end of a tint gradient if not using a color texture
+The light end of a tint gradient if not using a color texture
+Third gradient stop and position
+Third-person mode
+This is the directional light color.
+This is the directional light position.
+This is the distance from the eye in inches that the shader should finish transitioning to a cheaper water shader.
+This is the distance from the eye in inches that the shader should start transitioning to a cheaper water shader.
+Thresholds for the lightmap envmap effect.  Setting the min higher increases the minimum light amount at which the envmap gets nerfed to nothing.
+Thursday
+TlsAlloc
+TlsFree
+TlsGetValue
+TlsSetValue
+TreeLeaf
+TreeLeaf_ps20
+TreeLeaf_ps20b
+TreeLeaf_vs20
+Tuesday
+Turn on gradient color modulation
+Typically driven by SFM, similar to jitter seed
+T~OXu
+U projection vector for the glint
+U projection vector for the iris
+U?1g
+U?EVT?
+U?wN
+UBERLIGHT
+UEj)
+USEALTERNATEVIEW
+USEBOUNCECOLOR
+USEONSTATICPROP
+USEPATTERN
+USESCOLOR
+USE_LOGO1
+USE_LOGO2
+USE_PATTERN1
+USE_PATTERN2
+USE_PATTERN_OFFSET
+USE_WITH_2B
+UUUUUU
+Uberlight roundness
+UcKc
+UnLitWorld_ScreenSample
+UnhandledExceptionFilter
+UnlitGeneric
+UnlitTwoTexture
+UnlitTwoTexture_DX9
+Uo\vv
+Use distance-coded alpha generated from hi-res texture by vtex.
+Use frame buffer texture as input
+Use texcoord1 for detail texture
+Use the alternate view matrix instead of the current view matrix
+Use the base alpha to blend in the $color modulation
+Use the base alpha to desaturate the base texture.  Set to non-zero to enable, value gets multiplied into the alpha channel before desaturating.
+Use the vertex color to effect refract color. alpha will adjust refract amount
+V projection vector for the glint
+V projection vector for the iris
+V,4@PJ>
+VAvi001
+VBAllocTracker001
+VBik001
+VDataCache003
+VDmeMakeFileUtils001
+VERTEXALPHA
+VERTEXALPHATEXBLENDFACTOR
+VERTEXCOLOR
+VEngineCvar007
+VFileSystem017
+VGUI_Input005
+VGUI_Panel009
+VGUI_Scheme010
+VGUI_Surface031
+VGUI_System010
+VGUI_ivgui008
+VIGNETTE_ENABLE
+VMDLLIB001
+VMaterialSystem080
+VMaterialSystem2_001
+VMaterialSystemConfig004
+VNewAsyncFileSystem001
+VOLUME_TEXTURE
+VOMIT_ENABLE
+VORTEX1
+VORTEX2
+VP4002
+VPhysicsCollision007
+VPrecacheSystem001
+VProcessUtils002
+VResourceAccessControl001
+VSoundEmitter003
+VStudioRender026
+VertexLitGeneric
+VertexLitGeneric_Dx9: Unsupported combo! Can't use envmap + flashlight + singlepass flashlight!\n
+Volume Texture Default Weight
+Volume Texture Weight 0
+Volume Texture Weight 1
+Volume Texture Weight 2
+Volume Texture Weight 3
+VolumeClouds
+VolumeClouds_dx9
+VortWarp
+VortWarp_dx9
+WARPINGIN
+WATER_DX90
+WIDEN_TIPS
+WORLDSPACEBURNTEXTURE
+WORLDSPACETINTTEXTURE
+WORLDSPACETYPETEXTURE
+WORLDSPACEZONETEXTURE
+WORLDVERTEXTRANSITION
+WORLD_NORMAL
+WRINKLEMAP
+WRITEWATERFOGTODESTALPHA
+WRITE_DEPTH_TO_DESTALPHA
+WR_l%2>
+WY'N
+Warning
+Warning:  %s = '%s' is infinite, clamping value.\n
+Warning: $aomap is undefined in %s\n
+Warning: $maskmap is undefined in %s\n
+Water
+WaterCheap_ps20
+WaterCheap_ps20b
+WaterCheap_vs20
+Water_DX90
+Water_DX9_HDR
+Water_vs20
+Weapon-specific scale factor for patterns applied via UVs
+Weapon-specific scale factor for patterns applied via object space projections
+WeaponDecal
+WeaponDecal_dx9
+Wear/worn progress amount
+Wednesday
+Weight for Samples
+When adding static, this is the texture that gets blended in
+When enabled, blend mode 4 turns into a special blend mode for layering damage, with the detail texture being the lower strata with no spec or env, and the base texture being the upper strata which casts a drop shadow.  The blend is a thresholded value based on the detail alpha, allowing for what looks like chipped off paint or cracks.
+When using the anodizing mode, some specular values already affected by phongalbedo in the source need to be reduced to compensate for increase in phongalbedoboost
+WideCharToMultiByte
+WindowImposter
+WindowImposter_DX90
+Wireframe
+Wireframe_DX9
+WmS|
+World to Texture Matrix
+WorldRendererMgr001
+WorldTwoTextureBlend
+WorldVertexTransition
+WorldVertexTransition_DX9
+Write depth as color
+WriteConsoleW
+WriteFile
+WriteMiniDump
+WriteStencil
+WriteStencil_DX9
+WriteZ
+WriteZ_DX9
+X/4B
+X2CQ
+X4I+
+XL3Z
+Xl=hs>
+Y Bink Texture
+ZL>K]
+ZOOM_ANIMATE_SEQ2
+Z_JmLd
+Zjz\v
+ZxnI
+[ .25 .5 1 ]
+[0  0.5  1]
+[0 0 0 0.001]
+[0.0 0.0 0.0]
+[0.0 1.0 2.0]
+[0.11 0.124]
+[0.7 0.5 0.45]
+[0.8 1.0 1.0]
+[1 0.9 0 0.6]
+[1 1 1 0.5]
+[1.0 0.0 1.0]
+[1.0 1.0 1.0 1.0]
+[1.0 1.0 1.0]
+[aOni*{
+\n   PS dyn  var %s = %d (%s)
+\n   PS stat var %s = %d (%s)
+\n   VS dyn  var %s = %d (%s)
+\n   VS stat var %s = %d (%s)
+\n7AP
+\nwX4C
+\tJqAl
+\tcQr
+]~?|V~? O~?
+^<V7w
+_RDATA
+_W4~w
+__based(
+__cdecl
+__clrcall
+__eabi
+__fastcall
+__pascal
+__ptr64
+__restrict
+__stdcall
+__thiscall
+__unaligned
+__vectorcall
+_cabs
+_ftol3
+_hypot
+_logb
+_nextafter
+_ps20
+_ps30
+_rt_FullFrameDepth
+_rt_FullFrameFB
+_rt_SmallFB1
+_rt_SmallHDR0
+_rt_WaterReflection
+_rt_character_ssao
+_vs20
+`*Hhq
+`7bu
+`RTTI
+`copy constructor closure'
+`default constructor closure'
+`dynamic atexit destructor for '
+`dynamic initializer for '
+`eh vector constructor iterator'
+`eh vector copy constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`eh vector vbase copy constructor iterator'
+`local static guard'
+`local static thread guard'
+`local vftable constructor closure'
+`local vftable'
+`managed vector constructor iterator'
+`managed vector copy constructor iterator'
+`managed vector destructor iterator'
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`scalar deleting destructor'
+`string'
+`typeof'
+`udt returning'
+`vbase destructor'
+`vbtable'
+`vcall'
+`vector constructor iterator'
+`vector copy constructor iterator'
+`vector deleting destructor'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`vector vbase copy constructor iterator'
+`vftable'
+`virtual displacement map'
+aDJ=
+aFN,
+aaEnabled
+abcdefghijklmnopqrstuvwxyz
+accumbuff4sample
+accumbuff4sample_ps20
+accumbuff4sample_ps20b
+accumbuff5sample
+accumbuff5sample_ps20
+accumbuff5sample_ps20b
+acos
+activates clearing of alpha. -1 == copy CLEARCOLOR setting
+activates clearing of color
+activates clearing of depth
+aftershock_ps20
+aftershock_ps20b
+aftershock_vs20
+albedo (Base texture with no baked lighting)
+alpha
+alpha value for outline
+amount of base texture to additively blend in
+amount to blend second texture into frame by
+amount to gradually zoom between frames on the second sequence. 2.0 will double the size of a frame over its lifetime.
+animation param between 0 and 1
+arm color
+armature
+array of lights
+asin
+async_download_patch_textures
+async_download_sticker_textures
+atan
+atan2
+bAOPrePass
+bActive
+bAddBumpMaps
+bAddSelf
+bAdditive2ndTexture
+bAdditiveBlend
+bAlphaClip
+bAlphaMask
+bAlphaMaskTexture
+bAnimatedPulses
+bArmWiden
+bBackSurface
+bBaseAlphaEnvMask
+bBaseAlphaPhongMask
+bBaseAlphaSelfIllumMask
+bBlend
+bBlend && bRefraction
+bBlendFrames
+bBlendFrames || ( params[MAXLUMFRAMEBLEND1]->GetIntValue() != 0 )
+bBlendWithSmokeGrenade
+bBlobbyShadows
+bBlurredVignetteEnable
+bBump2
+bBumpAlphaEnvMask
+bBumpMapping ? 1 : 0
+bCSMBlending
+bCSMEnabled
+bCSMEnabled && !bAOPrePass
+bCSMEnabled ? 1 : 0
+bCSMEnabled_ps2b
+bCheapMode
+bColorLerpPS
+bColorModulate
+bContactShadows
+bConvertFromLinear
+bConvertToLinear
+bCrop
+bCullGrassOusideDangerRadius
+bDeferredShadows
+bDepthBlend
+bDepthBlurEnable
+bDesatBaseTint
+bDesaturateEnable
+bDesaturateWithBaseAlpha
+bDetail
+bDetail1
+bDetail2
+bDiffuseWarp ? 1 : 0
+bDistanceAlpha
+bDistanceAlphaFromDetail
+bDrawFlashlightAdditivePass ? 1 : 0
+bEnvmapAnisotropy
+bEnvmapTexture
+bExpMode
+bExpTexture
+bExtractGreenAlpha
+bFadeOutOnSilhouette
+bFadeToBlackEnable
+bFastPath
+bFbx
+bFlashlightShadows
+bFlattenStaticControlFlow
+bFlattenStaticControlFlow ? lightState.m_nNumLights : 0
+bFog
+bForceFresnel
+bForceSRGBReadAndWrite
+bForceSRGBReadAndWrite && ( params[ KERNEL ]->GetIntValue() != 0 )
+bForceSRGBReadAndWrite && ( params[ KERNEL ]->GetIntValue() != 0 ) && ( params[ ENABLECLEARCOLOR ]->GetIntValue() == 0 )
+bFresnel
+bFresnelWarp
+bFullyOpaque && pShaderAPI->ShouldWriteDepthToDestAlpha()
+bGenerateBaseTexture
+bGenerateMasks1
+bGenerateNormalMap
+bGhostOverlay
+bGlow
+bHalfLambert
+bHasAmbientReflection
+bHasAnisotropy
+bHasBaseAlphaEnvmapMask
+bHasBaseTexture
+bHasBlendModulateTexture
+bHasBounceColor
+bHasCheapFlow
+bHasDecalTexture ? Min( nDecalBlendMode, 1 ) : 2
+bHasDecalTexture ? nDecalBlendMode : 2
+bHasDetailAlpha
+bHasDetailTexture
+bHasDiffuseWarp && !bHasSelfIllumFresnel
+bHasDiffuseWarp && !bHasSelfIllumFresnel && !bHasFlashlight
+bHasEnvMapFresnel && bHasEnvmap
+bHasEnvmap
+bHasEnvmapMask
+bHasEnvmapMask && !bHasFlashlight && ( bHasEnvmap || bHasSelfIllumInEnvMapMask )
+bHasEnvmapMask && ( bHasEnvmap || bHasSelfIllumInEnvMapMask )
+bHasFakeRim && !bHasFlashlight
+bHasFlashlight
+bHasFlowmap
+bHasFogFade
+bHasFresnelRangesTexture
+bHasMultiTexture
+bHasPhongWarpTexture
+bHasSelfIllum
+bHasSelfIllum && !bHasFlashlight
+bHasSelfIllumFresnel
+bHasSelfIllumInEnvMapMask
+bHasSelfIllumInEnvMapMask && !bHasFlashlight
+bHasShadowSaturation
+bHasSimpleOverlay
+bHasStatic
+bHasTintMaskTexture
+bHasVertexAlpha
+bHasVertexColor
+bHasVertexColor || bHasVertexAlpha
+bHighlight ? 1 : 0
+bHighlight ? 2 : 0
+bInteriorLayer
+bInverseDepthBlend
+bIsDecal
+bIsFloat
+bIsModel
+bIsRenderingViewModels ? 1 : 0
+bLightWarp
+bLightmapWaterFog
+bLinearInput
+bLinearOutput
+bLocalContrastEnable
+bMasked
+bMirrorAboutViewportEdges
+bMirrorHorizontal
+bMod2X
+bModel
+bMulOutputByAlpha
+bNeedsSRGBAdapter
+bNoiseEnable
+bNormalMap
+bNormalMap || bGlitterTexture
+bNvidiaStereoActiveThisFrame
+bOpacityTexture
+bOutLine
+bOutline
+bPackedInterpolator
+bPattern + bHasCustomPaint + ( 2 * bHasAlloverPaint )
+bPeel ? 1 : 0
+bPerParticleOutline
+bPhong
+bPhongHalfLambert
+bPixelShaderFastPath
+bPixelShaderFastPath && envmapContrast == 1.0f
+bPowerup
+bPreview
+bPreview && bPreviewPhongAlbedoTint
+bPreview ? lightState.m_nNumLights : 0
+bPulse
+bRayTraceSphere ? 1 : 0
+bReflection
+bRefractTintTexture
+bRefraction
+bReloadZcull
+bSFM
+bSRGB
+bSRGBInputAdapter ? 1 : 0
+bSRGBOutputAdapter
+bSeamless
+bSeamlessBase
+bSeamlessDetail
+bSeamlessMapping
+bSecondSequence
+bSecondSequence ? params[SEQUENCE_BLEND_MODE]->GetIntValue() : 0
+bSecondSequence? params[MAXLUMFRAMEBLEND1]->GetIntValue() : 0
+bSecondaryNormal
+bSelfIllumFresnel
+bShaderSRGBConvert
+bShaderSRGBRead ? 1 : 0
+bShaderSrgbRead
+bShadowDepth
+bSoftEdges
+bSoftMask
+bSphereTexKillCombo ? 1 : 0
+bStaticBlendTexture
+bStaticLight3
+bSupportsCSM
+bSwapPatternMasks
+bTangentS
+bTangentT
+bThirdPerson
+bToolMode
+bTranslucent
+bTreeSway ? nTreeSwayMode : 0
+bUberlight
+bUberlight && bSFM
+bUseAlphaTestRef
+bUseConstantBasedAccum
+bUseLogo1
+bUseLogo2
+bUseMagnification
+bUseOnStaticProp
+bUsePattern1
+bUsePattern2
+bUsePatternOffset
+bUseRampTexture
+bUseStaticControlFlow ? 0 : ( IsPS3() ) ? MIN(2, lightState.m_nNumLights) : lightState.m_nNumLights
+bUseStaticControlFlow ? 0 : ( lightState.m_nNumLights )
+bUseStaticControlFlow ? 0 : lightState.m_nNumLights
+bUseStaticControlFlow ? 0 : nNumLights
+bUsesColor
+bVertexColorOrAlpha ? 1 : 0
+bVertexShaderFastPath
+bVignetteEnable
+bVolumeTex
+bVomitEnable
+bVortex1
+bVortex2
+bWorldNormal
+bWorldNormal ? 0 : bFlashlightShadows
+bWorldNormal ? 0 : lightState.m_nNumLights
+bWorldNormal ? 0 : phongInfo.m_bHasDetailTexture
+bWorldNormal ? 2 : ( phongInfo.m_bHasDecalTexture ? nDecalBlendMode : 2 )
+bWorldNormal ? false : ( lightState.m_bAmbientLight && !bStaticLight3 )
+bWorldSpaceBurnTexture
+bWorldSpaceTintTexture
+bWorldSpaceTypeTexture
+bWorldSpaceZoneTexture
+bWriteDepthToAlpha
+bWriteWaterFogToAlpha
+bWriteZ && bFullyOpaque && pShaderAPI->ShouldWriteDepthToDestAlpha()
+bZoomSeq2
+base texture (compressed) for hdr compression method A
+base texture tint
+base texture when running with HDR enabled
+bik_ps20
+bik_ps20b
+bik_vs20
+black
+black_ps20
+black_ps20b
+black_vs20
+blend amount for detail texture 2.
+blend amount for detail texture on texture 2.
+blend amount for detail texture on texture 3.
+blend amount for detail texture on texture 4.
+blend amount for detail texture.
+blend factor between the luminance of layer 2 and layer one
+blend factor between the luminance of layer 3 and layers below it
+blend factor between the luminance of layer 4 and layers below it
+blend two separate animated sequences.
+blendType == BT_BLEND
+blendmode for texture 3. 0 = blend, 1 = multiply 2x
+blendmode for texture 4. 0 = blend, 1 = multiply 2x
+blob_arm_ps20b
+blob_arm_vs20
+blob_ps30
+blob_vs30
+bloom_ps20
+bloom_ps20b
+blurAmount
+blurfilter_ps20
+blurfilter_ps20b
+blurfilter_vs20
+blurred vignette strength
+boosts the brightness of bright background pixels
+bufferclearobeystencil_ps20
+bufferclearobeystencil_ps20b
+bufferclearobeystencil_vs20
+bump map
+bump map strength
+bump map strength for fresnel
+bumpmap
+bumpmap texture
+bumpmap_variant
+c6`c
+c:\buildslave\csgo_trunk_win32\build\src\materialsystem\stdshaders\Release_dx9\stdshader_dx9.pdb
+c?e2
+c?gS
+cable texture tiling multiplier
+cable/cablenormalmap
+cable_ps20
+cable_ps20b
+cable_vs20
+calculate 1-depthblendalpha so that sprites appear when they are near geometry
+ceil
+center .5 .5 scale 1 1 rotate 0 translate 0 0
+center if the model in world space
+character_ps30
+character_ssao_ps20
+character_ssao_ps20b
+character_ssao_ps30
+character_ssao_vs20
+character_ssao_vs30
+character_uber_ps30
+character_vs20
+character_vs30
+cl_grass_mip_bias
+cl_proximity_grass
+cl_teamid_max
+cl_teamid_min
+clamp( params[ FLOW_DEBUG ]->GetIntValue(), 0, 2 )
+clear RGB channels to a solid color
+clear color
+cloak_blended_pass_ps20
+cloak_blended_pass_ps20b
+cloak_blended_pass_ps30
+cloak_blended_pass_vs20
+cloak_blended_pass_vs30
+cloak_ps20
+cloak_ps20b
+cloak_ps30
+cloak_vs20
+cloak_vs30
+colCorrectNumLookups
+color
+color multiplier
+color of outline for distance coded images.
+color of outter glow for distance coded line art.
+color tint for layer 1
+color tint for layer 2
+color tint for layer border
+color2
+colorcorrection_ps20
+colorcorrection_ps20b
+colorout_ps20
+colorout_ps20b
+colorout_vs20
+combo_BUMPMAP
+compressed base texture0 for hdr compression method B
+compressed base texture1 for hdr compression method B
+compressed base texture2 for hdr compression method B
+compression bump map
+compression wrinklemap
+contrast 0 == normal 1 == color*color
+cornea texture
+cosh
+cs_grass_ps20
+cs_grass_ps20b
+cs_grass_ps30
+cs_grass_vs30
+cu\fq7
+customcharacter_ps30
+customcharacter_vs30
+customclothing_ps20b
+customclothing_ps30
+customclothing_vs20
+customclothing_vs30
+customweapon_ps20b
+customweapon_ps30
+customweapon_vs20
+customweapon_vs30
+d8L2
+dddd, MMMM dd, yyyy
+debugmorphaccumulator_ps30
+debugmorphaccumulator_vs30
+debugmrttexture_ps20
+debugmrttexture_ps20b
+debugmrttexture_vs20
+debugtextureview_ps20
+debugtextureview_ps20b
+debugtextureview_vs20
+decalmodulate_ps20
+decalmodulate_ps20b
+decalmodulate_ps30
+decalmodulate_vs20
+decalmodulate_vs30
+defines that self illum value comes from env map mask alpha
+defines the blend mode between the images un dual sequence particles. 0 = avg, 1=alpha from first, rgb from 2nd, 2= first over second
+degree to boost interior thickness/fog by 'side-on'ness of vertex normals to the camera
+delta dimensions
+delta scale
+depth_of_field_ps20b
+depth_of_field_vs20
+depthtodestalpha_ps20b
+depthtodestalpha_vs20
+depthwrite_ps20
+depthwrite_ps20b
+depthwrite_ps30
+depthwrite_vs20
+depthwrite_vs30
+detail
+detail 1 blend factor
+detail 1 blend mode: 0=add, 1=mod2x, 2=mul, 3=alphamul (mul masked by base alpha)
+detail 1 blend mode: 0=add, 1=mod2x, 2=mul, 3=detailmul (mul with detail1)
+detail map 2
+detail scale
+detail texture
+detail texture 2
+detail texture 2 tint
+detail texture tint
+detail1 texcoord transform
+dev/flat_normal
+dev/flatnormal
+dev/vignette
+dev/water_normal
+do not operate in srgb space
+don't need to set this explicitly, it gets set when fresnelopacityranges is defined
+don't need to set this explicitly, it gets set when tangentSopacityranges is defined
+don't need to set this explicitly, it gets set when tangenttopacityranges is defined
+don't sample outside of the viewport
+downsample_nohdr_ps20
+downsample_nohdr_ps20b
+downsample_ps20
+downsample_ps20b
+downsample_vs20
+e+000
+e-CS
+eLK(w
+effects/flashlight001
+effects/flashlight_border
+effects/sparkle_color_cube_hdr
+effects/squares_glitter_normal
+embroider_ps30
+embroider_vs30
+emissive_scroll_blended_pass_ps20
+emissive_scroll_blended_pass_ps20b
+emissive_scroll_blended_pass_ps30
+emissive_scroll_blended_pass_vs20
+emissive_scroll_blended_pass_vs30
+enable self illum fresnel term
+enables depth-feathering
+enables fresnel-based opacity falloff, includes last term for scaling backface opacity
+enables phong lighting
+enables rim lighting
+enables view-based opacity falloff based on tangent s direction, great for cylinders, includes last term for scaling backface opacity
+enables view-based opacity falloff based on tangent t direction, great for cylinders, includes last term for scaling backface opacity
+end value for glow/shadow
+engine_post_ps20
+engine_post_ps20b
+engine_post_ps30
+engine_post_vs20
+engine_post_vs30
+env_cubemap
+env_cubemap used on world geometry without rebuilding map. . ignoring: %s\n
+environment map
+envmap
+envmap frame number
+envmap mask
+envmap mask 2
+envmap tint
+envmap_variant
+error with $spriteOrientation\n
+expansion bump map
+expansion wrinklemap
+exponent to tweak fog fade
+eye_refract_ps20
+eye_refract_ps20b
+eye_refract_ps30
+eye_refract_vs20
+eye_refract_vs30
+eyeglint_ps20
+eyeglint_ps20b
+eyeglint_vs20
+eyes
+eyes_flashlight_ps20
+eyes_flashlight_ps20b
+eyes_flashlight_ps30
+eyes_flashlight_vs20
+eyes_flashlight_vs30
+eyes_ps20
+eyes_ps20b
+eyes_ps30
+eyes_vs20
+eyes_vs30
+f6\tn
+f?Hqf?
+f@)rM
+fE?b
+fabs
+fabs(Scroll1.x) > 0.0
+facing_upright
+fade at intersection boundaries
+fade strength
+fade type. 0 = off, 1 = lerp, 2 = modulate
+false
+filmdust_ps20
+filmgrain_ps20
+filmgrain_vs20
+flags
+flags2
+flags2_defined
+flags_defined
+flashlight spotlight shape texture
+flashlightState.m_bEnableShadows
+flashlightState.m_bEnableShadows && ( pFlashlightDepthTexture != NULL )
+flashlightState.m_bUberlight
+flashlightState.m_bUberlight && bSFM
+flashlight_ps20
+flashlight_ps20b
+flashlight_ps30
+flashlight_shadow_decal
+flashlight_shadow_decal_ps20b
+flashlight_shadow_decal_vs20
+flesh_interior_blended_pass_ps20
+flesh_interior_blended_pass_ps20b
+flesh_interior_blended_pass_vs20
+floatBackBuffer
+floatcombine
+floatcombine_autoexpose
+floatcombine_autoexpose_ps20
+floatcombine_autoexpose_ps20b
+floatcombine_ps20
+floatcombine_ps20b
+floattoscreen
+floattoscreen_ps20
+floattoscreen_ps20b
+floattoscreen_vanilla
+floattoscreen_vanilla_ps20
+floattoscreen_vanilla_ps20b
+floor
+flow map
+flow noise texture
+flowmap
+fmod
+fog amount at which to end fading decal
+fog amount at which to start fading decal
+fog opacity beyond the range of destination alpha depth (in low-precision depth mode)
+fog strength (scales with thickness of the interior volume)
+fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z
+fogType == MATERIAL_FOG_LINEAR_BELOW_FOG_Z && blendType != BT_BLENDADD && blendType != BT_BLEND && !bIsAlphaTested
+force bump-mapping on, even for low-end machines
+force characters to use a specific combo. -1 to disable (0 is a valid combo)
+forces Phong lighting, even at low GPU levels (Phong must already be enabled)
+forces a 2x modulate so that you can brighten and darken things
+frame for the iris texture
+frame number for $basetexture2
+frame number for $basetexture3
+frame number for $basetexture4
+frame number for $bumpmap
+frame number for $detail
+frame number for $detail2
+frame number for $flowmap
+frame number for $normalmap
+frame number for $texture2
+frame number for detail1
+fresnel params
+frexp
+fz?0Kz?
+g?Ifg?w
+g_pHardwareConfig->GetHDRType()
+g_pHardwareConfig->SupportsCascadedShadowMapping() && !bSFM
+g_pHardwareConfig->SupportsCascadedShadowMapping() && !bSFM && !bHasFlashlight && !bDisableCSMLookup
+g_pHardwareConfig->SupportsCascadedShadowMapping() && !bSFM && !bHasFlashlight && g_pConfig->nFullbright != 1 && !bDisableCSMLookup
+g_pHardwareConfig->SupportsPixelShaders_2_b()
+g_pMemAlloc
+gamecontrols_ps20
+gamecontrols_vs20
+gl_amd_occlusion_workaround
+gl_nvidia_occlusion_workaround
+glass/glasswindowbreak070b_mask
+glint texture
+gpu_level
+grayscale data sitting in green/alpha channels
+h0'D
+h2yv
+hI{L[
+hasBaseAlphaEnvmapMask
+hasBaseAlphaEnvmapMask && bHasEnvmap
+hasBaseTexture
+hasBaseTexture2
+hasBaseTexture2 || hasBump2
+hasBump
+hasBump2
+hasBumpMask
+hasDetailTexture
+hasDetailTexture ? ( hasDetailTexture2 ? 2 : 1 ) : 0
+hasDetailTexture2
+hasDiffuseLighting
+hasDiffuseWarp
+hasEnvmap
+hasEnvmapMask
+hasFlashlight
+hasNormalMapAlphaEnvmapMask
+hasPhong && !ToolsEnabled()
+hasSelfIllum
+hasVertexColor
+hb?O2
+hdr color scale
+hdrcombineto16bit_ps20
+hdrcombineto16bit_ps20b
+hdrcombineto16bit_vs20
+hdrselectrange_ps20
+hdrselectrange_ps20b
+hsl_filmgrain_pass1
+hsl_filmgrain_pass1_ps20
+hsl_filmgrain_pass1_ps20b
+hsl_filmgrain_pass2
+hsl_filmgrain_pass2_ps20
+hsl_filmgrain_pass2_ps20b
+hsv_ps20
+hsv_ps20b
+iCompositeMode
+i]Wb
+icesurface_ps30
+icesurface_vs30
+id@j>
+if specified, then the red value of the image is used to index this ramp to produce the output color
+ignore vertex colors
+ij?P
+indicates that the base luminance should be used to mask phong
+indicates that there is no normal map and that the phong mask is in base alpha
+inity
+inner end value for outline
+inner start value for outline
+instead of blending between animation frames for the 2nd sequence, select pixels based upon max luminance
+instead of blending between animation frames for the first sequence, select pixels based upon max luminance
+interval over which to fade out far away particles
+introscreenspaceeffect_ps20
+introscreenspaceeffect_ps20b
+invert the phong mask (0=full phong, 1=no phong)
+iris texture
+j,4c
+jVa?
+k:UG
+k=yI
+kBk>
+kU!W>
+kWt>
+ldexp
+lightState.HasDynamicLight()
+lightState.m_bAmbientLight && !bStaticLight3
+lightState.m_bAmbientLight ? 1 : 0
+lightState.m_bStaticLight && bStaticLight3Streams
+lightState.m_bStaticLight ? 1 : 0
+lightState.m_nNumLights
+lightmapped_4wayblend_ps20b
+lightmapped_4wayblend_ps30
+lightmapped_4wayblend_vs20
+lightmapped_4wayblend_vs30
+lightmapped_terrain_ps20b
+lightmapped_terrain_ps30
+lightmapped_terrain_vs20
+lightmapped_terrain_vs30
+lightmappedgeneric_flashlight_vs20
+lightmappedgeneric_flashlight_vs30
+lightmappedgeneric_ps20
+lightmappedgeneric_ps20b
+lightmappedgeneric_ps30
+lightmappedgeneric_vs20
+lightmappedgeneric_vs30
+lightmappedpaint_ps20
+lightmappedpaint_ps20b
+lightmappedreflective_ps20
+lightmappedreflective_ps20b
+lightmappedreflective_vs20
+lightshafts_ps30
+lightshafts_vs30
+log10
+ls1=
+lzZ?
+m1WY$
+m\nXo
+mask using dest alpha
+mat_ambient_light_b
+mat_ambient_light_g
+mat_ambient_light_r
+mat_character_force_AMBIENTREFLECTION
+mat_character_force_ANISOTROPY
+mat_character_force_BASEALPHAENVMASK
+mat_character_force_BASEALPHAPHONGMASK
+mat_character_force_BASEALPHASELFILLUMMASK
+mat_character_force_BUMPALPHAENVMASK
+mat_character_force_CASCADED_SHADOW_MAPPING
+mat_character_force_DYN_CSM_ENABLED
+mat_character_force_ENVMAP
+mat_character_force_FAKERIM
+mat_character_force_FLASHLIGHT
+mat_character_force_FLASHLIGHTDEPTHFILTERMODE
+mat_character_force_FRESNELRANGESTEXTURE
+mat_character_force_NUM_LIGHTS
+mat_character_force_PHONGWARPTEXTURE
+mat_character_force_PIXELFOGTYPE
+mat_character_force_SHADOWSATURATION
+mat_character_force_USEBOUNCECOLOR
+mat_character_force_WRITEWATERFOGTODESTALPHA
+mat_character_force_combo
+mat_character_num_phong_lights
+mat_character_pretty
+mat_depth_blur_focal_distance_override
+mat_depth_blur_strength_override
+mat_depthfeather_enable
+mat_disable_fancy_blending
+mat_displacementmap
+mat_dof_max_blur_radius
+mat_dof_quality
+mat_enable_uber_shaders
+mat_flashlight_shadow_decal_indirectcolour_amount
+mat_flashlight_shadow_decal_max_alpha
+mat_force_vertexfog
+mat_grain_scale_override
+mat_local_contrast_edge_scale_override
+mat_local_contrast_midtone_mask_override
+mat_local_contrast_scale_override
+mat_local_contrast_vignette_end_override
+mat_local_contrast_vignette_start_override
+mat_motion_blur_percent_of_screen_max
+mat_noise_enable
+mat_parallaxmapsamplesmax
+mat_parallaxmapsamplesmin
+mat_phong_lightmappedgeneric
+mat_reduceparticles
+mat_screen_blur_override
+mat_use_compressed_hdr_textures
+mat_vignette_enable
+material %s has a normal map and $basealphaenvmapmask.  Must use $normalmapalphaenvmapmask to get specular.\n\n
+material %s has a normal map and an envmapmask.  Must use $normalmapalphaenvmapmask.\n\n
+material %s needs to have a $fogcolor.\n
+maximum distance to draw particles at
+maximum screen fractional size of particle
+min max exponent
+minimum screen fractional size of particle
+mode
+mode for combining decal texture with base. 0=normal(decal*srca + base*(1-srca), 1= mod, 2=mod2x, 3=additive
+mode for combining detail texture with base. 0=normal, 1= additive, 2=alpha blend detail over base, 3=crossfade
+models/player/custom_player/shared/clothing_grime
+models/player/customization/source/backing_normal
+models/player/customization/source/spherical_normal
+models/player/customization/source/stitch_normal
+models/player/customization/source/stitch_sample_offset
+models/shadertest/shader1_normal
+models/shadertest/shader3_normal
+models/shadertest/shield
+models/weapons/customization/materials/noise
+models/weapons/customization/shared/paint_wear
+models/weapons/customization/shared/sticker_paper
+models/weapons/customization/stickers/default/ao_default
+models/weapons/customization/stickers/default/sticker_default
+modf
+modulate_ps20
+modulate_ps20b
+modulate_ps30
+monitor tint
+monitorscreen_ps20
+monitorscreen_ps20b
+morphaccumulate_ps30
+morphaccumulate_vs30
+morphweight_ps30
+morphweight_vs30
+motion_blur_ps20
+motion_blur_ps20b
+motion_blur_vs20
+multiblend_ps20
+multiblend_ps20b
+multiblend_ps30
+multiblend_vs20
+multiblend_vs30
+n?|Pn?m
+nBumpMapVariant
+nCSMQualityComboValue
+nColorDepth
+nCustomMode
+nDecalStyle
+nDetail1BlendMode
+nDetail2BlendMode
+nDetailBlendMode
+nDetailBlendMode == DETAIL_BLEND_MODE_MASK_BASE_BY_DETAIL_ALPHA ? 0 : nLightingPreviewMode
+nFadeType
+nFancyBlendMode
+nFixedLightingMode ? 0 : lightState.m_nNumLights
+nFixedLightingMode ? false : bFlashlightShadows
+nLightingPreviewMode
+nLightingPreviewMode != 0
+nLightingPreviewMode == 3
+nLightingPreviewMode ? 0 : lightState.m_nNumLights
+nLightingPreviewMode ? false : bFlashlightShadows
+nLightingPreviewMode ? false : bWriteWaterFogToAlpha
+nNumBlurSamples
+nNumLights
+nNumNearbyPlayers
+nOrientation
+nPS20NumLights
+nPaintStyle
+nShadowFilterMode
+nStage
+nStaticLightVsCombo
+nTessellationMode
+nTexture3BlendMode
+nTexture4BlendMode
+nTinted
+nTreeSwayMode
+nan(ind)
+nan(snan)
+normal map
+np?z 
+numBones > 0
+num_lookups
+n}in
+o3fW
+object_motion_blur_ps20
+object_motion_blur_ps20b
+object_motion_blur_vs20
+obwQ4
+ofn}>
+operator
+operator "" 
+oriented
+origin for the eyes
+outer end value for outline
+outer start value for outline
+overbright factor for texture. For HDR effects.
+override
+owM&
+p?O7p?c
+p?RGB: Object-space normal, A: Cavity
+pAttr->GetValue( ATTR_D_COLORCORRECTION )
+pAttr->GetValue( ATTR_D_GRADIENT_COMPLEX )
+pAttr->GetValue( ATTR_D_GRADIENT_TWOSTOP )
+pAttr->GetValue( ATTR_D_PREMULTIPLY_ALPHA )
+pAttr->GetValue( ATTR_D_TEX2DBLUR )
+pAttr->GetValue( ATTR_D_TEX2DDOWNSAMPLE )
+pAttr->GetValue( ATTR_D_TEX2DFASTBLUR )
+pAttr->GetValue( ATTR_D_TEX2DPARTICLE )
+pAttr->GetValue( ATTR_D_USEINNERCORNER )
+pAttr->GetValue( ATTR_D_USEOPACITYMASK )
+pAttr->GetValue( ATTR_D_USEOUTERCORNER )
+pAttr->GetValue( ATTR_D_USERADIALCLIP )
+pAttr->GetValue( ATTR_D_USERADIALGRADIENT )
+pShaderAPI->GetCurrentNumBones() > 0
+pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z
+pShaderAPI->ShouldWriteDepthToDestAlpha()
+pTexture->IsCubeMap()
+pTexture->IsVolumeTexture()
+paint/bubble
+paint/bubblelayout
+paint/paint_envmap_hdr
+paint/splatnormal_default
+paintblob
+paintblob_dx9
+paintblob_ps20b
+paintblob_vs20
+palettize
+panorama
+panorama_dx9
+panorama_ps30
+panorama_vs30
+panoramafancy
+panoramafancy_dx9
+panoramafancy_ps30
+panoramafancy_vs30
+parallaxtest_ps30
+parallaxtest_vs30
+parallel_upright
+params[ ENABLECLEARCOLOR ]->GetIntValue()
+params[ KERNEL ]->GetIntValue()
+params[ KERNEL ]->GetIntValue() ? 1 : 0
+params[ NUM_LOOKUPS ]->GetIntValue()
+params[ABOVEWATER]->GetIntValue()
+params[ALPHADEPTH]->GetIntValue()
+params[AOMODE]->GetIntValue()
+params[BASETEXTURE]->IsTexture()
+params[BLOOMTYPE]->GetIntValue()
+params[ENVMAPMASK]->IsTexture() && params[BASETEXTURE]->IsTexture()
+params[GHOSTOVERLAY]->GetIntValue()
+params[MAXLUMFRAMEBLEND1]->GetIntValue()
+params[MODE]->GetIntValue()
+params[MRTINDEX]->GetIntValue()
+params[NOFRESNEL]->GetIntValue() == 0
+params[QUALITY]->GetIntValue()
+params[SHOWALPHA]->GetIntValue() != 0
+params[TV_GAMMA]->GetIntValue() && bToolMode ? 1 : 0
+params[info.m_nEnvmap]->IsTexture()
+particlesphere_ps20
+particlesphere_ps20b
+particlesphere_vs20
+phong exponent
+phongInfo.m_bHasBaseTextureWrinkle
+phongInfo.m_bHasDecalTexture ? nDecalBlendMode : 2
+phongInfo.m_bHasDetailTexture
+phongInfo.m_bHasDiffuseWarp && phongInfo.m_bHasPhong
+phongInfo.m_bHasPhongWarp && phongInfo.m_bHasPhong
+phongInfo.m_bHasRimLight
+phongInfo.m_bHasSelfIllum && !bHasFlashlightOnly
+phongInfo.m_bHasSelfIllumFresnel && !bHasFlashlightOnly
+phongInfo.m_bHasTintMaskTexture
+phong_ps20b
+phong_ps30
+phong_vs20
+phong_vs30
+pnJ=
+portal_ps20
+portal_ps20b
+portal_refract_ps20
+portal_refract_ps20b
+portal_refract_vs20
+portal_vs20
+portalstaticoverlay_ps20
+portalstaticoverlay_ps20b
+portalstaticoverlay_vs20
+position/normal deltas
+projected_ps20
+projected_ps20b
+projected_ps30
+projected_vs20
+projected_vs30
+proto_ice_ps20b
+proto_ice_vs20
+prototype_ps20b
+prototype_vs20
+qo-W>
+r7Yr7=
+r?33s?333333
+r_bloomtintb
+r_bloomtintexponent
+r_bloomtintg
+r_bloomtintr
+r_buildingmapforworld
+r_csm_viewmodelquality
+r_flashlightbrightness
+r_lightwarpidentity
+r_rimlight
+r_shader_srgbread
+r_showz_power
+r_staticlight_mode
+r_staticlight_streams
+r_staticlight_streams_indirect_only
+reflection texture
+reflection tint
+refract_ps20
+refract_ps20b
+refract_vs20
+refraction tint
+restrict(
+rim light boost
+rim light exponent
+rope_min_pixel_diameter
+sU0&?W
+s_pShaderAPI->GetCurrentNumBones() > 0
+s_pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z
+sample4x4_ps20
+saturation 0 == greyscale 1 == normal
+scale detail1 as multiplier of base UVs
+scale of the detail texture
+scale of the detail texture 2
+scale to tweak fog fade
+scales ambient light in the interior volume
+scales backlighting in the interior volume
+screen fractional size to finish fading particle out
+screen fractional size to start fading particle out
+screenspace_general
+screenspace_general_dx9
+screenspace_zone
+screenspace_zone_dx9
+screenspaceeffect_vs20
+screenspaceeffect_vs30
+screenspacezone_ps30
+second texture
+self-illumination map
+selfillum color tint
+sfm_ambientocclusion_ps30
+sfm_ambientocclusion_shader
+sfm_ambientocclusion_vs30
+sfm_ao_blur_ps30
+sfm_ao_blur_shader
+sfm_ao_blur_vs30
+sfm_blur_ps30
+sfm_blurfilterx_shader
+sfm_blurfiltery_shader
+sfm_combine_vs20
+sfm_downsample_shader
+sfm_integercombine_ps20
+sfm_integercombine_ps20b
+sfm_integercombine_shader
+sfm_screenspace_vs30
+sfm_shape_ps30
+sfm_shape_shader
+shader Sprite: Unknown sprite render mode\n
+shader/AOTexture
+shader/BaseTexture
+shader/ExpTexture
+shader/MasksTexture
+shader/PosTexture
+shader/SurfaceTexture
+shadertest/BaseTexture
+shadertest/WorldTwoTextureBlend
+shadertest/WorldTwoTextureBlend_detail
+shadertest/detail
+shadertest/lightmappedtexture
+shadertest/shadertest_env
+shadertest/shadertest_envmask
+shadow_ps20
+shadow_ps20b
+shadow_vs20
+shadowbuildtexture_ps20
+shadowbuildtexture_ps20b
+shadowbuildtexture_ps30
+shadowmodel_ps20
+shadowmodel_vs20
+shatteredglass_ps20
+shatteredglass_ps20b
+shatteredglass_vs20
+showz
+showz_ps20
+showz_ps20b
+showz_vs20
+side/speed map
+simpleoverlay
+sinh
+sky_hdr_compressed_ps20
+sky_hdr_compressed_ps20b
+sky_hdr_compressed_rgbs_ps20
+sky_hdr_compressed_rgbs_ps20b
+sky_ps20
+sky_ps20b
+sky_vs20
+snan)
+solidenergy_ps20b
+solidenergy_ps30
+solidenergy_vs20
+solidenergy_vs30
+special shader to reload Zcull memory on ps3
+specify that this is the back surface of the ice
+specify vertex normal (compressed) in material format
+specular boost
+specular exponent
+specular reflection mask
+spline type 0 = none,  1=ctamull rom
+splinecard_vs20
+splinerope_ps20
+splinerope_ps20b
+splinerope_vs20
+sprite orientation
+sprite origin
+sprite rendermode
+sprite_ps20
+sprite_ps20b
+sprite_vs20
+spritecard_ps20
+spritecard_ps20b
+spritecard_vs20
+sqrt
+start value for glow/shadow
+staticLight3VSCombo
+stdshader_dx9.dll
+strength of blur applied to the background seen through the interior
+strength of bumped refract of the background seen through the interior
+s{c|H
+t14x
+t?vMt?
+tLVv
+tanh
+teeth_bump_ps20
+teeth_bump_ps20b
+teeth_bump_ps30
+teeth_bump_vs20
+teeth_bump_vs30
+teeth_flashlight_ps20
+teeth_flashlight_ps20b
+teeth_flashlight_ps30
+teeth_flashlight_vs20
+teeth_flashlight_vs30
+teeth_ps20
+teeth_ps20b
+teeth_ps30
+teeth_vs20
+teeth_vs30
+texType
+texkill pixels not on sphere
+texture 1 end component for lum smoothstep
+texture 1 start component for lum smoothstep
+texture 2 end component for blend smoothstep
+texture 2 end component for lum smoothstep
+texture 2 how much the bump blends in (ignored if bumpmap2 exists)
+texture 2 start component for blend smoothstep
+texture 2 start component for lum smoothstep
+texture 3 end component for blend smoothstep
+texture 3 end component for lum smoothstep
+texture 3 how much the bump blends in
+texture 3 start component for blend smoothstep
+texture 3 start component for lum smoothstep
+texture 4 end component for blend smoothstep
+texture 4 end component for lum smoothstep
+texture 4 how much the bump blends in
+texture 4 start component for blend smoothstep
+texture 4 start component for lum smoothstep
+texture offset x for glow mask.
+texture offset y for glow mask.
+texture to use r/g channels for blend range for
+the scale for the seamless mapping. # of repetions of texture per inch.
+tier0.dll
+tint value to be applied when running on new-style srgb parts
+tints light in the interior volume
+tints the environment reflection
+tool color correction override
+tool mode
+tooltime
+treeleaf_ps20
+treeleaf_ps20b
+treeleaf_vs20
+true
+u+E6
+u?^p?o4
+uXO=
+uZEeu
+uniform scale texture 2 uv coords
+uniform scale texture 3 uv coords
+uniform scale texture 4 uv coords
+unknown CustomClothing material
+unlitgeneric_ps30
+unlitgeneric_vs20
+unlitgeneric_vs30
+unlittwotexture_ps20
+unlittwotexture_ps20b
+unlittwotexture_vs20
+unlitworld_screensample_ps20
+unlitworld_screensample_ps20b
+unlitworld_screensample_vs20
+up vector for the eyes
+use ONE:INVSRCALPHA blending
+used for paint or vomit screen effect
+uv projection scale
+v2!L.2
+vECd
+va1+
+vars.m_bBump
+vars.m_bTeeth
+vars.m_bWorldVertexTransition
+ve?z
+vertexlit_and_unlit_generic_bump_ps20
+vertexlit_and_unlit_generic_bump_ps20b
+vertexlit_and_unlit_generic_bump_ps30
+vertexlit_and_unlit_generic_bump_vs20
+vertexlit_and_unlit_generic_bump_vs30
+vertexlit_and_unlit_generic_ps20
+vertexlit_and_unlit_generic_ps20b
+vertexlit_and_unlit_generic_ps30
+vertexlit_and_unlit_generic_vs20
+vertexlit_and_unlit_generic_vs30
+vertexlitgeneric_flashlight_vs20
+verts are in world space
+viewfade color
+volume_clouds_ps20
+volume_clouds_ps20b
+volume_clouds_vs20
+vomit refract strength
+vortwarp_ps20
+vortwarp_ps20b
+vortwarp_ps30
+vortwarp_vs20
+vortwarp_vs30
+vp_parallel
+vp_parallel_oriented
+wIq?
+warp specular term
+warp the specular term
+warpParam > 0.0f && warpParam < 1.0f
+water_ps20
+water_ps20b
+water_vs20
+watercheap_ps20
+watercheap_ps20b
+watercheap_vs20
+weapondecal_ps20b
+weapondecal_ps30
+weapondecal_vs20
+weapondecal_vs30
+weight default
+weight0
+weight1
+weight2
+weight3
+where to apply seamless mapping to the detail texture.
+whether or not to enable alpha blend
+whether or not to enable alpha write
+whether or not to enable depth write
+whether or not to multiply src and dest color
+whether or not to multiply the result of the pixel shader * 2 against the framebuffer
+whether or not to smoothly blend between animated frames
+whether or not to use alternate bumpmap format with height
+whether to apply seamless mapping to the base texture. requires a smooth model.
+whether to use GPU vertex instancing (submit 1 vert per particle quad)
+white
+white_ps20
+white_ps20b
+widen arms at end instead of taper
+windowimposter_ps20
+windowimposter_ps20b
+windowimposter_vs20
+wn>Jj
+worldimposter
+worldimposter_ps20
+worldimposter_ps20b
+worldimposter_vs20
+worldtwotextureblend_ps20
+worldtwotextureblend_ps20b
+worldtwotextureblend_ps30
+writez_vs20
+writing to a shadow depth buffer
+xpxxxx
+y>1g
+z offset
+z*va
+z1}B
+zJO>
+zw?C6w?
+zyC7
+{255 255 255}
+{4Wf
+|W8A=
+}mxQ>
+~?Uz~?Ks~?0l~?

@@ -1,0 +1,1781 @@
+                          
+        %dx%d refCount: %d numframes: %d\n
+    "%s" "%s"\n
+    "%s" "env_cubemap"\n
+    %s in %.2f ms. Time remaining: %.2f\n
+    Download was NOT completed; will resume next frame.\n
+   %c=%d ~%d%%
+  > Continuing: 
+  > Serviced %i async load%s.\n
+  > Starting: 
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ '%s' : doesn't specify a valid TGA or PSD file!\n
+ '%s' : failed to save - set "maxwidth %d maxheight %d" manually.\n
+ '%s' : saved.\n
+ Base Class Array'
+ Base Class Descriptor at (
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+ ReadToken overflow
+ Type Descriptor'
+ [ %f %f %f %f  %f %f %f %f  %f %f %f %f  %f %f %f %f ]
+ center %f %f scale %f %f rotate %f translate %f %f
+ delete
+ delete[]
+ mat_texture_list_txlod_sync reset - texture '%s' no longer found.\n
+ mat_texture_list_txlod_sync save - texture '%s' cannot be mapped to content directory.\n
+ mat_texture_list_txlod_sync save - texture '%s' is not loaded from file system.\n
+ mat_texture_list_txlod_sync save - texture '%s' no longer found.\n
+ new
+ scale %f %f translate %f %f rotate %f
+!GnA
+"%s" - "%s": cached version doesn't exist\n
+"%s": cached version doesn't exist\n
+"%s": can't be found on disk\n
+#D5p
+#base
+#base is NULL 
+#include
+#include is NULL 
+$Material
+$ModelMaterial
+$Pos
+$Size
+$additive
+$allowalphatocoverage
+$alphamodifiedbyproxy_DO_NOT_SET_IN_VMT
+$alphatest
+$anisodirtexture
+$aotexture
+$baseTexture
+$basealphaenvmapmask
+$basemapalphaphongmask
+$basematerialname
+$basetexture
+$bumpframe
+$bumpmap
+$bumptransform
+$clearalpha
+$clearcolor
+$cleardepth
+$custommaterialnameoverride
+$debug
+$decal
+$decalscale
+$delta
+$deltascale
+$detail
+$detailnormal
+$dimensions
+$dudvmap
+$dummyVar
+$envmap
+$envmapFresnelMinMaxExp
+$envmapfresnel
+$envmapmask
+$envmapsphere
+$envmaptint
+$exptexture
+$fallbackmaterial
+$flags
+$flags2
+$flags_defined
+$flags_defined2
+$flat
+$flowmap
+$fresnelrangestexture
+$gammacolorread
+$grunge
+$halflambert
+$hide_if_override
+$ignorez
+$linearwrite
+$mappingheight
+$mappingwidth
+$masks1
+$masks2
+$maskstexture
+$materialmask
+$model
+$multiply
+$needspostasyncprecache
+$no_draw
+$no_fullbright
+$nocull
+$nodecal
+$nofog
+$normalmap
+$normalmapalphaenvmapmask
+$opaquetexture
+$painttexture
+$passcount
+$pattern
+$phong
+$phongalbedoboost
+$phongalbedotint
+$phongboost
+$phongexponenttexture
+$phongfresnelranges
+$phongwarptexture
+$postexture
+$pseudotranslucent
+$selfillum
+$sidespeed
+$skip_representative_texture
+$softwareskin
+$surfacetexture
+$translucent
+$use_in_fillrate_mode
+$vertexalpha
+$vertexcolor
+$vertexfog
+$wireframe
+$znearer
+%2d. %s, %d \n
+%d %d %d %d
+%d Cached, %d Total Materials\n
+%d Errors\n
+%d calls queued for %d bytes in parameters and overhead, %d bytes verts, %d bytes indices, %d bytes other\n
+%i %i %i %i
+%lld
+%noToolTexture
+%s (%d) : %s\n
+%s (shader: %s) refCount: %d.\n
+%s.vmt
+%s.vtf
+%s/bin/%s%s
+%s_ZBuffer
+%toolTexture
+&2@UUUUUU
+&Sgw
+'load' - loads the exclude list file, 'reset' - resets all loaded exclude information, 'save' - saves exclude list file
+'reset' - resets all run-time changes to LOD overrides, 'save' - saves all changes to material content files
+( 8PX
+('8PW
+(null)
+)2STud>
+)fLL#
+** Encountered stale cubemap! Please rebuild the following vtf:\n
+*** Encountered VTF file with an invalid full header!\n
+*** Encountered VTF file with an invalid minor version!\n
+*** Encountered VTF file with an invalid version!\n
+*** Encountered VTF invalid texture size!\n
+*** Encountered VTF non-square cubemap!\n
+*** Encountered VTF volume texture cubemap!\n
+*** Error unserializing VTF file... is the file empty?\n
+*** Tried to load a non-VTF file as a VTF file!\n
+*** Unable to serialize... have no image data!\n
+*VVw
+*pending*
++*tsJ
+-allowdebug
+-async_standin_orange
+-buildcubemaps
+-buildmodelforworld
+-defaultgamedir
+-dev
+-dev_disable_threaded_rendering
+-forceallmips
+-foundrymode
+-game
+-makereslists
+-noassert
+-noshaderapi
+-textmode
+-threads
+-tools
+-vulkan
+-xlsp
+.00cfg
+.?AV?$CBaseAppSystem@VIMaterialSystemInternal@@@@
+.?AV?$CConCommandMemberAccessor@VCCustomMaterialManager@@@@
+.?AV?$CConCommandMemberAccessor@VCMaterialSystem@@@@
+.?AV?$CFmtStrN@$0BAA@$0A@@@
+.?AV?$CMemberFunctor0@PAV?$CParallelProcessor@HV?$CMemberFuncJobItemProcessor@HV?$CCallQueueT@V?$CTSQueue@PAVCFunctor@@$0A@@@@@V1@@@$00@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCCompositeTextureGenerator@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCFunctor@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@V?$CFuncMemPolicyRefCount@PAVCFunctor@@@@@@
+.?AV?$CMemberFunctor0@PAVCMatLightmaps@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMatPaintmaps@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMatQueuedRenderContext@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMatRenderContextBase@@P8IMatRenderContextInternal@@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMaterial@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVCMaterialVar@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVIColorCorrectionSystem@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVIMaterialInternal@@P8IMaterial@@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@PAVIShaderAPI@@P81@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor0@V?$CLateBoundPtr@VIMesh@@@@P8IMesh@@AEXXZV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor10@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMaterial@@MMMMMMMMPAX@ZPAV3@MMMMMMMMPAXV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor14@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMaterial@@HHHHMMMMHHPAXHH@ZPAV3@HHHHMMMMHHPAXHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatQueuedMesh@@P81@AEXABUMST_DrawInfo_t@1@@ZU21@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatQueuedMesh@@P81@AEXABUMST_DrawModulatedInfo_t@1@@ZU21@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatQueuedMesh@@P81@AEXABUMST_MeshInfo_t@1@@ZU21@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABUMaterialLightingState_t@@@ZU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABUShaderStencilState_t@@@ZU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABVVMatrix@@@ZV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABVVector@@@ZV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXH@ZHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXM@ZMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAUGpuTimeSpanQueryHandle_t__@@@ZPAU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAUOcclusionQueryObjectHandle_t__@@@ZPAU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMaterial@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMesh@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMorph@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVVector4D@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPBD@ZPBDV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPBM@ZPBMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXVVector@@@ZV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialCullMode_t@@@ZW43@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialFogMode_t@@@ZW43@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialHeightClipMode_t@@@ZW43@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialMatrixMode_t@@@ZW43@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialNonInteractiveMode_t@@@ZW43@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEX_N@Z_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContext@@AE_N_N@Z_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContextInternal@@AEXPAVIMaterialInternal@@@ZPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMatRenderContextBase@@P8IMatRenderContextInternal@@AEXPAX@ZPAXV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialSystem@@P81@AEXPAVCMatQueuedRenderContext@@@ZPAV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXABVVMatrix@@@ZV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXH@ZHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXM@ZMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXPAVIMaterial@@@ZPAV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXPAVIMaterialVar@@@ZPAV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXPAVITexture@@@ZPAV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCMaterialVar@@P81@AEXPBD@ZV?$CUtlEnvelope@PBD@@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCOcclusionQueryMgr@@P81@AEXPAUOcclusionQueryObjectHandle_t__@@@ZPAU2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCTexture@@P81@AEXPAVITexture@@@ZPAV2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVCTexture_MultipleRenderTarget@@P81@AEXPBD@ZPBDV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVIColorCorrectionSystem@@P81@AEX_N@Z_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVIMaterialInternal@@P8IMaterial@@AEXM@ZMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor1@PAVIMesh@@P81@AEXW4MaterialPrimitiveType_t@@@ZW42@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatQueuedRenderContext@@P81@AEXHPBUMeshInstanceData_t@@@ZHPBU2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatQueuedRenderContext@@P81@AEXPAVIMesh@@H@ZPAV2@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABUCascadedShadowMappingState_t@@PAVITexture@@@ZU3@PAV4@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABUFlashlightState_t@@ABVVMatrix@@@ZU3@V4@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHABUmatrix3x4_t@@@ZHU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHABVVector@@@ZHV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHH@ZHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHM@ZHMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHPAVITexture@@@ZHPAV3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHPBULightDesc_t@@@ZHPBU3@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXKPBD@ZKPBDV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXMM@ZMMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMaterial@@PAX@ZPAV3@PAXV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVIMesh@@PAVIMaterial@@@ZPAV3@PAV4@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@H@ZPAV3@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@W4MaterialNonInteractiveMode_t@@@ZPAV3@W44@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEX_N0@Z_N_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMaterial@@P81@AEXW4MaterialVarFlags_t@@_N@ZW42@_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMaterialVar@@P81@AEXABVVector4D@@H@ZV2@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMaterialVar@@P81@AEXKPAX@ZKPAXV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVCMaterialVar@@P81@AEXMH@ZMHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVIColorCorrectionSystem@@P81@AEXIM@ZIMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVIColorCorrectionSystem@@P81@AEXI_N@ZI_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVIMaterialInternal@@P8IMaterial@@AEXW4MaterialVarFlags_t@@_N@ZW43@_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVIMesh@@P81@AEXHH@ZHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@PAVIMesh@@P81@AEXPAV1@H@ZPAV1@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor2@V?$CLateBoundPtr@VIMesh@@@@P8IMesh@@AEXPAV2@H@ZPAV2@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatQueuedIndexBuffer@@P81@AEXHW4MaterialIndexFormat_t@@PAX@ZHW42@PAXV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatQueuedRenderContext@@P81@AEXPAVIMesh@@PAVCPrimList@@H@ZPAV2@PAV3@HV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXABUFlashlightState_t@@ABVVMatrix@@PAVITexture@@@ZU3@V4@PAV5@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXEEE@ZEEEV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHMM@ZHMMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4ClientRenderStateBuffer_t@@PBXH@ZW43@PBXHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXW4MaterialPrimitiveType_t@@HH@ZW43@HHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEX_N00@Z_N_N_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVIMaterialInternal@@P8IMaterial@@AEXMMM@ZMMMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor3@PAVIMesh@@P81@AEXABVVector4D@@HH@ZV2@HHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatQueuedIndexBuffer@@P81@AEXHW4MaterialIndexFormat_t@@PAX_N@ZHW42@PAX_NV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXEEEE@ZEEEEV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHHHH@ZHHHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHPAVITexture@@PAURect_t@@1@ZHPAV3@V?$CUtlEnvelope@URect_t@@@@V5@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@HPAURect_t@@1@ZPAV3@HPAU4@PAU4@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor4@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@MMM@ZPAV3@MMMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor5@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHHHHH@ZHHHHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor5@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@HHHH@ZPAV3@HHHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor5@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@MMMM@ZPAV3@MMMMV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor6@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXPAVITexture@@0HHHH@ZPAV3@PAV3@HHHHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor6@PAVCSOAContainer@@P81@AEXHHHHHT__m128@@@ZHHHHHT2@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor7@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHHHHPAEW4ImageFormat@@PAVCThreadEvent@@@ZHHHHPAEW43@PAV4@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor7@PAVCSOAContainer@@P81@AEXHHHHPBV1@HH@ZHHHHPBV1@HHV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CMemberFunctor8@PAVCMatRenderContextBase@@P8IMatRenderContext@@AEXHHHHPAEW4ImageFormat@@PAVITexture@@PAVCThreadEvent@@@ZHHHHPAEW43@PAV4@PAV5@V?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@VCFuncMemPolicyNone@@@@
+.?AV?$CRefCountServiceBase@$00VCRefMT@@@@
+.?AV?$CRefCountServiceDestruct@VCRefST@@@@
+.?AV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@
+.?AV?$CRefCounted1@VCFunctor@@V?$CRefCountServiceDestruct@VCRefST@@@@@@
+.?AV?$CRefCounted1@VIMatRenderContext@@VCRefCountServiceNull@@@@
+.?AV?$CRefCounted1@VIMatRenderContextInternal@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@
+.?AV?$CRefCounted1@VIRefCounted@@V?$CRefCountServiceBase@$00VCRefMT@@@@@@
+.?AV?$CRefCounted@V?$CRefCountServiceBase@$00VCRefMT@@@@@@
+.?AV?$CTier0AppSystem@VIMaterialSystemInternal@@@@
+.?AV?$CTier1AppSystem@VIMaterialSystemInternal@@$0A@@@
+.?AV?$CTier2AppSystem@VIMaterialSystemInternal@@$0A@@@
+.?AVCBufferedLoggingListener@@
+.?AVCCachedPerFrameMeshData@@
+.?AVCCallQueueExternal@CMatQueuedRenderContext@@
+.?AVCCheckerboardTexture@@
+.?AVCColorCorrectionRegen@@
+.?AVCColorCorrectionSystem@@
+.?AVCCompositeTexture@@
+.?AVCCompositeTextureGenerator@@
+.?AVCCompositeTextureResult@@
+.?AVCCustomMaterial@@
+.?AVCCustomMaterialManager@@
+.?AVCDefaultAccessor@@
+.?AVCDummyHardwareConfig@@
+.?AVCDummyMaterial@@
+.?AVCDummyMaterialSystem@@
+.?AVCDummyMaterialVar@@
+.?AVCDummyMesh@@
+.?AVCDummyMorph@@
+.?AVCDummyTexture@@
+.?AVCEmptyConVar@@
+.?AVCFunctor@@
+.?AVCFunctorJob@@
+.?AVCJob@@
+.?AVCMatNullRenderContext@@
+.?AVCMatPaintmaps@@
+.?AVCMatQueuedIndexBuffer@@
+.?AVCMatQueuedMesh@@
+.?AVCMatQueuedRenderContext@@
+.?AVCMatRenderContext@@
+.?AVCMatRenderContextBase@@
+.?AVCMaterial@@
+.?AVCMaterialSubRect@@
+.?AVCMaterialSystem@@
+.?AVCMaterialVar@@
+.?AVCMaterial_QueueFriendly@@
+.?AVCMemoryStack@@
+.?AVCMorph@@
+.?AVCMorphMgr@@
+.?AVCNonFatalLoggingResponsePolicy@@
+.?AVCNormalizationCubemap@@
+.?AVCP4File@@
+.?AVCP4File_Dummy@@
+.?AVCRefCountServiceNull@@
+.?AVCReferenceToHandleTexture@@
+.?AVCShaderDLL@@
+.?AVCShaderLibConVarAccessor@@
+.?AVCShaderSystem@@
+.?AVCSignedNormalizationCubemap@@
+.?AVCSolidTexture@@
+.?AVCTexture@@
+.?AVCTextureManager@@
+.?AVCTexture_MultipleRenderTarget@@
+.?AVCUniformRandomStreamATP@@
+.?AVCUtlCStringConversion@@
+.?AVCUtlCharConversion@@
+.?AVCUtlNoEscConversion@@
+.?AVCVTFTexture@@
+.?AVConCommand@@
+.?AVConCommandBase@@
+.?AVConVar@@
+.?AVIAppSystem@@
+.?AVICachedPerFrameMeshData@@
+.?AVICallQueue@@
+.?AVIColorCorrectionSystem@@
+.?AVICommandCallback@@
+.?AVICommandCompletionCallback@@
+.?AVICompositeTexture@@
+.?AVICompositeTextureGenerator@@
+.?AVIConCommandBaseAccessor@@
+.?AVIConVar@@
+.?AVICustomMaterial@@
+.?AVICustomMaterialManager@@
+.?AVIIndexBuffer@@
+.?AVILoggingListener@@
+.?AVILoggingResponsePolicy@@
+.?AVIMatRenderContext@@
+.?AVIMatRenderContextInternal@@
+.?AVIMaterial@@
+.?AVIMaterialInternal@@
+.?AVIMaterialSystem@@
+.?AVIMaterialSystemHardwareConfig@@
+.?AVIMaterialSystemInternal@@
+.?AVIMaterialSystemStub@@
+.?AVIMaterialVar@@
+.?AVIMemoryInfo@@
+.?AVIMesh@@
+.?AVIMorph@@
+.?AVIMorphInternal@@
+.?AVIMorphMgr@@
+.?AVIPaintmapTextureManager@@
+.?AVIRefCounted@@
+.?AVIShaderDLL@@
+.?AVIShaderDLLInternal@@
+.?AVIShaderInit@@
+.?AVIShaderSystem@@
+.?AVIShaderSystemInternal@@
+.?AVIShaderUtil@@
+.?AVITexture@@
+.?AVITextureInternal@@
+.?AVITextureManager@@
+.?AVITextureRegenerator@@
+.?AVIUniformRandomStreamATP@@
+.?AVIVTFTexture@@
+.?AVIVertexBuffer@@
+.?AV__non_rtti_object@std@@
+.?AVbad_cast@std@@
+.?AVbad_exception@std@@
+.?AVbad_typeid@std@@
+.?AVexception@std@@
+.?AVtype_info@@
+.CRT$XCA
+.CRT$XCU
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.bss
+.data
+.data$r
+.edata
+.gfids$x
+.gfids$y
+.hdr
+.hdr.vtf
+.idata$2
+.idata$3
+.idata$4
+.idata$5
+.idata$6
+.psd
+.rdata
+.rdata$r
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.text
+.text$di
+.text$mn
+.text$x
+.text$yd
+.tga
+.txt
+.vmt
+.vtf
+.xdata$x
+//MOD/maps/_exclude.lst
+/C psdinfo "%s" > "%s"
+/C psdinfo -write "%s" < "%s"
+/econ/body/
+/econ/head/
+0 - do not support flashlight (don't load flashlight shader combos), 1 - flashlight is supported
+0vB-
+1#IND
+1#INF
+1#QNAN
+1#SNAN
+2ieO=
+3072
+333333
+4dsg
+4g%6
+5DKB
+5xT~
+700PP
+700WP
+:Esp
+:s6X
+<8bunz8
+<=DX90
+<@En[vP
+<DX90
+<DX90_20b
+<DX95
+<UNDEFINED>
+=87M
+========================\n
+>=DX90
+>=DX90_20b
+>DX90
+>Xzv
+>o3fW
+?*hiR
+?1mm
+?3ScR.>
+?3xj
+?40V
+?5Wg4p
+?5a1
+?7Tf(
+?8bunz8
+?93l
+??0CThreadEvent@@QAE@_N@Z
+??0CThreadLocalBase@GenericThreadLocals@@QAE@XZ
+??0CThreadMutex@@QAE@XZ
+??1CThreadEvent@@QAE@XZ
+??1CThreadLocalBase@GenericThreadLocals@@QAE@XZ
+??1CThreadMutex@@QAE@XZ
+?@En[vP
+?AFxD
+?ConMsg@@YAXPBDZZ
+?DevMsg@@YAXPBDZZ
+?DevWarning@@YAXPBDZZ
+?EnterScope@CVProfile@@QAEXPBDH0_NH@Z
+?ExitScope@CVProfile@@QAEXXZ
+?FindOrCreateCounter@CVProfile@@QAEPAHPBDW4CounterGroup_t@@@Z
+?G2Q
+?Get@CThreadLocalBase@GenericThreadLocals@@QBEPAXXZ
+?IT$7
+?Lock@CThreadFastMutex@@ACEXII@Z
+?Ltm
+?MKR
+?Outputs .pfm files containing lightmap data for each lightmap page when a level exits.
+?PiB
+?Reset@CThreadEvent@@QAE_NXZ
+?SSE and SSE2 are required.
+?Set@CThreadEvent@@QAE_NXZ
+?Set@CThreadLocalBase@GenericThreadLocals@@QAEXPAX@Z
+?SpinLockForRead@CThreadSpinRWLock@@QAEXXZ
+?SpinLockForWrite@CThreadSpinRWLock@@QAEXXZ
+?T5cd'j
+?Tick@CPerfStatsData@@QAEXXZ
+?Tu7R
+?UUUUUU
+?Wait@CThreadEvent@@QAE_NI@Z
+?X&eB
+?X1U
+?c3y
+?c3y?
+?c3y?q
+?cos
+?gibQ^AX>
+?kAf
+?mat_morphstats
+?mat_report_queue_status
+?o3fW
+?pEly
+?q42s(
+?rmMx
+?u1P
+?uZEeu
+@Report if HDR is enabled for debugging
+@UUUUUU
+@VNQ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABGR8888
+APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+ARGB8888
+ATI1N
+ATI2N
+ATTEMPTED TO DECOMMIT OWNED MEMORY STACK SPACE\n
+AYl=
+A]?VJ
+Access violation - no RTTI data!
+AddMemoryInfoCallback
+Ai0T
+AiFC.
+AllocateLightmapTexture(%d) in released lightmap state (STATE_RELEASED), delayed till "Restore".\n
+AllocateLightmapTexture(%d) in unknown lightmap state (%d), skipped.\n
+Allocated optimal read buffer of %d bytes @ 0x%p\n
+Allow Threading
+April
+Assertion Failed: !m_bNeedsSort
+Async texture taking synchronous path: %s\n
+Attempted to morph too many meshes in a single model!\n
+August
+BGR565
+BGR888
+BGR888_BLUESCREEN
+BGRA1010102
+BGRA4444
+BGRA5551
+BGRA8888
+BGRX5551
+BGRX8888
+BGenerateRepresentativePalette: not implemented
+Bad dynamic_cast!
+Bad expression operator: '%c%c', expected C style operator
+Bad expression token: %c
+BeginRender
+Bfe9
+Binding uncached material "%s", artificially incrementing refcount\n
+BlendCubeMapFaceEdges: unsupported image format (%d)
+Blending mip%d %dx%d to
+BufferClearObeyStencil
+BuiltDebug
+CColorCorrectionSystem: Missing '%s'\n
+CColorCorrectionSystem: Raw file '%s' has bad size (%d)\n
+CCompositeTextureGenerator::Process
+CCompositeTextureResult::RegenerateTextureBits
+CCustomMaterialManager::GetOrCreateCustomMaterial
+CKeyValuesTokenReader::SeekBackOneToken: It is only possible to seek back one token at a time
+CMatCallQueue.m_Allocator[%d]
+CMatPaintmaps::UpdatePaintmap paintmap=%d out of range\n
+CMatQueuedRenderContext::m_Indices
+CMatQueuedRenderContext::m_Vertices
+CMatRenderContext: Trying to clear render data with render data still locked (%d)!\n
+CMatRenderContext: Trying to compact with render data still locked!\n
+CMatRenderContextBase::sm_RenderData[0]
+CMatRenderContextBase::sm_RenderData[1]
+CMaterial pool
+CMaterial::DrawElements: No bound shader\n
+CMaterial::GetNumAnimationFrames:\nno representative texture for material %s\n
+CMaterial::PrecacheVars: error loading vmt file %s for %s\n
+CMaterial::PrecacheVars: error loading vmt file for %s\n
+CMaterial::PrecacheVars: fallback material for vmt file %s is itself!\n
+CMaterialSubRect pool
+CMaterialSubRect::InitializeShader: Shader not specified in material %s.\n
+CMaterialSubRect::PrecacheVars: error loading vmt file for %s\n
+CMaterialSubRect::SetupMaterialVars: Invalid Material Page!\n
+CMaterialSystem::BeginFrame
+CMaterialSystem::EndFrame
+CMaterialSystem::EndFrame - waiting on additional threaded work for MatQueuedThreaded.\n
+CMaterialSystem::SwapBuffers
+CMaterialVar pool
+CMaterialVar::GetStringValue: Unknown material var type\n
+CMaterialVar::GetVecValue: trying to get a vec value for %s which is of type %d\n
+CMemoryStack unattributed
+CMemoryStack: ERROR - mismatched RegisterAllocation/RegisterDeallocation!\n
+CMorph::AccumulateMorph
+CMorph::BeginMorphAccumulation
+CMorph::EndMorphAccumulation
+CMorph::RenderMorphWeights
+COLORCORRECTION_VERSION_1
+CPU Level - Default: High
+CProtectedDataObjectExternal:: New item %p length %d Item %d \n
+CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!\n
+CTSListBase: Misaligned list\n
+CTSQueue: Misaligned queue\n
+CTexture::AllocateTextureHandles "%s" attempted to allocate 0 frames of texture handles!
+CTexture::GetTextureHandle(): nFrame is < 0!\n
+CTexture::WriteDataToShaderAPITexture
+CUserExtraData
+CUtlBuffer::VaPrintf: String overflowed buffer [%d]\n
+CUtlFixedMemory overflow!\n
+CUtlLinkedList overflow! (exhausted index range)\n
+CUtlLinkedList overflow! (exhausted memory allocator)\n
+CUtlRBTree overflow!\n
+CallAssertFailedNotifyFunc
+Called function that cannot be supported\n
+Can't force single thread from within thread!\n
+Can't load p4lib.dll\n
+Cannot set the shader API twice!\n
+Cascaded shadow map quality level, [0,3], 0=VERY_LOW, 3=HIGHEST
+CkeyValuesTokenReader::SeekBackOneToken: No tokens read yet
+CleanupCompositingMat
+CloseHandle
+Cmat_verbose_texture_gen
+ColorCorrection (%s)
+ColorOut
+CommandLine
+Completed
+CompositeTextureGenerationThread
+Composited Textures
+ConVar(%s) defined with infinite float value (%s)\n
+ConVarRef %s doesn't point to an existing ConVar\n
+Conditional Error: %s\n
+Console
+CorExitProcess
+Corrupted paint rect\n
+Couldn't determine offset and size of material "%s"\n
+CqTR;
+CreateCompositingMat
+CreateFileMappingA
+CreateFileW
+CreateInterface
+CreateResultVTF
+CreateSimpleThread
+CubeMap textures
+Custom Weapon Material Usage: Total: %d Active: %d  Textures: %d  BackingTextures: %d \n
+Cutoff time (in ms) spent in ServiceAsyncTextureLoads
+D15S1
+D16_SHADOW
+D24FS8
+D24S8
+D24X4S4
+D24X8
+D24X8_SHADOW
+DEMO
+DXT Compress
+DXT1
+DXT1_ONEBITALPHA
+DXT1_RUNTIME
+DXT3
+DXT3_RUNTIME
+DXT5
+DXT5_RUNTIME
+DebugDepth
+DebugDrawEnvmapMask
+DebugNormalMap
+DebugPrintUsedMaterials: material: "%s" didn't unache\n
+DebugPrintUsedMaterials: refCount (%d) < 0 for material: "%s"\n
+DebugTextureInfo001
+Decal textures
+December
+DecodePointer
+Defer asynchronous loading of high-resolution textures.
+DeleteCriticalSection
+Depth must be 1 for cubemaps!\n
+Destroying a texture that is in the queue!\n
+Dev only convar async_download_colorize
+Dev only convar async_download_debug_output
+Dev only convar async_download_delay
+Dev only convar async_download_init_at_minimum_res
+Dev only convar async_download_refresh_mode
+Dev only convar async_download_to_synchronous_on_completion
+Dev only convar async_download_wait_frames
+Dev only convar mat_composite_texture_rolling_cache_size
+Dev only convar mat_track_materialvar_changes_post_precache
+DevWarning
+Disallow Threading
+Dmat_texture_tracking
+DoAsyncTextureLoad
+DoAsyncTextureLoad: Failed to preload texture: %s (%d)\n
+DoAsyncTextureLoad: Failed to preload texture: %s (%s)\n
+DoNewAssertDialog
+DummyMaterialVar
+DummyTexture
+ERROR
+ERROR: Texture handle mismatch (Frame %i handle is 0x%8.8x, expected 0x%8.8x) for %s\n
+Eb2]A=
+EditorRenderStateList_t pool
+Enable/Disable specularity for perf testing.  Will cause a material reload upon change.
+Enable/Disable specularity for visual testing.  Will not reload materials and will not affect perf.
+EncodePointer
+Endframe_Wait
+EnterCriticalSection
+Error
+Error creating composite texture! Could not find render target texture. \n
+Error creating compositing material! Marking composite complete and not rendering to RT...\n
+Error in .VMT file: error parsing vector element "%s" in "%s"\n
+Error reading material "%s"\n
+Error reading material data "%s"\n
+Error reading texture data "%s"\n
+Error reading texture header "%s"\n
+Error! Flag "%s" is multiply defined in material "%s"!\n
+Error! Variable "%s" is multiply defined in material "%s"!\n
+Error: Material "%s" : proxy "%s" not found!\n
+Error: Material "%s" : proxy "%s" unable to initialize!\n
+Error: Material "%s" has more than %lu proxies!\n
+Error: Material "%s" uses unknown shader "%s"\n
+Error: failed to load exclude file '%s'!\n
+Error: failed to save exclude file '%s'!\n
+Excluded: %d '%s' \n
+Excluding
+ExitProcess
+F0$?3=1
+F=J4
+F?cf
+FCVAR_NEVER_AS_STRING
+FEMh\f
+Failed to AllocateShaderAPITextures for [%s]\n
+Failed to cache VMT specified in resource/vmtcache.txt: %s\n
+Failed to create %d x %d render target for composite texturing!\n
+Failed to load $include VMT file (%s)\n
+Failed to lock lightmap\n
+February
+FillRate
+Finalize
+FindClose
+FindFirstFileExA
+FindNextFileA
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsSetValue
+FlushFileBuffers
+FmtStrVSNPrintf truncated to %d without QUIET_TRUNCATION specified!\n
+Force sync to vertical retrace
+Forcing queued mode off!\n
+FreeEnvironmentStringsW
+FreeLibrary
+Freeing optimal read buffer of %d bytes @ 0x%p\n
+Friday
+Full Frame
+G&iC
+G8D>
+GAME
+GAMECONSOLE
+GPU Level - Default: High
+GPU<1
+GPU<2
+GPU<3
+GPU>=1
+GPU>=2
+GPU>=3
+GYM=
+Game shader '%s' trying to override a base shader '%s'.
+GameUISystemMgr001
+Gblocking issue in occlusion queries! Grab brian!\n
+GenerateComposite
+GetACP
+GetCPInfo
+GetCPUInformation
+GetCommandLineA
+GetCommandLineW
+GetConsoleCP
+GetConsoleMode
+GetCurrentDirectoryW
+GetCurrentPackageId
+GetCurrentProcess
+GetCurrentProcessId
+GetCurrentThreadId
+GetDriveTypeW
+GetEnvironmentStringsW
+GetFileType
+GetFullPathNameA
+GetLastError
+GetLongPathNameA
+GetModuleFileNameA
+GetModuleHandleA
+GetModuleHandleExA
+GetModuleHandleExW
+GetModuleHandleW
+GetOEMCP
+GetProcAddress
+GetProcessHeap
+GetReadRTResult
+GetShortPathNameA
+GetStandardTextureDimensions: Couldn't find the texture to get the dimensions!\n
+GetStandardTextureDimensions: still unimplemented for this type!\n
+GetStartupInfoW
+GetStdHandle
+GetStringTypeW
+GetSystemInfo
+GetSystemTimeAsFileTime
+GetThreadedLoadLibraryFunc
+GetVersionExA
+Gin>
+HDR Disabled\n
+HDR Enabled\n
+HH:mm:ss
+HW Morph Count
+HW Morphing
+Handling alt-tab in queued mode!\n
+Height and width must be equal for cubemaps!\n
+HighQualityCSM
+Ht=c
+IA88
+IMEManager001
+IND)ind)S
+IND)ind)UUUUUU
+INITY
+INTZ
+IT=_9
+Image dimensions must be multiple of 4!\n
+Infinite recursion in patch file?\n
+InitializeCriticalSectionAndSpinCount
+InitializeCriticalSectionEx
+InitializeSListHead
+InputStackSystemVersion001
+InputSystemVersion001
+InterlockedFlushSList
+Invalid texture value in CMaterialVar::GetTextureValue\n
+Invalid vector component (%d) of variable %s referenced in material %s
+IsDebuggerPresent
+IsProcessorFeaturePresent
+IsValidCodePage
+J\;5yTb
+January
+July
+June
+KERNEL32.dll
+KV Conditional Evaluation Error
+KeyValues Error: %s in file %s line %d\n
+KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s\n
+KeyValuesSystem
+LCMapStringEx
+LCMapStringW
+LE_BGRA8888
+LE_BGRX8888
+LINEAR_A8
+LINEAR_ABGR8888
+LINEAR_ARGB8888
+LINEAR_BGR888
+LINEAR_BGRA8888
+LINEAR_BGRX5551
+LINEAR_BGRX8888
+LINEAR_D24S8
+LINEAR_DXT1
+LINEAR_DXT3
+LINEAR_DXT5
+LINEAR_I8
+LINEAR_RGB888
+LINEAR_RGBA16161616
+LINEAR_RGBA8888
+LINUX
+LOG_GENERAL
+LOWVIOLENCE
+La8i
+Le?2
+LeaveCriticalSection
+Lightmap-Page-%d.pfm
+Lightmaps
+LoadFromBuffer: missing {
+LoadLibraryExA
+LoadLibraryExW
+Loading Texture %s
+LocaleNameToLCID
+Localize_001
+LoggingSystem_AddTagToCurrentChannel
+LoggingSystem_IsChannelEnabled
+LoggingSystem_Log
+LoggingSystem_LogAssert
+LoggingSystem_LogDirect
+LoggingSystem_PopLoggingState
+LoggingSystem_PushLoggingState
+LoggingSystem_RegisterLoggingChannel
+LoggingSystem_RegisterLoggingListener
+LoggingSystem_SetLoggingResponsePolicy
+LowQualityCSM
+MATCHFRAMEWORK_001
+MATERIAL_MAX_PATH to short for %s.vtf\n
+MDLCache004
+MM/dd/yy
+March
+MatSystemSurface006
+Mat_QueuedEndframe
+Mat_ThreadedEndframe
+Material "%s":\n   No render states in shader "%s"\n
+Material "%s":\n   Shader "%s" can't be used with models!\n
+MaterialSystem: Out of memory in render data! (Attempted size = %d)\n
+MaterialSystemConsole
+MaterialSystemHardwareConfig013
+MaterialSystem_Interface_t::AllocateLightmap: lightmap (%dx%d) too big to fit in page (%dx%d)\n
+MaterialSystem_Interface_t::UpdateLightmap lightmapPageID=%d out of range\n
+MbP?
+MemAllocScratch
+MemFreeScratch
+MemOutOfMemory
+Memory Level - Default: High
+MeshSystem001
+MipGen
+MkK?
+Model textures
+Module %s is a debug build\n
+Monday
+Morph Targets
+Morph texture is too big!!! Make brian add support for morphs having multiple textures.\n
+MorphAccumulate
+Mpm<
+MultiByteToWideChar
+NAN(IND)
+NAN(SNAN)
+NULL
+NULL material
+NV_NULL
+NetworkSystemVersion001
+No such variable "%s" for material "%s"\n
+November
+Nu?-HF
+October
+Other textures
+OutputDebugStringA
+PF\n%d %d\n-1.000000\n
+POSIX
+PanoramaTextServices001
+PanoramaUIClient001
+PanoramaUIEngine001
+Pex?0
+Physics2 Interface ActorMgr v0.1
+Physics2 Interface ResourceMgr v0.1
+Physics2 Interface v0.3
+Plat_ExitProcess
+Plat_FloatTime
+Plat_GetOSVersion
+Plat_IsInDebugSession
+Plat_MSTime
+Programming error: CMatRenderContext::AllocateLightmap: NULL material\n
+Programming error: CMatRenderContext::AllocateWhiteLightmap: NULL material\n
+Programming error: CMatRenderContext::Bind: NULL material\n
+Programming error: CMatRenderContextBase::Bind: NULL material\n
+Programming error: CMaterialSystem::DebugPrintUsedMaterialsCallback: NULL texture\n
+Proxies
+QueryPerformanceCounter
+Queued Material System: DISABLED!\n
+Queued Material System: ENABLED!\n
+QueuedLoaderVersion001
+R16F
+R32F
+RG1616F
+RG3232F
+RGB323232F
+RGB565
+RGB888
+RGB888_BLUESCREEN
+RGBA1010102
+RGBA16161616
+RGBA16161616F
+RGBA32323232F
+RGBA8888
+RGBX8888
+RSDS
+R\vn>
+RaiseException
+Rd.F
+ReadPixelsEventWait
+ReadPixelsGetResultEventWait
+ReadRT
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got conditional between key and value
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got } in key
+RecursiveLoadFromBuffer:  recursion overflow
+Reference Count for Material %s (%d) != 0\n
+RefreshCompositingMat
+Refreshing materials due to async completion:\n
+ReleaseLightmapPages is expected in STATE_DEFAULT, current state = %d, discarded.\n
+ReleaseThreadHandle
+Reload vmts from vmtcache.txt.
+Reloads a single material
+Reloads all custom materials
+Reloads all materials
+Reloads all textures
+RemoveMemoryInfoCallback
+RenderDevice001
+RenderDeviceMgr001
+RenderHardwareConfig001
+RenderSystemSurface001
+RenderTargets
+RenderThread
+RenderToRT %d
+Report thread stalls.  Positive number will filter by stalls >= time in ms.  -1 reports all locks.
+Reports the amount of size in bytes taken up by hardware morph textures.
+Requesting material value from var "%s" which is not a material value (material: %s)\n
+Requesting texture value from var "%s" which is not a texture value (material: %s)\n
+ResourceSystem004
+RestoreLightmapPages is expected in STATE_RELEASED, current state = %d, discarded.\n
+Restoring
+RtlUnwind
+SHELL32.dll
+SNAN)
+STAR_System001
+S\rYkv
+Saturday
+Scaleform textures
+SceneSystem_001
+Scissor Rect Stack overflow.  Too many Pushes?\n
+Scissor Rect Stack underflow.  Too many Pops?\n
+SendServerCmdUserExtraData called %d %s\n
+September
+SetFilePointerEx
+SetLastError
+SetShader: Couldn't find shader %s for material %s!\n
+SetStdHandle
+SetTempExcluded: %s: %s (%d)\n
+SetUnhandledExceptionFilter
+Shader not specified in material %s (fallback %s)\nUsing wireframe instead...\n
+Shader not specified in material %s\nUsing wireframe instead...\n
+ShaderAPI: %s\n
+ShaderApi029
+ShaderDLL004
+ShaderDevice001
+ShaderDeviceMgr001
+ShaderShadow010
+ShaderSystem002
+Shader_t::LoadTexture: texture "%s.vtf" doesn't exist\n
+ShellExecuteA
+ShouldUseNewAssertDialog
+Show materials (verbose version).
+Show materials.
+Show memory usage for custom weapon materials.
+Show used textures.
+Sleep
+Software AA - perform a software anti-aliasing post-process (an alternative/supplement to MSAA). This value sets the strength of the effect: (0.0 - off), (1.0 - full)
+SonyPS3
+SoundSystem001
+Spew info about the hardware aspect ratio
+StackToolsNotify_LoadedLibrary
+StandardRenderStateList_t pool
+StaticProp textures
+StoreTempValue
+Sunday
+Svj>
+Swap_Buffers
+T\t5K
+TerminateProcess
+Texture '%s' not found.\n
+Texture LOD Autocheckout
+Texture: '%s' RefCount: %d\n
+TextureGeneration: CCompositeTexture (construct): %s, %s\n
+TextureGeneration: CCompositeTexture (destruct): %s, %s\n
+TextureGeneration: Create m_ResultTexture.m_pTexture (+destroy resultVTF mem) %s\n
+TextureGeneration: CreateCompositingMaterial (+refresh): %s\n
+TextureGeneration: CreateResultVTF %s\n
+TextureGeneration: DoAsyncTextureLoad %s... 
+TextureGeneration: FAILURE: resulting vtf size missmatch, forcing regenerate.\n
+TextureGeneration: Finished generating texture %s... 
+TextureGeneration: GenerateMipmaps, copy scratchVTF to resultVTF, %s\n
+TextureGeneration: GetCompositeTexture found CCompositeTexture\n
+TextureGeneration: SUCCESS.\n
+TextureGeneration: m_ResultTexture still referenced on destruct, leaking Id, %d %s %s\n
+The content path to the materialsrc directory. If left unset, it'll assume your content directory is next to the currently running game dir.
+The material system requires the filesystem to run!\n
+The queue/thread mode the material system should use: -1=default, 0=synchronous single thread, 1=queued single thread, 2=queued multithreaded
+This means we want triple buffering if we are fullscreen and vsync'd
+ThreadInMainThread
+ThreadInterlockedAssignIf64
+ThreadJoin
+ThreadSetDebugName
+ThreadSleep
+Thursday
+TlsAlloc
+TlsFree
+TlsGetValue
+TlsSetValue
+Too many morph vertices! Call brian\n
+Total HW Morph memory used: %dk\n
+Tried BeginRenderTargetAllocation after game startup. If I let you do this, all users would suffer.\n
+Tried to create render target outside of CMaterialSystem::BeginRenderTargetAllocation/EndRenderTargetAllocation block\n
+Tuesday
+T~OXu
+U?1g
+U?Xzv
+U?wN
+UEj)
+UNKNOWN
+UUUUUU
+UV88
+UVLX8888
+UVWQ8888
+UcKc
+UnhandledExceptionFilter
+Unknown exception
+Unknown material %s\n
+UnlitGeneric
+Uo\vv
+Usage: mat_reloadmaterial material_name_substring\n   or  mat_reloadmaterial substring1*substring2*...*substringN\n
+Usage:\n  mat_texture_list_exclude load excludelistfile.lst - loads exclude list file;\n  mat_texture_list_exclude reset - resets loaded exclude list information;\n  mat_texture_list_exclude save excludelistfile.lst - saves exclude list file.\n
+Usage:\n  mat_texture_list_txlod_sync reset - resets all run-time changes to LOD overrides;\n  mat_texture_list_txlod_sync save  - saves all changes to material content files.\n
+Using shader api: %s\n
+VALVE-MODULE-DEBUG-%08X
+VAvi001
+VBAllocTracker001
+VBik001
+VCLIENTMATERIALSYSTEM001
+VDataCache003
+VDmeMakeFileUtils001
+VENGINE_GAMEUIFUNCS_VERSION005
+VEngineCvar007
+VFileSystem017
+VGUI_Input005
+VGUI_Panel009
+VGUI_Scheme010
+VGUI_Surface031
+VGUI_System010
+VGUI_ivgui008
+VJobs01
+VMDLLIB001
+VMT patch file has no $include key - invalid!\n
+VMTCache
+VMaterialSystem080
+VMaterialSystem2_001
+VMaterialSystemConfig004
+VMaterialSystemStub001
+VNewAsyncFileSystem001
+VP4002
+VPhysicsCollision007
+VPrecacheSystem001
+VProcessUtils002
+VResourceAccessControl001
+VShaderUtil001
+VSoundEmitter003
+VStudioRender026
+VTFFileBaseHeader_t
+VTFFileHeaderPS3_t
+VTFFileHeaderV7_1_t
+VTFFileHeaderV7_2_t
+VTFFileHeaderV7_3_t
+VTFFileHeaderX360_t
+VTFFileHeader_t
+V_AppendSlash: ran out of space on %s.
+VertexLitGeneric
+VirtualAlloc
+VirtualFree
+WIN32
+WINDOWS
+WR_l%2>
+WY'N
+WaitForAsyncTextureLoads
+WaitForSingleObject
+Warning
+Warning error: CShaderSystem::DrawElements: Mesh supports tessellation, but material does not.\n
+Warning in .VMT file (%s): no ']' or '}' found in vector key "%s".\nDid you forget to surround the vector with "s?\n
+Warning! Encountered old format VTF file; please rebuild it!\n
+Warning:  %s = '%s' is infinite, clamping value.\n
+Warning: Applying '$nodecal 1' to character material: %s\n
+Warning: Async texture download exceeded 10ms: %s!\n
+Warning: Removing '$nodecal 1' from character material: %s\n
+Wednesday
+Whether QMS can be enabled on single threaded CPU
+WideCharToMultiByte
+Wireframe
+Wireframe_DX6
+Wireframe_DX9
+WmS|
+World textures
+WorldRendererMgr001
+WriteConsoleW
+WriteFile
+WriteMiniDump
+X/4B
+X2CQ
+X360
+X4I+
+X@EventSystem001
+XL3Z
+Xl=hs>
+Y@.dll
+Z_JmLd
+ZxnI
+[ ServiceAsyncTextureLoads() : Call %i : HighQueue %i, LowQueue %i ]\n
+[.02 .02 .02]
+[AsyncStandin_TEXID]
+[BLACKALPHAZERO_TEXID]
+[BLACK_TEXID]
+[CHAR_MASKS1_TEXID]
+[CHAR_MASKS2_TEXID]
+[FLAT_NORMAL_TEXTURE]
+[FLAT_SSBUMP_TEXTURE]
+[FULLBRIGHT_BUMPED_LIGHTMAP_TEXID]
+[FULLBRIGHT_LIGHTMAP_TEXID]
+[GREYALPHAZERO_TEXID]
+[GREY_TEXID]
+[MAXDEPTH_TEXID]
+[WHITE_TEXID]
+[aOni*{
+[lightmap
+[lightmap %d]
+[paintmap %d]
+\content\
+\game\
+\hammer.exe
+\hlmv.exe
+\materials\
+\materialsrc\
+\nExcluded Textures: (%d)\n
+\nwX4C
+\tJqAl
+\tcQr
+\vmview.exe
+^<V7w
+_ExitOnFatalAssert
+_RDATA
+_W4~w
+___%s_%d.vmt
+___AccumulateMorph%d.vmt
+___buffer_clear_obey_stencil0.vmt
+___buffer_clear_obey_stencil1.vmt
+___buffer_clear_obey_stencil2.vmt
+___buffer_clear_obey_stencil3.vmt
+___buffer_clear_obey_stencil4.vmt
+___buffer_clear_obey_stencil5.vmt
+___buffer_clear_obey_stencil6.vmt
+___buffer_clear_obey_stencil7.vmt
+___error.vmt
+___flat.vmt
+___morphweight.vmt
+___visualizeMorphAccum.vmt
+___visualizeMorphWeight.vmt
+__based(
+__cdecl
+__clrcall
+__eabi
+__fastcall
+__morphtarget[%d]: pos/norm
+__morphtarget[%d]: side/speed
+__pascal
+__ptr64
+__render_target_%d
+__restrict
+__stdcall
+__thiscall
+__unaligned
+__vectorcall
+_cabs
+_hypot
+_logb
+_nextafter
+_rt_CustomMaterial1024
+_rt_CustomMaterial128
+_rt_CustomMaterial2048
+_rt_CustomMaterial256
+_rt_CustomMaterial512
+_rt_FullFrameDepth
+_rt_FullFrameFB1
+_rt_FullScreen
+_rt_MorphAccumulator
+_rt_MorphWeight
+_xlsp
+`*Hhq
+`7bu
+`RTTI
+`copy constructor closure'
+`default constructor closure'
+`dynamic atexit destructor for '
+`dynamic initializer for '
+`eh vector constructor iterator'
+`eh vector copy constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`eh vector vbase copy constructor iterator'
+`h`hhh
+`local static guard'
+`local static thread guard'
+`local vftable constructor closure'
+`local vftable'
+`managed vector constructor iterator'
+`managed vector copy constructor iterator'
+`managed vector destructor iterator'
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`scalar deleting destructor'
+`string'
+`typeof'
+`udt returning'
+`vbase destructor'
+`vbtable'
+`vcall'
+`vector constructor iterator'
+`vector copy constructor iterator'
+`vector deleting destructor'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`vector vbase copy constructor iterator'
+`vftable'
+`virtual displacement map'
+aDJ=
+aFN,
+abcdefghijklmnopqrstuvwxyz
+acos
+antitamper.dll
+asin
+async_download_colorize
+async_download_debug_output
+async_download_delay
+async_download_init_at_minimum_res
+async_download_refresh_mode
+async_download_to_synchronous_on_completion
+async_download_wait_frames
+atan
+atan2
+bFbx
+bad exception
+bad vertex size for material %s\n
+bin/
+black
+bumpScale
+c:\buildslave\csgo_trunk_win32\build\src\materialsystem\Release\materialsystem.pdb
+c:\buildslave\csgo_trunk_win32\build\src\materialsystem\imaterialsysteminternal.h
+c:\buildslave\csgo_trunk_win32\build\src\public\tier0/tslist.h
+c:\buildslave\csgo_trunk_win32\build\src\public\tier1\utlsortvector.h
+c?e2
+cairo.dll
+ceil
+client.dll
+cmaterialsystem.cpp
+cmatrendercontext.cpp
+cmd.exe
+color-code miplevels 2: normalmaps, 1: everything else
+composite_texture.cpp
+composite_texture_%d_%d_%d_%d
+compositing_material_%d
+compressedSize
+config
+cosh
+cpu_level
+cs_custom_material_%i
+csgo
+csm_quality_level
+ctexture.cpp
+cu\fq7
+cubemap
+custom_material.cpp
+d8L2
+datacache.dll
+dddd, MMMM dd, yyyy
+debugmorphaccumulator
+depth
+dev/IdentityLightWarp
+dev/dev_exclude_error
+dev/dev_temp_exclude
+dummy group
+dummy material
+e+000
+e-CS
+eLK(w
+engine.dll
+engine/NormalizedRandomDirections2D
+engine/SSAOReflectionVectors
+engine/preloadtexture
+env_cubemap
+envmap
+envmapmask
+error
+error parsing vector element in ParseVectorFromKeyValueString\n
+f6\tn
+f@)rM
+fabs
+false
+fb width: %d fb height: %d\n
+fileTypeString
+filesystem_stdio.dll
+flags
+flashlight
+floor
+fmod
+fmod.dll
+fmodstudio.dll
+frexp
+g_PerfStats
+g_VProfCurrentProfile
+g_pMemAlloc
+g_pThreadPool
+g_tm_api
+game
+gameconsole
+gpu_level
+gpu_mem_level
+grey
+greyalphazero
+groupName
+h0'D
+h2yv
+hI{L[
+hb?O2
+hdr_dx9
+headerSize
+height
+icui18n.dll
+icuuc.dll
+id@j>
+imageFormat
+imemanager.dll
+include
+infested
+inity
+inputsystem.dll
+insert
+j,4c
+jVa?
+k:UG
+k=yI
+kBk>
+kU!W>
+kWt>
+launcher.dll
+ldexp
+libavcodec-56.dll
+libavformat-56.dll
+libavresample-2.dll
+libavutil-54.dll
+libfontconfig-1.dll
+libfreetype-6.dll
+libglib-2.0-0.dll
+libgmodule-2.0-0.dll
+libgobject-2.0-0.dll
+libpango-1.0-0.dll
+libpangoft2-1.0-0.dll
+libswscale-3.dll
+lightmap fullpage texlock
+lightmap subrect texlock
+load
+localize.dll
+log10
+lowResImageFormat
+lowResImageHeight
+lowResImageSample
+lowResImageWidth
+lowfill
+ls1=
+lzZ?
+m1WY$
+m\nXo
+m_bIsHidef: %s\n
+m_bIsWidescreen: %s\n
+m_flFrameBufferAspectRatio: %f\n
+m_flFrameBuffertoPhysicalScalar: %f\n
+m_flPhysicalAspectRatio: %f\n
+m_pName is NULL for CMaterialVar\n
+mat_aaquality
+mat_antialias
+mat_async_tex_maxtime_ms
+mat_bufferprimitives
+mat_bumpmap
+mat_composite_texture_rolling_cache_size
+mat_compressedtextures
+mat_custommaterialusage
+mat_debugalttab
+mat_debugalttab: CMaterialSystem::ReacquireResources\n
+mat_debugalttab: CMaterialSystem::ReleaseResources\n
+mat_debugalttab: CMaterialSystem::ReleaseShaderObjects\n
+mat_debugalttab: CMaterialSystem::RestoreShaderObjects\n
+mat_debugalttab: ChangeVideoMode\n
+mat_debugalttab: RecomputeAllStateSnapshots\n
+mat_debugalttab: ReloadMaterials\n
+mat_debugalttab: ResetTextureFilteringState\n
+mat_debugalttab: SetAnisotropicLevel\n
+mat_debugalttab: SetHardwareGammaRamp\n
+mat_debugalttab: SetStandardVertexShaderConstants\n
+mat_debugalttab: Setting bReloadMaterials because new dxlevel = %d and old dxlevel = %d\n
+mat_debugalttab: Setting forceUpdate, bReloadMaterials and recomputeSnapshots (ShadowDepthTexture changed: %d -> %d)\n
+mat_debugalttab: Setting forceUpdate, bReloadMaterials, and bForceAltTab because new hdr level = %d and old hdr level = %d\n
+mat_debugalttab: forceUpdate is true, therefore setting recomputeSnapshots, bRedownloadLightmaps, bRedownloadTextures, bResetAnisotropy, and bSetStandardVertexShaderConstants\n
+mat_debugalttab: new ReduceFillrate=%d, old ReduceFillrate=%d, setting bReloadMaterials\n
+mat_debugalttab: new UseParallaxMapping=%d, old UseParallaxMapping=%d, setting bReloadMaterials\n
+mat_debugalttab: new bAllowCheats=%d, old bAllowCheats=%d, setting bRedownloadLightmaps\n
+mat_debugalttab: new bFilterLightmaps=%d, old bFilterLightmaps=%d, setting EnableLightmapFiltering\n
+mat_debugalttab: new bNoTransparency=%d, old bNoTransparency=%d, setting recomputeSnapshots and bResetAnisotropy\n
+mat_debugalttab: new bSoftwareLighting=%d, old bSoftwareLighting=%d, setting bReloadMaterials\n
+mat_debugalttab: new gpu_level=%d, old gpu_level=%d, setting bReloadMaterials\n
+mat_debugalttab: new m_nForceAnisotropicLevel: %d, old m_nForceAnisotropicLevel: %d, setting bResetAnisotropy and bResetTextureFilter\n
+mat_debugalttab: new monitorgamma: %f, old monitorgamma: %f, setting bMonitorGammaChanged\n
+mat_debugalttab: redownloading textures\n
+mat_debugalttab: setting bRedownloadTextures, recomputeSnapshots, and bResetAnisotropy\n
+mat_debugalttab: video mode changed because triple buffering changed\n
+mat_debugalttab: video mode changed due to toggle of wait for vsync\n
+mat_debugalttab: video mode changed for one of various reasons\n
+mat_debugdepth
+mat_detail_tex
+mat_diffuse
+mat_draw_resolution
+mat_draw_resolution_threshold
+mat_drawflat
+mat_drawgray
+mat_dxlevel
+mat_dynamicPaintmaps
+mat_dynamiclightmaps
+mat_exclude_async_update
+mat_fastnobump
+mat_fastspecular
+mat_fillrate
+mat_filterlightmaps
+mat_filtertextures
+mat_force_vertexfog
+mat_forceaniso
+mat_forcehardwaresync
+mat_forcemanagedtextureintohardware
+mat_fullbright
+mat_hdr_enabled
+mat_lightmap_pfms
+mat_measurefillrate
+mat_mipmaptextures
+mat_monitorgamma
+mat_monitorgamma_tv_enabled
+mat_monitorgamma_tv_exp
+mat_monitorgamma_tv_range_max
+mat_monitorgamma_tv_range_min
+mat_motion_blur_enabled
+mat_norendering
+mat_normalmaps
+mat_paint_enabled
+mat_parallaxmap
+mat_phong
+mat_picmip
+mat_processtoolvars
+mat_proxy
+mat_queue_mode
+mat_queue_mode_force_allow
+mat_queue_priority
+mat_queue_report
+mat_reducefillrate
+mat_reduceparticles
+mat_reloadallcustommaterials
+mat_reloadallmaterials
+mat_reloadmaterial
+mat_reloadtextures
+mat_reloadvmtcache
+mat_reporthwmorphmemory
+mat_reversedepth
+mat_showaspectratioinfo
+mat_showenvmapmask
+mat_showlowresimage
+mat_showmaterials
+mat_showmaterialsverbose
+mat_showmiplevels
+mat_showtextures
+mat_software_aa_strength
+mat_softwarelighting
+mat_specular
+mat_spewalloc
+mat_supportflashlight
+mat_texture_list_content_path
+mat_texture_list_exclude
+mat_texture_list_exclude loaded '%s'.\n
+mat_texture_list_exclude loading '%s'...\n
+mat_texture_list_exclude reset : completed.\n
+mat_texture_list_exclude reset...\n
+mat_texture_list_exclude saved '%s'.\n
+mat_texture_list_exclude saving '%s'...\n
+mat_texture_list_exclude_editing
+mat_texture_list_txlod_sync
+mat_texture_list_txlod_sync %s...\n
+mat_texture_list_txlod_sync reset : completed.\n
+mat_texture_list_txlod_sync save : completed.\n
+mat_texturestreaming
+mat_tonemapping_occlusion_use_stencil
+mat_track_materialvar_changes_post_precache
+mat_triplebuffered
+mat_using_d3d9ex
+mat_vsync
+matchmaking.dll
+material "%s" not found.\n
+material_proxy_state
+materials
+materials/
+materials/%s
+materials/%s.vmt
+materials/%s.vtf
+materials/graffiti/
+materialsystem.dll
+matrix: %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f
+maxheight
+maxwidth
+mem_level
+mempool.cpp
+mipSkipCount
+models/player/custom_player/econ/
+models/weapons/customization/materials/noise.vtf
+models/weapons/customization/shared/gun_grunge.vtf
+models/weapons/customization/shared/paint_wear.vtf
+modf
+monitor gamma (typically 2.2 for CRT and 1.7 for LCD)
+morph.cpp
+morphweight
+mss32.dll
+mssdolby.flt
+mssds3d.flt
+mssdsp.flt
+msseax.flt
+mssmp3.asi
+msssrs.flt
+mtlName
+nan(ind)
+nan(snan)
+no ']' or '}' found in vector key in ParseVectorFromKeyValueString\n
+no_composite
+normalize
+normalizesigned
+np?z 
+numFrames
+numMipLevels
+numResources
+n}in
+o3fW
+obwQ4
+ofn}>
+operator
+operator "" 
+owM&
+p4lib
+panorama.dll
+panorama_text_pango.dll
+panoramauiclient.dll
+parsifal.dll
+patch
+phonon.dll
+pnJ=
+portal2
+preloadDataSize
+qo-W>
+r7Yr7=
+r_flashlightdepthtexture
+r_shadowrendertotexture
+reflectivity
+replace
+reset
+resource/vmtcache.txt
+restrict(
+sU0&?W
+save
+scaleform
+scenefilecache.dll
+server.dll
+serverbrowser.dll
+setting.aspectratio
+setting.defaultres
+setting.defaultresheight
+setting.unsupported
+shaderapidx9
+shaderapidx9.dll
+shaderapiempty
+shaderapivk
+sinh
+snan)
+soundemittersystem.dll
+soundsystem.dll
+sqrt
+srgb
+srgb_gameconsole
+srgb_pc
+startFrame
+stdshader_dbg
+stdshader_dbg.dll
+stdshader_dx%d
+stdshader_dx9.dll
+steam_api.dll
+steamnetworkingsockets.dll
+stereoparam
+studiorender.dll
+subrect
+swarm
+s{c|H
+t14x
+tLVv
+tanh
+texture preload
+tier0.dll
+tmp_lod_psdinfo.txt
+true
+u+E6
+u?^p?o4
+uXO=
+uZEeu
+unknown
+unknown\n
+unnamed
+unrecognized conditional test %s in %s\n
+v2!L.2
+v8.dll
+v8_libbase.dll
+v8_libplatform.dll
+vECd
+va1+
+valve_avi.dll
+vaudio_celt.dll
+vaudio_miles.dll
+vaudio_speex.dll
+vector2d: %f %f
+vector3d: %f %f %f
+vector4d: %f %f %f %f
+version
+vgui2.dll
+vguimatsurface.dll
+video.dll
+vmt_patch
+vmt_patches
+vphysics.dll
+vscript.dll
+vstdlib.dll
+vtex_dll.dll
+wIq?
+weapons/shared
+weapons/v_models
+weapons/w_models
+white
+width
+wireframe
+xpxxxx
+xwpwpp
+y>1g
+z*va
+z1}B
+zJO>
+zyC7
+{4Wf
+|W8A=
+}mxQ>
