@@ -24,7 +24,12 @@ jobs:
           $folders = "$env:GameTracking_dir" | Get-ChildItem -Force -Directory -Filter ".*"
           $files = "$env:GameTracking_dir" | Get-ChildItem -Force -File
           
-          ($folders + $files) | ForEach-Object {
+          $folders | ForEach-Object {
+            $_.FullName | Write-Host
+            $_.FullName | Remove-Item -Force
+          }
+          
+          $files | ForEach-Object {
             $_.FullName | Write-Host
             $_.FullName | Remove-Item -Force
           }
