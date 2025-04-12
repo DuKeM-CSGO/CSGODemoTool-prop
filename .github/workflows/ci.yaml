@@ -31,7 +31,7 @@ jobs:
           if (-not (Test-Path -Path $vs_dev_shell)) {
             Write-Error "vs_dev_shell $vs_dev_shell is invalid."
           }
-          & $vs_dev_shell -Arch x64
+          & $vs_dev_shell -Arch amd64
           cl.exe
           Pop-Location
 #         $vs = Get-VSSetupInstance | Where-Object {
