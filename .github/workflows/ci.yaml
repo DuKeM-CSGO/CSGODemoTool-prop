@@ -27,7 +27,7 @@ jobs:
           Import-Module VSSetup
           
           Write-Host Get-VSSetupInstance
-          
+          Pop-Location
 #         $vs = Get-VSSetupInstance | Where-Object {
 #           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
 #         }
@@ -39,7 +39,7 @@ jobs:
 #         & ($vs[0]).InstallationPath -Arch x64
 #         cl.exe
           
-          Pop-Location
+          
 #      - name: CMake Build
 #        shell: pwsh
 #        run: |
