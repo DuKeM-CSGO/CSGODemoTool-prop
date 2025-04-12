@@ -37,7 +37,7 @@ jobs:
           
           Push-Location "$build_dir"
           
-          if (${{ matrix.os }} -eq "windows-latest") {
+          if ("${{ matrix.os }}" -eq "windows-latest") {
             cmake -S ..
           } else {
             cmake -S -DCMAKE_CXX_COMPILER=g++ ..
@@ -56,7 +56,7 @@ jobs:
           
           Push-Location "$build_dir"
           
-          if (${{ matrix.os }} -eq "windows-latest") {
+          if ("${{ matrix.os }}" -eq "windows-latest") {
             ctest --build-and-test ../ ./ --build-generator "Visual Studio 17 2022" -C Debug
           } else {
             ctest --build-and-test ../ ./ --build-generator "Unix Makefiles"
