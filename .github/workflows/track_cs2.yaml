@@ -3,6 +3,7 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
+  
 jobs:
   tracking:
     name: Track CS2
@@ -25,7 +26,9 @@ jobs:
           $GameTracking_dir = "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git $GameTracking_dir
           
-          # TODO: Waring if $GameTracking_dir.Contains(" ")
+          if ($GameTracking_dir.Contains(" ")){
+            Write-Warning "Target dir($GameTracking_dir) contains space"
+          }
           
           $GameTracking_dir |
             Get-ChildItem -Force -Directory |
