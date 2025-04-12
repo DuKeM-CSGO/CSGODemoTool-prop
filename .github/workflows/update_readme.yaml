@@ -82,6 +82,7 @@ jobs:
         with:
           pattern: '*_result_file'
           path: doc/auto_gen
+          merge-multiple: true
       
       - name: Check third-party repo
         env:
