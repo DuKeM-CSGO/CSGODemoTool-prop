@@ -82,7 +82,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          pattern: *_result_file
+          pattern: '*_result_file'
           path: doc/auto_gen
       
       - name: Check third-party repo
