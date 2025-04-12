@@ -117,6 +117,7 @@ jobs:
           
           # check changes
           
+          git status | Write-Host
           $changes = git status --porcelain
           if (-not $changes) {
               exit 0
