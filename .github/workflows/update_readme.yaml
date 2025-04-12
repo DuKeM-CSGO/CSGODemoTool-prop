@@ -110,10 +110,9 @@ jobs:
           
           #region third-party
           
-          $third_party = Get-Content -Path doc\auto_gen\third_party_repo.md
+          $third_party = Get-Content -Path doc\auto_gen\third_party_repo.md -Raw
           $markdown += $third_party
           
-          Write-Host $markdown
           $markdown | Out-File -FilePath readme.md -Force -Encoding utf8
           
           # check changes
