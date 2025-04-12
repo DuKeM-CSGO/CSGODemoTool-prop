@@ -40,7 +40,7 @@ jobs:
           if ("${{ matrix.os }}" -eq "windows-latest") {
             cmake -S ..
           } else {
-            cmake -S -DCMAKE_CXX_COMPILER=g++ ..
+            cmake -S .. -DCMAKE_CXX_COMPILER=g++
           }
           
           Pop-Location
