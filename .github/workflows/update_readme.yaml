@@ -87,7 +87,8 @@ jobs:
           path: doc/auto_gen
           merge-multiple: true
       
-      - name: Check third-party repo
+      - name: Generate readme.md
+        id: generate_readme
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -117,10 +118,11 @@ jobs:
           
           # check changes
           
-          git status | Write-Host
-          git status --porcelain | Write-Host
+          git add .
           $changes = git status --porcelain
+          
           if (-not $changes) {
+              Write-Host "Changes:\n$changes"
               exit 0
           } else {
               "readme_changed=true" |
@@ -129,7 +131,7 @@ jobs:
 
       - name: Commit changes
         id: commit
-        if: steps.update_readme.outputs.readme_changed == 'true'
+        if: steps.generate_readme.outputs.readme_changed == 'true'
         shell: pwsh
         run: |
           $commit_sha = git rev-parse HEAD
@@ -137,7 +139,7 @@ jobs:
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 
       - name: Create Pull Request
-        if: steps.update_readme.outputs.readme_changed == 'true'
+        if: steps.generate_readme.outputs.readme_changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
