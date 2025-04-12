@@ -103,13 +103,17 @@ jobs:
           
           #region headers
           
-          $markdown += New-MDHeader "Headings"
+          $markdown += New-MDHeader "Readme"
           
           $url = "$yaml_url/ci.yaml"
           $svg = "[![CI]($url/badge.svg)]($url)"
           $markdown += New-MDParagraph -Lines $svg
           
           $url = "$yaml_url/track_cs2.yaml"
+          $svg = "[![Track CS2]($url/badge.svg)]($url)"
+          $markdown += New-MDParagraph -Lines $svg
+          
+          $url = "$yaml_url/update_readme.yaml"
           $svg = "[![Track CS2]($url/badge.svg)]($url)"
           $markdown += New-MDParagraph -Lines $svg
           
