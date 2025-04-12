@@ -1,6 +1,8 @@
 name: Update Readme
 on:
   workflow_dispatch: {}
+  schedule:
+    - cron: '0 0 * * *'
 jobs:
   update_third_party_repo:
     name: Update third-party repo
@@ -9,6 +11,7 @@ jobs:
       - name: Check third-party repo
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
         run: |
           $result = [System.Collections.Generic.List[object]]@()
           
@@ -51,10 +54,11 @@ jobs:
               License = $license
             })
           }
-
+          
           $result | ConvertTo-Json | Out-File -FilePath result.json -Encoding utf8
           
       - name: Format to markdown
+        shell: pwsh
         run: |
           Import-Module MarkdownPS
           
@@ -91,6 +95,7 @@ jobs:
         id: generate_readme
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
         run: |
           Import-Module MarkdownPS
           $markdown = ""

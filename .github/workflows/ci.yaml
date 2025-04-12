@@ -26,9 +26,13 @@ jobs:
           
           Import-Module VSSetup
           
-          $res = Get-VSSetupInstance | Select-VSSetupInstance -Latest
-          $res | Get-Member | Write-Host
-          Write-Host $res.InstallationPath
+          $vs_instance = Get-VSSetupInstance | Select-VSSetupInstance -Latest
+          $vs_dev_shell = Join-Path $.InstallationPath "Common7\Tools\Launch-VsDevShell.ps1"
+          if (-not (Test-Path -Path $vs_dev_shell)) {
+            Write-Error "vs_dev_shell $vs_dev_shell is invalid."
+          }
+          & $vs_dev_shell -Arch x64
+          cl.exe
           Pop-Location
 #         $vs = Get-VSSetupInstance | Where-Object {
 #           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
