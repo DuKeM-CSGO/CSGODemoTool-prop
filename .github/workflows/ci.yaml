@@ -74,8 +74,8 @@ jobs:
       - name: CMake Generate
         shell: pwsh
         run: |
-          g++ --help=target | sls "std="
-          clang++ --help | sls "std="
+          g++ --help=target
+          clang++ --help
           
           Import-Module VSSetup
           
