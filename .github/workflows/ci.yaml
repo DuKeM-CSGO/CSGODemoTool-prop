@@ -29,7 +29,7 @@ jobs:
       - name: CMake Generate
         shell: pwsh
         run: |
-          $build_dir = ${{ steps.set_build_dir.outputs.build_dir }}
+          $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
           
           if (-not (Test-Path -Path $build_dir)) {
             New-Item -Path $build_dir -ItemType "Directory" | Out-Null
@@ -48,7 +48,7 @@ jobs:
       - name: Run CTest
         shell: pwsh
         run: |
-          $build_dir = ${{ steps.set_build_dir.outputs.build_dir }}
+          $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
           
           if (-not (Test-Path -Path $build_dir)) {
             New-Item -Path $build_dir -ItemType "Directory" | Out-Null
