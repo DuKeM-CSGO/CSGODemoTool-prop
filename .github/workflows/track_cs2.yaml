@@ -35,10 +35,14 @@ jobs:
           $changes = git status --porcelain
           if (-not $changes) {
               exit 0
+          } else {
+              "TRACKING_CHANGED=true" |
+                Out-File -FilePath $env:GITHUB_ENV -Append
           }
 
       - name: Commit changes
         id: commit
+        if: steps.clone.outputs.TRACKING_CHANGED == 'true'
         shell: pwsh
         run: |
           Push-Location "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
@@ -48,6 +52,7 @@ jobs:
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 
       - name: Create Pull Request
+        if: steps.clone.outputs.TRACKING_CHANGED == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -55,7 +60,7 @@ jobs:
           base: master
           branch: update-tracking-cs2
           delete-branch: true
-          author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
             GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}
           body: |
