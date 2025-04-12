@@ -1,15 +1,10 @@
-#include <print>
-#include <version>
+#include "macro.h"
 
-#if defined(_MSC_VER)
-    #define COMPILER_MSVC 1
-#elif defined(__clang__)
-    #define COMPILER_CLANG 1
-#elif defined(__GNUC__)
-    #define COMPILER_GCC 1
-#else
-    #define COMPILER_UNKNOWN 1
+#if __cpp_lib_print < 202207L
+#error "cpp_lib_print is unavailable"
 #endif
+
+#include <print>
 
 int main() {
 #if COMPILER_MSVC
