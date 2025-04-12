@@ -77,6 +77,9 @@ jobs:
     needs: [update_third_party_repo]
     runs-on: windows-latest
     steps:
+      - name: Run checkout
+        uses: actions/checkout@v4
+      
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -97,11 +100,11 @@ jobs:
           $markdown += New-MDHeader "Headings"
           
           $url = "$yaml_url/ci.yaml"
-          $svg = "[![Update Readme]($url/badge.svg)]($url)"
+          $svg = "[![CI]($url/badge.svg)]($url)"
           $markdown += New-MDParagraph -Lines $svg
           
           $url = "$yaml_url/track_cs2.yaml"
-          $svg = "[![Update Readme]($url/badge.svg)]($url)"
+          $svg = "[![Track CS2]($url/badge.svg)]($url)"
           $markdown += New-MDParagraph -Lines $svg
           
           #region third-party
