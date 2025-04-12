@@ -3,7 +3,8 @@
 
 #if __cpp_constexpr < 202207L
 #error "cpp_constexpr is too strict"
-#elif __cpp_constexpr_dynamic_alloc < 201907L
+#endif
+#if __cpp_constexpr_dynamic_alloc < 201907L
 #error "cpp_constexpr_dynamic_alloc is unavailable"
 #endif
 
