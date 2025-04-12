@@ -23,7 +23,7 @@ jobs:
           }
           
           if (-not (Test-Path -Path $clone_dir)) {
-            New-Item -Path $clone_dir -ItemType "Directory"
+            New-Item -Path $clone_dir -ItemType "Directory" | Out-Null
           }
           
           "clone_dir=$clone_dir" |

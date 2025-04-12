@@ -17,14 +17,14 @@ jobs:
         id: set_build_dir
         shell: pwsh
         run: |
-          $build_dir = Join-Path "${{ github.workspace }}" "build"
+          $build_dir = (Join-Path "${{ github.workspace }}" "build").ToString()
           
           if ($build_dir.Contains(" ")) {
             Write-Warning "CMake working dir($build_dir) contains space"
           }
           
           if (-not (Test-Path -Path $build_dir)) {
-            New-Item -Path $build_dir -ItemType "Directory"
+            New-Item -Path $build_dir -ItemType "Directory" | Out-Null
           }
           
           "build_dir=$build_dir" |
