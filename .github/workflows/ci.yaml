@@ -26,16 +26,18 @@ jobs:
           
           Import-Module VSSetup
           
-          $vs = Get-VSSetupInstance | Where-Object {
-            $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
-          }
-          $vs | Foreach-Object {
-            Write-Host "Found Launch-VsDevShell.ps1 for Visual Studio $($_.DisplayName) ($($_.InstallationVersion))"
-            Write-Host "Path: $_.InstallationPath"
-          }
+          Write-Host Get-VSSetupInstance
           
-          & ($vs[0]).InstallationPath -Arch x64
-          cl.exe
+#         $vs = Get-VSSetupInstance | Where-Object {
+#           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
+#         }
+#         $vs | Foreach-Object {
+#           Write-Host "Found Launch-VsDevShell.ps1 for Visual Studio $($_.DisplayName) ($($_.InstallationVersion))"
+#           Write-Host "Path: $_.InstallationPath"
+#         }
+#         
+#         & ($vs[0]).InstallationPath -Arch x64
+#         cl.exe
           
           Pop-Location
 #      - name: CMake Build
