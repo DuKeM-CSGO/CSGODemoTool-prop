@@ -10,10 +10,55 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
-      - name: Print system info
+      - name: Run checkout
+        uses: actions/checkout@v4
+      
+      - name: Set build dir
+        id: set_build_dir
         shell: pwsh
         run: |
-          cmake --help
+          $build_dir = Join-Path "${{ github.workspace }}" "build"
+          
+          if ($build_dir.Contains(" ")) {
+            Write-Warning "CMake working dir($build_dir) contains space"
+          }
+          
+          if (-not (Test-Path -Path $build_dir)) {
+            New-Item -Path $build_dir -ItemType "Directory"
+          }
+          
+          "build_dir=$build_dir" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+      
+      - name: CMake Generate
+        shell: pwsh
+        run: |
+          $build_dir = ${{ steps.set_build_dir.outputs.build_dir }}
+          
+          Push-Location "$build_dir"
+          
+          if (${{ matrix.os }} -eq "windows-latest") {
+            cmake -S ..
+          } else {
+            cmake -S -DCMAKE_CXX_COMPILER=g++ ..
+          }
+          
+          Pop-Location
+      
+      - name: Run CTest
+        shell: pwsh
+        run: |
+          $build_dir = ${{ steps.set_build_dir.outputs.build_dir }}
+          
+          Push-Location "$build_dir"
+          
+          if (${{ matrix.os }} -eq "windows-latest") {
+            ctest --build-and-test ../ ./ --build-generator "Visual Studio 17 2022" -C Debug
+          } else {
+            ctest --build-and-test ../ ./ --build-generator "Unix Makefiles"
+          }
+          
+          Pop-Location
   
   ci:
     name: CI
@@ -25,17 +70,6 @@ jobs:
       - name: CMake Generate
         shell: pwsh
         run: |
-          $cmake_dir = "${{ github.workspace }}\build"
-          
-          if ($cmake_dir.Contains(" ")) {
-            Write-Warning "CMake working dir($cmake_dir) contains space"
-          }
-          
-          if (-not (Test-Path -Path $cmake_dir)) {
-            New-Item -Path $cmake_dir -ItemType "Directory"
-          }
-          
-          Push-Location "$cmake_dir"
           
           Import-Module VSSetup
           
@@ -46,7 +80,6 @@ jobs:
           }
           & $vs_dev_shell -Arch amd64
           cl.exe
-          Pop-Location
 #         $vs = Get-VSSetupInstance | Where-Object {
 #           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
 #         }
