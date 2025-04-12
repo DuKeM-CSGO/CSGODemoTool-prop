@@ -12,50 +12,51 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Set tracking dir
+        id: set_tracking_dir
         shell: pwsh
         run: |
-          echo "GameTracking_dir=${{ runner.temp }}\GameTracking-CS2" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "GameTracking_dir=${{ runner.temp }}\GameTracking-CS2" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 
       - name: Clone latest repo
+        id: clone
         shell: pwsh
         run: |
-          git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git "$env:GameTracking_dir"
+          $GameTracking_dir = "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
+          git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git $GameTracking_dir
           
-          "$env:GameTracking_dir" | Get-ChildItem -Force -Directory | Where-Object {
-            -not $_.FullName.Contains(".git")
-          } | ForEach-Object {
-            XCOPY $_.FullName "GameTracking\CS2" /E /I /H /Y /Q
-          }
+          # TODO: Waring if $GameTracking_dir.Contains(" ")
+          
+          $GameTracking_dir |
+            Get-ChildItem -Force -Directory |
+            Where-Object { -not $_.FullName.Contains(".git") } |
+            ForEach-Object { XCOPY $_.FullName "GameTracking\CS2" /E /I /H /Y /Q }
           
           $changes = git status --porcelain
           if (-not $changes) {
-              echo "TRACKING_CHANGED=false" | Out-File -FilePath $env:GITHUB_ENV -Append
               exit 0
-          } else {
-              echo "TRACKING_CHANGED=true" | Out-File -FilePath $env:GITHUB_ENV -Append
           }
 
       - name: Commit changes
-        if: env.TRACKING_CHANGED == 'true'
+        id: commit
         shell: pwsh
         run: |
-          Push-Location "$env:GameTracking_dir"
+          Push-Location "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
           $commit_sha = git rev-parse HEAD
           Pop-Location
-          echo "COMMIT_SHA=$commit_sha" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "COMMIT_SHA=$commit_sha" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 
       - name: Create Pull Request
-        if: env.TRACKING_CHANGED == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: "GameTracking-CS2: updated to ${{ env.COMMIT_SHA }}"
+          title: "GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}"
           base: master
           branch: update-tracking-cs2
           delete-branch: true
-          committer: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
-          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          author: GitHub Actions <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
-            GameTracking-CS2: updated to ${{ env.COMMIT_SHA }}
+            GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}
           body: |
-            GameTracking-CS2: updated to ${{ env.COMMIT_SHA }}
+            GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}
