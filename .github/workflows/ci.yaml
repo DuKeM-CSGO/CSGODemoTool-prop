@@ -26,7 +26,9 @@ jobs:
           
           Import-Module VSSetup
           
-          Write-Host Get-VSSetupInstance
+          $res = Get-VSSetupInstance | Select-VSSetupInstance -Latest
+          Write-Host $res.getType().name
+          Write-Host $res
           Pop-Location
 #         $vs = Get-VSSetupInstance | Where-Object {
 #           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")

@@ -52,7 +52,7 @@ jobs:
             })
           }
 
-          $result | ConvertTo-Json | Out-File -FilePath result.json
+          $result | ConvertTo-Json | Out-File -FilePath result.json -Encoding utf8
           
       - name: Format to markdown
         run: |
@@ -64,7 +64,7 @@ jobs:
           $markdown += New-MDHeader "Third-party Repos" -Level 2
           $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
           
-          $markdown | Out-File -FilePath third_party_repo.md
+          $markdown | Out-File -FilePath third_party_repo.md -Encoding utf8
       
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -113,7 +113,7 @@ jobs:
           $markdown += $third_party
           
           Write-Host $markdown
-          $markdown | Out-File -FilePath readme.md
+          $markdown | Out-File -FilePath readme.md -Force -Encoding utf8
           
           # check changes
           
