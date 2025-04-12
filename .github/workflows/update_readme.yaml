@@ -112,6 +112,7 @@ jobs:
           $third_party = Get-Content -Path doc\auto_gen\third_party_repo.md
           $markdown += $third_party
           
+          Write-Host $markdown
           $markdown | Out-File -FilePath readme.md
           
           # check changes
