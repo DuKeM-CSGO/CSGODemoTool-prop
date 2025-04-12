@@ -9,28 +9,34 @@ jobs:
     name: Track CS2
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: Run checkout
         uses: actions/checkout@v4
       
       - name: Set tracking dir
         id: set_tracking_dir
         shell: pwsh
         run: |
-          "GameTracking_dir=${{ runner.temp }}\GameTracking-CS2" |
+          $clone_dir = "${{ runner.temp }}\GameTracking-CS2"
+          
+          if ($clone_dir.Contains(" ")) {
+            Write-Warning "Repo dir($clone_dir) contains space"
+          }
+          
+          if (-not (Test-Path -Path $clone_dir)) {
+            New-Item -Path $clone_dir -ItemType "Directory"
+          }
+          
+          "clone_dir=$clone_dir" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-
+      
       - name: Clone latest repo
         id: clone
         shell: pwsh
         run: |
-          $GameTracking_dir = "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
-          git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git $GameTracking_dir
+          $clone_dir = "${{ steps.set_tracking_dir.outputs.clone_dir }}"
+          git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git $clone_dir
           
-          if ($GameTracking_dir.Contains(" ")){
-            Write-Warning "Target dir($GameTracking_dir) contains space"
-          }
-          
-          $GameTracking_dir |
+          $clone_dir |
             Get-ChildItem -Force -Directory |
             Where-Object { -not $_.FullName.Contains(".git") } |
             ForEach-Object { XCOPY $_.FullName "GameTracking\CS2" /E /I /H /Y /Q }
@@ -39,32 +45,32 @@ jobs:
           if (-not $changes) {
               exit 0
           } else {
-              "TRACKING_CHANGED=true" |
-                Out-File -FilePath $env:GITHUB_ENV -Append
+              "tracking_changed=true" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           }
 
       - name: Commit changes
         id: commit
-        if: steps.clone.outputs.TRACKING_CHANGED == 'true'
+        if: steps.clone.outputs.tracking_changed == 'true'
         shell: pwsh
         run: |
-          Push-Location "${{ steps.set_tracking_dir.outputs.GameTracking_dir }}"
+          Push-Location "${{ steps.set_tracking_dir.outputs.clone_dir }}"
           $commit_sha = git rev-parse HEAD
           Pop-Location
-          "COMMIT_SHA=$commit_sha" |
+          "commit_sha=$commit_sha" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 
       - name: Create Pull Request
-        if: steps.clone.outputs.TRACKING_CHANGED == 'true'
+        if: steps.clone.outputs.tracking_changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: "GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}"
+          title: "GameTracking-CS2: updated to ${{ steps.commit.outputs.commit_sha }}"
           base: master
           branch: update-tracking-cs2
           delete-branch: true
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
-            GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}
+            GameTracking-CS2: updated to ${{ steps.commit.outputs.commit_sha }}
           body: |
-            GameTracking-CS2: updated to ${{ steps.commit.outputs.COMMIT_SHA }}
+            GameTracking-CS2: updated to ${{ steps.commit.outputs.commit_sha }}

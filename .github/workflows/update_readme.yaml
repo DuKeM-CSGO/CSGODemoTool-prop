@@ -1,0 +1,173 @@
+name: Update Readme
+on:
+  workflow_dispatch: {}
+jobs:
+  update_third_party_repo:
+    name: Update third-party repo
+    id: update_third_party_repo
+    runs-on: windows-latest
+    steps:
+      - name: Check third-party repo
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $result = [System.Collections.Generic.List[object]]@()
+          
+          # TODO: Migration
+          $repolist = @(
+            @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
+            @{repo_name = "weidai11/cryptopp"},
+            @{repo_name = "microsoft/Detours"; display_name="detours"},
+            @{repo_name = "gperftools/gperftools"},
+            @{repo_name = "protocolbuffers/protobuf"},
+            @{repo_name = "google/snappy"},
+            @{repo_name = "NVIDIA/stdexec"},
+            @{repo_name = "hackers-painters/katana-parser" ; display_name="katana_parser"},
+            @{repo_name = "nlohmann/json"; display_name="nlohmann_json"},
+            @{repo_name = "SteamDatabase/GameTracking-CSGO"; display_name="gametracking_csgo"},
+            @{repo_name = "microsoft/proxy"; display_name="proxy3"},
+            @{repo_name = "microsoft/stl"; display_name="microsoft_stl"},
+            @{repo_name = "alibaba/yalantinglibs"},
+            @{repo_name = "AcademySoftwareFoundation/openexr"}
+          )
+          
+          $repolist | ForEach-Object {
+            $repo = $_.repo_name
+            if ((-not $_.ContainsKey("display_name")) -or ($_.display_name -eq "")) {
+               $_.display_name = ($_.repo_name -split '/')[1]
+            }
+            
+            $repo_info = gh repo view $repo --json latestRelease,licenseInfo | ConvertFrom-Json
+            $release = $repo_info.latestRelease
+            $license = $repo_info.licenseInfo.key
+            if ($license -eq "other") {
+              $license = ""
+            }
+            
+            $result.Add([ordered]@{
+              Name = $_.display_name;
+              RealName = $_.repo_name;
+              Version = $release.tagName;
+              PublishTime = ($release.publishedAt -split ' ')[0];
+              License = $license
+            })
+          }
+
+          $result | ConvertTo-Json | Out-File -FilePath result.json
+          
+      - name: Format to markdown
+        run: |
+          Import-Module MarkdownPS
+          
+          $content = Get-Content -Path result.json | ConvertFrom-Json
+          
+          $markdown = ""
+          $markdown += New-MDHeader "Third-party Repos" -Level 2
+          $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
+          
+          $markdown | Out-File -FilePath third_party_repo.md
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: third_party_repo_result_file
+          path: third_party_repo.md
+
+  update_readme:
+    name: Update readme
+    id: update_readme
+    needs: [update_third_party_repo]
+    runs-on: windows-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: *_result_file
+          path: doc/auto_gen
+      
+      - name: Check third-party repo
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          Import-Module MarkdownPS
+          $markdown = ""
+          $yaml_url = "https://github.com/$env:GITHUB_REPOSITORY/actions/workflows"
+          
+          #region headers
+          
+          $markdown += New-MDHeader "Headings"
+          
+          $url = "$yaml_url/ci.yaml"
+          $svg = "[![Update Readme]($url/badge.svg)]($url)"
+          $markdown += New-MDParagraph -Lines $svg
+          
+          $url = "$yaml_url/track_cs2.yaml"
+          $svg = "[![Update Readme]($url/badge.svg)]($url)"
+          $markdown += New-MDParagraph -Lines $svg
+          
+          #region third-party
+          
+          $third_party = Get-Content -Path doc\auto_gen\third_party_repo.md
+          $markdown += $third_party
+          
+          $markdown | Out-File -FilePath readme.md
+          
+          # check changes
+          
+          $changes = git status --porcelain
+          if (-not $changes) {
+              exit 0
+          } else {
+              "readme_changed=true" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      - name: Commit changes
+        id: commit
+        if: steps.update_readme.outputs.readme_changed == 'true'
+        shell: pwsh
+        run: |
+          $commit_sha = git rev-parse HEAD
+          "commit_sha=$commit_sha" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      - name: Create Pull Request
+        if: steps.update_readme.outputs.readme_changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Readme: updated to ${{ steps.commit.outputs.commit_sha }}"
+          base: master
+          branch: update-readme
+          delete-branch: true
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit-message: |
+            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+          body: |
+            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+
+#     - name: Set env
+#       if: false
+#       run: |
+#         $docPath = [Environment]::GetFolderPath('MyDocuments')
+#         echo "DOC_PATH=$docPath" >> $env:GITHUB_ENV
+#       
+#     - name: Cache PSWriteHTML module
+#       if: false
+#       id: cache-module
+#       uses: actions/cache@v4
+#       with:
+#         path: ${{ env.DOC_PATH }}\PowerShell\Modules\PSWriteHTML
+#         key: ${{ runner.os }}-pswritehtml-v1
+#         restore-keys: |
+#           ${{ runner.os }}-
+#     
+#     - name: Install PSWriteHTML (if cache miss)
+#       if: false #steps.cache-module.outputs.cache-hit != 'true'
+#       shell: pwsh
+#       run: |
+#         Install-Module PSWriteHTML `
+#           -Scope CurrentUser `
+#           -Force `
+#           -AllowClobber `
+#           -Repository PSGallery

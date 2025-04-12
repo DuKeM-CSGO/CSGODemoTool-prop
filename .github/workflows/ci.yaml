@@ -1,95 +1,44 @@
-name: Update Readme
+name: CI
 on:
   workflow_dispatch: {}
 jobs:
   readme:
-    name: Update Readme
+    name: CI
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: Run checkout
         uses: actions/checkout@v4
-
-      - name: Set env
-        if: false
-        run: |
-          $docPath = [Environment]::GetFolderPath('MyDocuments')
-          echo "DOC_PATH=$docPath" >> $env:GITHUB_ENV
-        
-      - name: Cache PSWriteHTML module
-        if: false
-        id: cache-module
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.DOC_PATH }}\PowerShell\Modules\PSWriteHTML
-          key: ${{ runner.os }}-pswritehtml-v1
-          restore-keys: |
-            ${{ runner.os }}-
       
-      - name: Install PSWriteHTML (if cache miss)
-        if: false #steps.cache-module.outputs.cache-hit != 'true'
+      - name: CMake Generate
         shell: pwsh
         run: |
-          Install-Module PSWriteHTML `
-            -Scope CurrentUser `
-            -Force `
-            -AllowClobber `
-            -Repository PSGallery
-            
-      - name: Check Third-party Repo
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          $result = [System.Collections.Generic.List[object]]@()
+          $cmake_dir = "${{ runner.temp }}\build"
           
-          # TODO: Migration
-          $repolist = @(
-            @{repo_name = "abseil/abseil-cpp"; display_name="abseil"},
-            @{repo_name = "weidai11/cryptopp"},
-            @{repo_name = "microsoft/Detours"; display_name="detours"},
-            @{repo_name = "gperftools/gperftools"},
-            @{repo_name = "protocolbuffers/protobuf"},
-            @{repo_name = "google/snappy"},
-            @{repo_name = "NVIDIA/stdexec"},
-            @{repo_name = "hackers-painters/katana-parser" ; display_name="katana_parser"},
-            @{repo_name = "nlohmann/json"; display_name="nlohmann_json"},
-            @{repo_name = "SteamDatabase/GameTracking-CSGO"; display_name="gametracking_csgo"},
-            @{repo_name = "microsoft/proxy"; display_name="proxy3"},
-            @{repo_name = "microsoft/stl"; display_name="microsoft_stl"},
-            @{repo_name = "alibaba/yalantinglibs"},
-            @{repo_name = "AcademySoftwareFoundation/openexr"}
-          )
-          
-          $repolist | ForEach-Object {
-            $repo = $_.repo_name
-            if ((-not $_.ContainsKey("display_name")) -or ($_.display_name -eq "")) {
-               $_.display_name = ($_.repo_name -split '/')[1]
-            }
-            
-            $repo_info = gh repo view $repo --json latestRelease,licenseInfo | ConvertFrom-Json
-            $release = $repo_info.latestRelease
-            $license = $repo_info.licenseInfo.key
-            if ($license -eq "other") {
-              $license = ""
-            }
-            
-            $result.Add([ordered]@{
-              Name = $_.display_name;
-              RealName = $_.repo_name;
-              Version = $release.tagName;
-              PublishTime = ($release.publishedAt -split ' ')[0];
-              License = $license
-            })
+          if ($cmake_dir.Contains(" ")) {
+            Write-Warning "CMake working dir($cmake_dir) contains space"
           }
-
-          $result | ConvertTo-Json | Out-File -FilePath result.json
           
-      - name: Format to markdown
-        run: |
-          Import-Module MarkdownPS
+          if (-not (Test-Path -Path $cmake_dir)) {
+            New-Item -Path $cmake_dir -ItemType "Directory"
+          }
           
-          $content = Get-Content -Path result.json | ConvertFrom-Json
-          $markdown = ""
+          Push-Location "$cmake_dir"
           
-          $markdown += New-MDHeader "Tables"
-          $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
-          Write-Host $markdown
+          Import-Module VSSetup
+          
+          $vs = Get-VSSetupInstance | Where-Object {
+            $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
+          }
+          $vs | Foreach-Object {
+            Write-Host "Found Launch-VsDevShell.ps1 for Visual Studio $($_.DisplayName) ($($_.InstallationVersion))"
+            Write-Host "Path: $_.InstallationPath"
+          }
+          
+          & ($vs[0]).InstallationPath -Arch x64
+          cl.exe
+          
+          Pop-Location
+#      - name: CMake Build
+#        shell: pwsh
+#        run: |
+#          
