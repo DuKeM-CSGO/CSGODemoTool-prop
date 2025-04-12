@@ -4,7 +4,6 @@ on:
 jobs:
   update_third_party_repo:
     name: Update third-party repo
-    id: update_third_party_repo
     runs-on: windows-latest
     steps:
       - name: Check third-party repo
@@ -75,7 +74,6 @@ jobs:
 
   update_readme:
     name: Update readme
-    id: update_readme
     needs: [update_third_party_repo]
     runs-on: windows-latest
     steps:
