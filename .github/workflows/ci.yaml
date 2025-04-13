@@ -1,6 +1,17 @@
 name: CI
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      build_debug:
+        description: 'Build debug version'
+        required: false
+        type: boolean
+        default: true
+      build_release:
+        description: 'Build release version'
+        required: false
+        type: boolean
+        default: false
 jobs:
   system_info:
     name: System Info
@@ -10,7 +21,7 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
         cpp_compiler: [g++, clang++]
-        build_type: [Debug, Release]
+        build_type: 
         include:
           - os: windows-latest
             cpp_compiler: cl
@@ -65,7 +76,7 @@ jobs:
           
           Push-Location "$build_dir"
           
-          cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
+          cmake -S .. -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
           
           Pop-Location
       
