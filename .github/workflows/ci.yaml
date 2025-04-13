@@ -21,7 +21,10 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
         cpp_compiler: [g++, clang++]
-        build_type: 
+        build_type: ${{ 
+          (inputs.build_debug == 'true' ? ['Debug'] : []) + 
+          (inputs.build_release == 'true' ? ['Release'] : []) 
+        }}
         include:
           - os: windows-latest
             cpp_compiler: cl
