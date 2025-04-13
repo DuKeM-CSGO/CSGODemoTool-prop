@@ -77,11 +77,11 @@ $res |
 execute_process(
     COMMAND PowerShell -Command [[
 		$res = @{
-  			"constexpr_202207L" = "${HAS__cpp_constexpr_202207L}",
-  			"constexpr_dynamic_alloc" = "${HAS__cpp_constexpr_dynamic_alloc}",
-  			"modules" = "${HAS__cpp_modules}",
-  			"lib_modules" = "${HAS__cpp_lib_modules}",
-  			"lib_print" = "${HAS__cpp_lib_print}",
+  			"constexpr_202207L" = "${HAS__cpp_constexpr_202207L}";
+  			"constexpr_dynamic_alloc" = "${HAS__cpp_constexpr_dynamic_alloc}";
+  			"modules" = "${HAS__cpp_modules}";
+  			"lib_modules" = "${HAS__cpp_lib_modules}";
+  			"lib_print" = "${HAS__cpp_lib_print}"
   		}
 		$res |
 			ConvertTo-Json |
