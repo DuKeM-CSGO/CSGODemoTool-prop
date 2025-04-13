@@ -22,7 +22,7 @@ jobs:
         id: set-matrix
         shell: pwsh
         run: |
-          $matrix = @()
+          $matrix = [System.Collections.Generic.List[object]]::new()
           if (${{ inputs.build_debug }}) { $matrix += "Debug" }
           if (${{ inputs.build_release }}) { $matrix += "Release" }
           $res = $matrix | ConvertTo-Json
