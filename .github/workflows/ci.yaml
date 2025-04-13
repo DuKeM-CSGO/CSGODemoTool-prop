@@ -8,7 +8,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        cpp_compiler: [g++, clang++]
+        build_type: [Debug, Release]
+        include:
+          - os: windows-latest
+            cpp_compiler: cl
+            c_compiler: cl
+          - cpp_compiler: g++
+            c_compiler: gcc
+          - cpp_compiler: clang++
+            c_compiler: clang
     steps:
       - name: Run checkout
         uses: actions/checkout@v4
@@ -26,7 +36,8 @@ jobs:
           "build_dir=$build_dir" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
       
-      - name: CMake Generate
+      - name: CMake Generate For MSVC
+        if: matrix.cpp_compiler == 'cl'
         shell: pwsh
         run: |
           $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
@@ -37,18 +48,16 @@ jobs:
           
           Push-Location "$build_dir"
           
-          if ("${{ matrix.os }}" -eq "windows-latest") {
-            cmake -S ..
-          } else {
-            cmake -S .. -DCMAKE_CXX_COMPILER=g++
-          }
+          cmake -S ..
           
           Pop-Location
       
-      - name: Run CTest
+      - name: CMake Generate For GCC && Clang
+        if: matrix.cpp_compiler != 'cl'
         shell: pwsh
         run: |
-          $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
+          $build_type = "${{ matrix.build_type }}"
+          $build_dir = (Join-Path "${{ steps.set_build_dir.outputs.build_dir }}" "$build_type").ToString()
           
           if (-not (Test-Path -Path $build_dir)) {
             New-Item -Path $build_dir -ItemType "Directory" | Out-Null
@@ -56,13 +65,28 @@ jobs:
           
           Push-Location "$build_dir"
           
-          if ("${{ matrix.os }}" -eq "windows-latest") {
-            ctest --build-and-test ../ ./ --build-generator "Visual Studio 17 2022" -C Debug
-          } else {
-            ctest --build-and-test ../ ./ --build-generator "Unix Makefiles"
-          }
+          cmake -S .. -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
           
           Pop-Location
+      
+#     - name: Run CTest
+#       shell: pwsh
+#       run: |
+#         $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
+#         
+#         if (-not (Test-Path -Path $build_dir)) {
+#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
+#         }
+#         
+#         Push-Location "$build_dir"
+#         
+#         if ("${{ matrix.os }}" -eq "windows-latest") {
+#           ctest --build-and-test ../ ./ --build-generator "Visual Studio 17 2022" -C Debug
+#         } else {
+#           ctest --build-and-test ../ ./ --build-generator "Unix Makefiles"
+#         }
+#         
+#         Pop-Location
   
   ci:
     name: CI
