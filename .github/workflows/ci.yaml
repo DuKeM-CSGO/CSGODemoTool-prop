@@ -25,7 +25,7 @@ jobs:
           $matrix = [System.Collections.Generic.List[object]]::new()
           if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("Debug") }
           if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("Release") }
-          $res = $matrix | ConvertTo-Json
+          $res = $matrix | ConvertTo-Json -AsArray
           Write-Host "matrix=$res"
           "matrix=$res" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
