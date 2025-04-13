@@ -23,8 +23,8 @@ jobs:
         shell: pwsh
         run: |
           $matrix = [System.Collections.Generic.List[object]]::new()
-          if (${{ inputs.build_debug }}) { $matrix += "Debug" }
-          if (${{ inputs.build_release }}) { $matrix += "Release" }
+          if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("Debug") }
+          if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("Release") }
           $res = $matrix | ConvertTo-Json
           Write-Host "matrix=$res"
           "matrix=$res" |
