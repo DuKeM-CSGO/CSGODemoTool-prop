@@ -97,6 +97,17 @@ jobs:
           cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
           
           Pop-Location
+          
+      - name: Gather result of CMake deteching
+        shell: pwsh
+        run: |
+          Push-Location "${{ steps.set_build_dir.outputs.build_dir }}"
+          
+          $detech_result = Get-Content -Path cmake_detech.log
+            | ConvertFrom-Json
+          Write-Host $detech_result
+          
+          Pop-Location
       
 #     - name: Run CTest
 #       shell: pwsh
@@ -119,6 +130,7 @@ jobs:
   
   ci:
     name: CI
+    if: false
     runs-on: windows-latest
     steps:
       - name: Run checkout
