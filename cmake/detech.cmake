@@ -1,6 +1,5 @@
-
-message(WARNING "${CMAKE_CXX_COMPILER_ID} ${CMAKE_C_COMPILER_ID}")
-
+message(STATUS "Detecting CPP compiler ID - ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "Detecting C compiler ID - ${CMAKE_C_COMPILER_ID}")
 message(STATUS "Detecting CPP byte order - ${CMAKE_CXX_BYTE_ORDER}")
 message(STATUS "Detecting C byte order - ${CMAKE_C_BYTE_ORDER}")
 
@@ -68,12 +67,6 @@ int main() { return 0; }
 check_cxx_source_compiles("${CODE}" HAS__cpp_lib_print)
 UNSET(CMAKE_REQUIRED_FLAGS)
 
-message(STATUS "Generator toolset: ${CMAKE_GENERATOR_TOOLSET}")
-message(STATUS "Generator platform: ${CMAKE_GENERATOR_PLATFORM}")
-if(CMAKE_GENERATOR MATCHES "Visual Studio")
-    message(STATUS "Available VS platforms: ${CMAKE_VS_PLATFORM_NAME}")
-endif()
-
 SET(PWSH
 "$res = @{}
 $res |
@@ -84,11 +77,11 @@ $res |
 execute_process(
     COMMAND PowerShell -Command [[
 		$res = @{
-  			constexpr_202207L: ${HAS__cpp_constexpr_202207L},
-  			constexpr_dynamic_alloc: ${HAS__cpp_constexpr_dynamic_alloc},
-  			modules: ${HAS__cpp_modules},
-  			lib_modules: ${HAS__cpp_lib_modules},
-  			lib_print: ${HAS__cpp_lib_print},
+  			"constexpr_202207L" = "${HAS__cpp_constexpr_202207L}",
+  			"constexpr_dynamic_alloc" = "${HAS__cpp_constexpr_dynamic_alloc}",
+  			"modules" = "${HAS__cpp_modules}",
+  			"lib_modules" = "${HAS__cpp_lib_modules}",
+  			"lib_print" = "${HAS__cpp_lib_print}",
   		}
 		$res |
 			ConvertTo-Json |
