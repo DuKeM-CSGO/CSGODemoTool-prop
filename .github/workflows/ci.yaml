@@ -94,7 +94,7 @@ jobs:
           
           Push-Location "$build_dir"
           
-          cmake -S .. -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
+          cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
           
           Pop-Location
       
