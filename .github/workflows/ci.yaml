@@ -22,12 +22,12 @@ jobs:
         id: set-matrix
         shell: pwsh
         run: |
-          $matrix = @(
-            ${{ inputs.build_debug }} ? "Debug" : "",
-            ${{ inputs.build_release }} ? "Release" : ""
-          ) | ConvertTo-Json
-          Write-Host "matrix=$matrix"
-          "matrix=$matrix" |
+          $matrix = @()
+          if (${{ inputs.build_debug }}) { $matrix += "Debug" }
+          if (${{ inputs.build_release }}) { $matrix += "Release" }
+          $res = $matrix | ConvertTo-Json
+          Write-Host "matrix=$res"
+          "matrix=$res" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
   
   system_info:
