@@ -13,18 +13,32 @@ on:
         type: boolean
         default: false
 jobs:
+  setup-matrix:
+    runs-on: windows-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Set Matrix
+        id: set-matrix
+        shell: pwsh
+        run: |
+          $matrix = @(
+            ${{ inputs.build_debug }} ? "Debug" : "",
+            ${{ inputs.build_release }} ? "Release" : ""
+          ) | ConvertTo-Json
+          "matrix=$matrix" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+  
   system_info:
     name: System Info
+    needs: setup-matrix
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
         cpp_compiler: [g++, clang++]
-        build_type: ${{ 
-          (inputs.build_debug == 'true' ? ['Debug'] : []) + 
-          (inputs.build_release == 'true' ? ['Release'] : []) 
-        }}
+        build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         include:
           - os: windows-latest
             cpp_compiler: cl
