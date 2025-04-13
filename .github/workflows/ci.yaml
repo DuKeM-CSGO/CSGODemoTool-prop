@@ -26,6 +26,7 @@ jobs:
             ${{ inputs.build_debug }} ? "Debug" : "",
             ${{ inputs.build_release }} ? "Release" : ""
           ) | ConvertTo-Json
+          Write-Host "matrix=$matrix"
           "matrix=$matrix" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
   
