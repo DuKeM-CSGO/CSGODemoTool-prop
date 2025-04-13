@@ -103,7 +103,7 @@ jobs:
         run: |
           Push-Location "${{ steps.set_build_dir.outputs.build_dir }}"
           
-          $detech_result = Get-Content -Path cmake_detech.log
+          $detech_result = Get-Content -Path cmake_detech.json
             | ConvertFrom-Json
           Write-Host $detech_result
           
