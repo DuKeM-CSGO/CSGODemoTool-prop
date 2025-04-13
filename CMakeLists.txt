@@ -3,6 +3,6 @@ ENABLE_TESTING()
 
 PROJECT(main_project)
 
-INCLUDE(detech.cmake)
+INCLUDE("cmake/detech.cmake")
 
 ADD_SUBDIRECTORY("src")
