@@ -73,3 +73,26 @@ message(STATUS "Generator platform: ${CMAKE_GENERATOR_PLATFORM}")
 if(CMAKE_GENERATOR MATCHES "Visual Studio")
     message(STATUS "Available VS platforms: ${CMAKE_VS_PLATFORM_NAME}")
 endif()
+
+SET(PWSH
+"$res = @{}
+$res |
+  Out-File -FilePath cmake_detech.log -Append -Encoding utf8
+"
+)
+
+execute_process(
+    COMMAND PowerShell -Command [[
+		$res = @{
+  			constexpr_202207L: ${HAS__cpp_constexpr_202207L},
+  			constexpr_dynamic_alloc: ${HAS__cpp_constexpr_dynamic_alloc},
+  			modules: ${HAS__cpp_modules},
+  			lib_modules: ${HAS__cpp_lib_modules},
+  			lib_print: ${HAS__cpp_lib_print},
+  		}
+		$res |
+			ConvertTo-Json |
+			Out-File -FilePath cmake_detech.log -Append -Encoding utf8
+	]]
+    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/build"
+)
