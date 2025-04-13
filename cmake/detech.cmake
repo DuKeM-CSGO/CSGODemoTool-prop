@@ -67,25 +67,20 @@ int main() { return 0; }
 check_cxx_source_compiles("${CODE}" HAS__cpp_lib_print)
 UNSET(CMAKE_REQUIRED_FLAGS)
 
-SET(PWSH
-"$res = @{}
-$res |
-  Out-File -FilePath cmake_detech.log -Append -Encoding utf8
-"
-)
+SET(pwsh_json [[
+{
+	"constexpr_202207L": "",
+	"constexpr_dynamic_alloc": "",
+	"modules": "",
+	"lib_modules": "",
+	"lib_print": ""
+}
+]])
 
-execute_process(
-    COMMAND PowerShell -Command [[
-		$res = @{
-  			"constexpr_202207L" = "${HAS__cpp_constexpr_202207L}";
-  			"constexpr_dynamic_alloc" = "${HAS__cpp_constexpr_dynamic_alloc}";
-  			"modules" = "${HAS__cpp_modules}";
-  			"lib_modules" = "${HAS__cpp_lib_modules}";
-  			"lib_print" = "${HAS__cpp_lib_print}"
-  		}
-		$res |
-			ConvertTo-Json |
-			Out-File -FilePath cmake_detech.log -Append -Encoding utf8
-	]]
-    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/build"
-)
+STRING(JSON pwsh_json SET "${pwsh_json}" "constexpr_202207L" "${HAS__cpp_constexpr_202207L}")
+STRING(JSON pwsh_json SET "${pwsh_json}" "constexpr_dynamic_alloc" "${HAS__cpp_constexpr_dynamic_alloc}")
+STRING(JSON pwsh_json SET "${pwsh_json}" "modules" "${HAS__cpp_modules}")
+STRING(JSON pwsh_json SET "${pwsh_json}" "lib_modules" "${HAS__cpp_lib_modules}")
+STRING(JSON pwsh_json SET "${pwsh_json}" "lib_print" "${HAS__cpp_lib_print}")
+
+FILE(WRITE "${CMAKE_SOURCE_DIR}/build/cmake_detech.log" "${pwsh_json}")
