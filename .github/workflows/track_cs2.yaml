@@ -3,7 +3,9 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
-  
+defaults:
+  run:
+    shell: pwsh
 jobs:
   tracking:
     name: Track CS2
@@ -14,7 +16,6 @@ jobs:
       
       - name: Set tracking dir
         id: set_tracking_dir
-        shell: pwsh
         run: |
           $clone_dir = "${{ runner.temp }}\GameTracking-CS2"
           
@@ -31,7 +32,6 @@ jobs:
       
       - name: Clone latest repo
         id: clone
-        shell: pwsh
         run: |
           $clone_dir = "${{ steps.set_tracking_dir.outputs.clone_dir }}"
           git clone --depth=1 https://github.com/SteamDatabase/GameTracking-CS2.git $clone_dir
@@ -52,11 +52,9 @@ jobs:
       - name: Commit changes
         id: commit
         if: steps.clone.outputs.tracking_changed == 'true'
-        shell: pwsh
+        working-directory: "${{ steps.set_tracking_dir.outputs.clone_dir }}"
         run: |
-          Push-Location "${{ steps.set_tracking_dir.outputs.clone_dir }}"
           $commit_sha = git rev-parse HEAD
-          Pop-Location
           "commit_sha=$commit_sha" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
 

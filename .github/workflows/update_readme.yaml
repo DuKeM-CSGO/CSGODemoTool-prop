@@ -3,6 +3,9 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
+defaults:
+  run:
+    shell: pwsh
 jobs:
   update_third_party_repo:
     name: Update third-party repo
@@ -11,7 +14,6 @@ jobs:
       - name: Check third-party repo
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: pwsh
         run: |
           $result = [System.Collections.Generic.List[object]]@()
           
