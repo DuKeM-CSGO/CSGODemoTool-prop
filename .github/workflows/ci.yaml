@@ -31,8 +31,8 @@ jobs:
           "matrix=$res" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
   
-  system_info:
-    name: System Info
+  cmake:
+    name: CMake
     needs: setup-matrix
     runs-on: ${{ matrix.os }}
     strategy:
@@ -79,9 +79,9 @@ jobs:
             else { $build_dir = "build/Release" }
           }
           
-          $detech_result = Get-Content -Path $build_dir/cmake_detect.json
-            | ConvertFrom-Json
-          Write-Host $detech_result
+          $detect_result = Get-Content -Path $build_dir/cmake_detect.json
+          #  | ConvertFrom-Json
+          Write-Host $detect_result
           
 #     - name: CMake Generate For MSVC
 #       if: false #matrix.cpp_compiler == 'cl'
