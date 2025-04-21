@@ -60,22 +60,6 @@ jobs:
           $preset = $preset_array -join "_"
           
           cmake --workflow --preset "$preset"
-          
-      - name: Find PWSH Module Dir
-        if: matrix.os != 'windows-latest'
-        id: pwsh_module_dir
-        run: |
-          $pwsh_module_dir = $(Resolve-Path ~/.local/share/powershell/Modules)
-          "pwsh_module_dir=$pwsh_module_dir" |
-                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-          
-      - name: Cache MarkdownPS module
-        if: matrix.os != 'windows-latest'
-        id: cache_module
-        uses: actions/cache@v4
-        with:
-          path: steps.pwsh_module_dir.outputs.pwsh_module_dir
-          key: markdownps-${{ runner.os }}
       
       - name: Install MarkdownPS
         if: ${{ matrix.os != 'windows-latest' && steps.cache_module.outputs.cache-hit != 'true'}}
@@ -86,6 +70,29 @@ jobs:
             -Force `
             -AllowClobber `
             -Repository PSGallery
+      
+#     - name: Find PWSH Module Dir(Windows)
+#       if: matrix.os == 'windows-latest'
+#       run: |
+#         $pwsh_module_dir = [Environment]::GetFolderPath('MyDocuments') + "/WindowsPowerShell/Modules/"
+#         "pwsh_module_dir=$pwsh_module_dir" |
+#               Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+      
+      - name: Find PWSH Module Dir(Ubuntu/macOS)
+        if: matrix.os != 'windows-latest'
+        id: pwsh_module_dir
+        run: |
+          $pwsh_module_dir = $(Resolve-Path ~/.local/share/powershell/Modules/)
+          "pwsh_module_dir=$pwsh_module_dir" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          
+      - name: Cache MarkdownPS module
+        if: matrix.os != 'windows-latest'
+        id: cache_module
+        uses: actions/cache@v4
+        with:
+          path: steps.pwsh_module_dir.outputs.pwsh_module_dir
+          key: markdownps-${{ runner.os }}
           
       - name: Gather result of CMake detecting
         id: cmake_detection
