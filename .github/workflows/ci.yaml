@@ -39,7 +39,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        compiler: [gcc] #, clang]
+        compiler: [msvc, gcc] #, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         exclude:
           - os: [ubuntu-latest, macos-latest]
