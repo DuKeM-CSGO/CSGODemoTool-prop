@@ -127,6 +127,9 @@ jobs:
           #region auto-gen
           Get-ChildItem "doc/auto_gen" -File |
             Select-Object FullName, LastWriteTimeUtc |
+            Format-Table
+          Get-ChildItem "doc/auto_gen" -File |
+            Select-Object FullName, LastWriteTimeUtc |
             Foreach-Object {
               $content = Get-Content -Path "$_.FullName" -Raw -Encoding utf8
               $markdown += $third_party
