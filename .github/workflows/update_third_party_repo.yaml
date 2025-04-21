@@ -1,4 +1,4 @@
-name: Update Readme
+name: Update Third-Party Repo
 on:
   workflow_dispatch: {}
   schedule:
