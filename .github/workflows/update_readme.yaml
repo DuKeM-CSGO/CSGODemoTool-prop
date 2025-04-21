@@ -180,22 +180,4 @@ jobs:
 #         $docPath = [Environment]::GetFolderPath('MyDocuments')
 #         echo "DOC_PATH=$docPath" >> $env:GITHUB_ENV
 #       
-#     - name: Cache PSWriteHTML module
-#       if: false
-#       id: cache-module
-#       uses: actions/cache@v4
-#       with:
-#         path: ${{ env.DOC_PATH }}\PowerShell\Modules\PSWriteHTML
-#         key: ${{ runner.os }}-pswritehtml-v1
-#         restore-keys: |
-#           ${{ runner.os }}-
-#     
-#     - name: Install PSWriteHTML (if cache miss)
-#       if: false #steps.cache-module.outputs.cache-hit != 'true'
-#       shell: pwsh
-#       run: |
-#         Install-Module PSWriteHTML `
-#           -Scope CurrentUser `
-#           -Force `
-#           -AllowClobber `
-#           -Repository PSGallery
+
