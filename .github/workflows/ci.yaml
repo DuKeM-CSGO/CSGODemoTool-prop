@@ -51,18 +51,6 @@ jobs:
       - name: Run checkout
         uses: actions/checkout@v4
       
-#     - name: Set build dir
-#       id: set_build_dir
-#       run: |
-#         $build_dir = (Join-Path "${{ github.workspace }}" "build").ToString()
-#         
-#         if ($build_dir.Contains(" ")) {
-#           Write-Warning "CMake working dir($build_dir) contains space"
-#         }
-#         
-#         "build_dir=$build_dir" |
-#           Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-      
       - name: CMake Workflow
         run: |
           $preset_array = @(
@@ -73,16 +61,23 @@ jobs:
           
           cmake --workflow --preset "$preset"
           
+      - name: Find PWSH Module Dir
+        if: matrix.os != 'windows-latest'
+        id: pwsh_module_dir
+        run: |
+          "pwsh_module_dir=$HOME/.local/share/powershell/Modules" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          
       - name: Cache MarkdownPS module
         if: matrix.os != 'windows-latest'
-        id: cache-module
+        id: cache_module
         uses: actions/cache@v4
         with:
-          path: ${{ ~/.local/share/powershell/Modules }}
+          path: steps.pwsh_module_dir.outputs.pwsh_module_dir
           key: markdownps-${{ runner.os }}
       
       - name: Install MarkdownPS
-        if: ${{ matrix.os != 'windows-latest' && steps.cache-module.outputs.cache-hit != 'true'}}
+        if: ${{ matrix.os != 'windows-latest' && steps.cache_module.outputs.cache-hit != 'true'}}
         shell: pwsh
         run: |
           Install-Module MarkdownPS `
