@@ -82,3 +82,9 @@ jobs:
         uses: ./.github/workflows/update_readme.yaml
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+  upload_readme:
+    name: Upload Readme
+    needs: update_third_party_repo
+    uses: ./.github/workflows/update_readme.yaml
+    with:
+      github-token: ${{ secrets.GITHUB_TOKEN }}

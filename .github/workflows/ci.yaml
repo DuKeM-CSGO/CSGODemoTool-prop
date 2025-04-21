@@ -187,8 +187,9 @@ jobs:
         with:
           name: ${{steps.cmake_detection.outputs.result_file}}_result_file
           path: doc/auto_gen/${{steps.cmake_detection.outputs.result_file}}.md
-          
-      - name: Upload Readme
-        uses: ./.github/workflows/update_readme.yaml
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+  upload_readme:
+    name: Upload Readme
+    needs: cmake
+    uses: ./.github/workflows/update_readme.yaml
+    with:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
