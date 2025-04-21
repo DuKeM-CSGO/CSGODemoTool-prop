@@ -168,6 +168,8 @@ jobs:
           base: master
           branch: update-readme
           delete-branch: true
+          set-safe-directory: true
+          cleanup: true
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
             Readme: updated to ${{ steps.commit.outputs.commit_sha }}

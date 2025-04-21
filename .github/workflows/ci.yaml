@@ -78,7 +78,7 @@ jobs:
         id: cache-module
         uses: actions/cache@v4
         with:
-          path: ${{ env.HOME }}/.local/share/powershell/Modules
+          path: ${{ $HOME/.local/share/powershell/Modules }}
           key: markdownps-${{ runner.os }}
       
       - name: Install MarkdownPS
@@ -127,7 +127,7 @@ jobs:
             Foreach-Object {
               [PSCustomObject]@{
                 Name = $_.Name
-                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
               }
             } |
             Sort-Object -Property name |
@@ -142,7 +142,7 @@ jobs:
             Foreach-Object {
               [PSCustomObject]@{
                 Name = $_.Name
-                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
               }
             } |
             Sort-Object -Property name |
@@ -157,7 +157,7 @@ jobs:
             Foreach-Object {
               [PSCustomObject]@{
                 Name = $_.Name
-                Value = if ( $_.Value -ne "" ) { "$emoji_yes" } else { "$emoji_no" }
+                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
               }
             } |
             Sort-Object -Property name |
@@ -172,41 +172,14 @@ jobs:
             "${{ matrix.build_type }}"
           )
           $filename = $filename_array -join "_"
+          "result_file=$filename" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          
           $filename += ".md"
           $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
           
-          # check changes
-          
-          git add .
-          $changes = git status --porcelain
-          
-          if (-not $changes) {
-              exit 0
-          } else {
-              "cmake_detection_changed=true" |
-                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-          }
-
-      - name: Commit changes
-        id: commit
-        if: steps.cmake_detection.outputs.cmake_detection_changed == 'true'
-        shell: pwsh
-        run: |
-          $commit_sha = git rev-parse HEAD
-          "commit_sha=$commit_sha" |
-            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-
-      - name: Create Pull Request
-        if: steps.cmake_detection.outputs.cmake_detection_changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Readme: updated to ${{ steps.commit.outputs.commit_sha }}"
-          base: master
-          branch: update-cmake_detection
-          delete-branch: true
-          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          commit-message: |
-            CMake detection: updated to ${{ steps.commit.outputs.commit_sha }}
-          body: |
-            CMake detection: updated to ${{ steps.commit.outputs.commit_sha }}
+          name: cmake_detection_${{steps.cmake_detection.outputs.result_file}}_result_file
+          path: ${{steps.cmake_detection.outputs.result_file}}.md
