@@ -129,7 +129,7 @@ jobs:
             Select-Object FullName, LastWriteTimeUtc |
             Foreach-Object {
               $content = Get-Content -Path $_.FullName -Raw -Encoding utf8
-              $markdown += $third_party
+              $markdown += $content
               
               $footnote = "Last updated: " + $_.LastWriteTimeUtc.ToString("u")
               $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
