@@ -191,5 +191,5 @@ jobs:
     name: Upload Readme
     needs: cmake
     uses: ./.github/workflows/update_readme.yaml
-    with:
+    secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
