@@ -65,9 +65,8 @@ jobs:
         if: matrix.os != 'windows-latest'
         id: pwsh_module_dir
         run: |
-          Write-Host $(Resolve-Path ~/.local)
-          Write-Host $HOME
-          "pwsh_module_dir=$HOME/.local/share/powershell/Modules" |
+          $pwsh_module_dir = $(Resolve-Path ~/.local/share/powershell/Modules)
+          "pwsh_module_dir=$pwsh_module_dir" |
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
       - name: Cache MarkdownPS module
