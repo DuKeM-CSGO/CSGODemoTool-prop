@@ -74,6 +74,7 @@ jobs:
           cmake --workflow --preset "$preset"
           
       - name: Gather result of CMake detecting
+        id: cmake_detection
         run: |
           Import-Module MarkdownPS
           $markdown = ""
@@ -159,3 +160,39 @@ jobs:
           $filename = $filename_array -join "_"
           $filename += ".md"
           $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
+          
+          # check changes
+          
+          git add .
+          $changes = git status --porcelain
+          
+          if (-not $changes) {
+              exit 0
+          } else {
+              "cmake_detection_changed=true" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      - name: Commit changes
+        id: commit
+        if: steps.cmake_detection.outputs.cmake_detection_changed == 'true'
+        shell: pwsh
+        run: |
+          $commit_sha = git rev-parse HEAD
+          "commit_sha=$commit_sha" |
+            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      - name: Create Pull Request
+        if: steps.cmake_detection.outputs.cmake_detection_changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Readme: updated to ${{ steps.commit.outputs.commit_sha }}"
+          base: master
+          branch: update-cmake_detection
+          delete-branch: true
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          commit-message: |
+            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+          body: |
+            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
