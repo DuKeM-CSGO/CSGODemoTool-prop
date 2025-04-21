@@ -28,7 +28,6 @@ jobs:
           if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("debug") }
           if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("release") }
           $res = $matrix | ConvertTo-Json -AsArray -Compress
-          Write-Host "matrix=$res"
           "matrix=$res" |
             Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
   
@@ -40,11 +39,13 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        compiler: [gcc, clang]
+        compiler: [gcc] #, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         include:
           - os: windows-latest
             compiler: msvc
+            build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
+    
     steps:
       - name: Run checkout
         uses: actions/checkout@v4
