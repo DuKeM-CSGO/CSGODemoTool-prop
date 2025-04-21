@@ -174,7 +174,7 @@ jobs:
             "${{ matrix.compiler }}",
             "${{ matrix.build_type }}"
           )
-          $filename = $filename_array -join "_"
+          $filename = ($filename_array -join "_").ToLower()
           "result_file=$filename" |
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
@@ -187,3 +187,8 @@ jobs:
         with:
           name: ${{steps.cmake_detection.outputs.result_file}}_result_file
           path: doc/auto_gen/${{steps.cmake_detection.outputs.result_file}}.md
+          
+      - name: Upload Readme
+        uses: ./.github/workflows/update_readme.yaml
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
