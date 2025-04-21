@@ -40,8 +40,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        compiler: [msvc, gcc, clang]
+        compiler: [gcc, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
+        include:
+          - os: windows-latest
+            compiler: msvc
     steps:
       - name: Run checkout
         uses: actions/checkout@v4
@@ -71,8 +74,9 @@ jobs:
       - name: Gather result of CMake detecting
         run: |
           $build_dir = "build"
-          if ("${{ inputs.compiler }}" -ne "msvc") {
-            $build_dir = Join-Path "$build_dir" "${{ matrix.build_type }}"
+          if ("${{ matrix.compiler }}" -ne "msvc") {
+            if ("${{ matrix.build_type }}" -eq "debug") { $build_dir = "build/Debug" }
+            else { $build_dir = "build/Release" }
           }
           
           $detech_result = Get-Content -Path $build_dir/cmake_detech.json
