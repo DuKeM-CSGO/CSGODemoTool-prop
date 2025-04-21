@@ -128,8 +128,7 @@ jobs:
           Get-ChildItem "doc/auto_gen" -File |
             Select-Object FullName, LastWriteTimeUtc |
             Foreach-Object {
-              Write-Host "$_.FullName"
-              $content = Get-Content -Path "$_.FullName" -Raw -Encoding utf8
+              $content = Get-Content -Path $_.FullName -Raw -Encoding utf8
               $markdown += $third_party
               
               $footnote = "Last updated: " + $_.LastWriteTimeUtc.ToString("u")
