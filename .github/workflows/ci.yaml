@@ -159,8 +159,9 @@ jobs:
             New-MDTable -Shrink
           $markdown += New-MDParagraph -Lines ""
           
+          $filepath = "doc/auto_gen/"
           $filename_array = @(
-            "doc/auto_gen/cmake_detection",
+            "cmake_detection",
             "${{ runner.os }}",
             "${{ runner.arch }}",
             "${{ matrix.compiler }}",
@@ -171,10 +172,11 @@ jobs:
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
           $filename += ".md"
+          $filename = $filepath + $filename
           $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cmake_detection_${{steps.cmake_detection.outputs.result_file}}_result_file
+          name: ${{steps.cmake_detection.outputs.result_file}}_result_file
           path: ${{steps.cmake_detection.outputs.result_file}}.md
