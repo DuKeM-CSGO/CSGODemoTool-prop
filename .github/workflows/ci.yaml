@@ -73,27 +73,19 @@ jobs:
           
           cmake --workflow --preset "$preset"
           
-      - name: Find PWSH module dir
-        if: matrix.os != 'windows-latest'
-        id: find_pwsh_module_dir
-        run: |
-          Write-Output $env:PSModulePath
-          
-      - name: Cache PSWriteHTML module
+      - name: Cache MarkdownPS module
         if: matrix.os != 'windows-latest'
         id: cache-module
         uses: actions/cache@v4
         with:
-          path: ${{ env.DOC_PATH }}\PowerShell\Modules\PSWriteHTML
-          key: ${{ runner.os }}-pswritehtml-v1
-          restore-keys: |
-            ${{ runner.os }}-
+          path: ${{ env.HOME }}/.local/share/powershell/Modules
+          key: markdownps-${{ runner.os }}
       
-      - name: Install PSWriteHTML
+      - name: Install MarkdownPS
         if: ${{ matrix.os != 'windows-latest' && steps.cache-module.outputs.cache-hit != 'true'}}
         shell: pwsh
         run: |
-          Install-Module PSWriteHTML `
+          Install-Module MarkdownPS `
             -Scope CurrentUser `
             -Force `
             -AllowClobber `
@@ -165,7 +157,7 @@ jobs:
             Foreach-Object {
               [PSCustomObject]@{
                 Name = $_.Name
-                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+                Value = if ( $_.Value -ne "" ) { "$emoji_yes" } else { "$emoji_no" }
               }
             } |
             Sort-Object -Property name |
@@ -174,7 +166,8 @@ jobs:
           
           $filename_array = @(
             "doc/auto_gen/cmake_detection",
-            "${{ matrix.os }}",
+            "${{ runner.os }}",
+            "${{ runner.arch }}",
             "${{ matrix.compiler }}",
             "${{ matrix.build_type }}"
           )
@@ -214,6 +207,6 @@ jobs:
           delete-branch: true
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
-            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+            CMake detection: updated to ${{ steps.commit.outputs.commit_sha }}
           body: |
-            Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+            CMake detection: updated to ${{ steps.commit.outputs.commit_sha }}
