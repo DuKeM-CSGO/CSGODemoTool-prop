@@ -10,7 +10,6 @@ defaults:
 jobs:
   update_readme:
     name: Update readme
-    needs: [update_third_party_repo]
     runs-on: windows-latest
     steps:
       - name: Run checkout
