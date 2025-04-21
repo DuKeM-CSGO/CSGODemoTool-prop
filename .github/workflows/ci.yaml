@@ -65,6 +65,8 @@ jobs:
         if: matrix.os != 'windows-latest'
         id: pwsh_module_dir
         run: |
+          Write-Host $(Resolve-Path ~/.local)
+          Write-Host $HOME
           "pwsh_module_dir=$HOME/.local/share/powershell/Modules" |
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
@@ -159,7 +161,6 @@ jobs:
             New-MDTable -Shrink
           $markdown += New-MDParagraph -Lines ""
           
-          $filepath = "doc/auto_gen/"
           $filename_array = @(
             "cmake_detection",
             "${{ runner.os }}",
@@ -172,11 +173,11 @@ jobs:
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
           $filename += ".md"
-          $filename = $filepath + $filename
+          $filename = "doc/auto_gen/" + $filename
           $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{steps.cmake_detection.outputs.result_file}}_result_file
-          path: ${{steps.cmake_detection.outputs.result_file}}.md
+          path: doc/auto_gen/${{steps.cmake_detection.outputs.result_file}}.md
