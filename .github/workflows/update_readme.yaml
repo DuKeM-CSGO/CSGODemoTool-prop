@@ -3,6 +3,11 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
+  push:
+    branches:
+      - master
+    paths:
+      - 'doc/auto_gen/**.md'
 defaults:
   run:
     shell: pwsh
@@ -119,10 +124,16 @@ jobs:
           $svg = "[![Track CS2]($url/badge.svg)]($url)"
           $markdown += New-MDParagraph -Lines $svg
           
-          #region third-party
-          
-          $third_party = Get-Content -Path doc\auto_gen\third_party_repo.md -Raw
-          $markdown += $third_party
+          #region auto-gen
+          Get-ChildItem "doc/auto_gen" -File |
+            Select-Object FullName, LastWriteTimeUtc |
+            Foreach-Object {
+              $content = Get-Content -Path "$_.FullName" -Raw -Encoding utf8
+              $markdown += $third_party
+              
+              $footnote = "Last updated: " + $_.LastWriteTimeUtc.ToString("u")
+              $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
+            }
           
           $markdown | Out-File -FilePath readme.md -Force -Encoding utf8
           

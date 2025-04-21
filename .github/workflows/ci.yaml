@@ -75,103 +75,87 @@ jobs:
           
       - name: Gather result of CMake detecting
         run: |
+          Import-Module MarkdownPS
+          $markdown = ""
+          
           $build_dir = "build"
           if ("${{ matrix.compiler }}" -ne "msvc") {
             if ("${{ matrix.build_type }}" -eq "debug") { $build_dir = "build/Debug" }
             else { $build_dir = "build/Release" }
           }
           
-          $detect_result = Get-Content -Path $build_dir/cmake_detect.json
-          #  | ConvertFrom-Json
-          Write-Host $detect_result
+          $detect_result = Get-Content -Path $build_dir/cmake_detect.json -Raw -Encoding utf8 | ConvertFrom-Json
           
-#     - name: CMake Generate For MSVC
-#       if: false #matrix.cpp_compiler == 'cl'
-#       TODO: working-directory
-#       run: |
-#         $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
-#         
-#         if (-not (Test-Path -Path $build_dir)) {
-#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
-#         }
-#         
-#         Push-Location "$build_dir"
-#         
-#         cmake -S ..
-#         
-#         Pop-Location
-#     
-#     - name: CMake Generate For GCC && Clang
-#       if: false #matrix.cpp_compiler != 'cl'
-#       TODO: working-directory
-#       run: |
-#         $build_type = "${{ matrix.build_type }}"
-#         $build_dir = (Join-Path "${{ steps.set_build_dir.outputs.build_dir }}" "$build_type").ToString()
-#         
-#         if (-not (Test-Path -Path $build_dir)) {
-#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
-#         }
-#         
-#         Push-Location "$build_dir"
-#         
-#         cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
-#         
-#         Pop-Location
-#     
-#     - name: Run CTest
-#       shell: pwsh
-#       run: |
-#         $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
-#         
-#         if (-not (Test-Path -Path $build_dir)) {
-#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
-#         }
-#         
-#         Push-Location "$build_dir"
-#         
-#         if ("${{ matrix.os }}" -eq "windows-latest") {
-#           ctest --build-and-test ../ ./ --build-generator "Visual Studio 17 2022" -C Debug
-#         } else {
-#           ctest --build-and-test ../ ./ --build-generator "Unix Makefiles"
-#         }
-#         
-#         Pop-Location
-# 
-# ci:
-#   name: CI
-#   if: false
-#   runs-on: windows-latest
-#   steps:
-#     - name: Run checkout
-#       uses: actions/checkout@v4
-#     
-#     - name: CMake Generate
-#       run: |
-#         g++ --help=target
-#         clang++ --help
-#         
-#         Import-Module VSSetup
-#         
-#         $vs_instance = Get-VSSetupInstance | Select-VSSetupInstance -Latest
-#         $vs_dev_shell = Join-Path $vs_instance.InstallationPath "Common7\Tools\Launch-VsDevShell.ps1"
-#         if (-not (Test-Path -Path $vs_dev_shell)) {
-#           Write-Error "vs_dev_shell $vs_dev_shell is invalid."
-#         }
-#         & $vs_dev_shell -Arch amd64
-#         cl.exe
-#         $vs = Get-VSSetupInstance | Where-Object {
-#           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
-#         }
-#         $vs | Foreach-Object {
-#           Write-Host "Found Launch-VsDevShell.ps1 for Visual Studio $($_.DisplayName) ($($_.InstallationVersion))"
-#           Write-Host "Path: $_.InstallationPath"
-#         }
-#         
-#         & ($vs[0]).InstallationPath -Arch x64
-#         cl.exe
+          # Format JSON
+          $markdown = ""
+          $emoji_yes = ":heavy_check_mark:"
+          $emoji_no = ":x:"
+          
+          # CMake Detection
+          
+          $markdown += New-MDParagraph -Lines "CMake Detection"
+          $markdown += $detect_result.cmake_variables.PSObject.Properties |
+            Select-Object Name, Value |
+            Sort-Object -Property name |
+            New-MDTable -Shrink
+          
+          # Compiler Flags
+          
+          $markdown += New-MDParagraph -Lines "Compiler Flags"
+          $markdown += $detect_result.compiler_flags.PSObject.Properties |
+            Select-Object Name, Value |
+            Foreach-Object {
+              [PSCustomObject]@{
+                Name = $_.Name
+                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+              }
+            } |
+            Sort-Object -Property name |
+            New-MDTable -Shrink
+          
+          # C++ Features
+          
+          $markdown += New-MDParagraph -Lines "C++ Features"
+          $markdown += $detect_result.cpp_features.PSObject.Properties |
+            Select-Object Name, Value |
+            Foreach-Object {
+              [PSCustomObject]@{
+                Name = $_.Name
+                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+              }
+            } |
+            Sort-Object -Property name |
+            New-MDTable -Shrink
+          
+          # Headers
+          
+          $markdown += New-MDParagraph -Lines "Headers"
+          $markdown += $detect_result.headers.PSObject.Properties |
+            Select-Object Name, Value |
+            Foreach-Object {
+              [PSCustomObject]@{
+                Name = $_.Name
+                Value = if ( $null -ne $_.Value ) { "$emoji_yes" } else { "$emoji_no" }
+              }
+            } |
+            Sort-Object -Property name |
+            New-MDTable -Shrink
           
           
-#      - name: CMake Build
-#        shell: pwsh
-#        run: |
-#          
+          $detect_result.PSObject.Properties |
+            Select-Object Name, Value |
+            Foreach-Object {
+              $markdown += New-MDHeader "$_.Name"
+              
+              $markdown += $_.Value | Sort-Object -Property display_name | New-MDTable -Shrink
+            }
+          
+          $filename_array = @(
+            "doc/auto_gen/cmake_detection",
+            "${{ matrix.os }}",
+            "${{ matrix.compiler }}",
+            "${{ matrix.build_type }}"
+          )
+          $filename = $filename_array -join "_"
+          $filename += ".md"
+          $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
