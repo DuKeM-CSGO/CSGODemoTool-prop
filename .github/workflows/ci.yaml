@@ -75,7 +75,7 @@ jobs:
           
       - name: Find PWSH module dir
         if: matrix.os != 'windows-latest'
-        id: cache-module
+        id: find_pwsh_module_dir
         run: |
           Write-Output $env:PSModulePath
           
