@@ -25,8 +25,8 @@ jobs:
         id: set-matrix
         run: |
           $matrix = [System.Collections.Generic.List[object]]::new()
-          if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("Debug") }
-          if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("Release") }
+          if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("debug") }
+          if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("release") }
           $res = $matrix | ConvertTo-Json -AsArray -Compress
           Write-Host "matrix=$res"
           "matrix=$res" |
@@ -40,72 +40,78 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        cpp_compiler: [g++, clang++]
+        compiler: [msvc, gcc, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
-        include:
-          - os: windows-latest
-            cpp_compiler: cl
-            c_compiler: cl
-          - cpp_compiler: g++
-            c_compiler: gcc
-          - cpp_compiler: clang++
-            c_compiler: clang
     steps:
       - name: Run checkout
         uses: actions/checkout@v4
       
-      - name: Set build dir
-        id: set_build_dir
-        run: |
-          $build_dir = (Join-Path "${{ github.workspace }}" "build").ToString()
-          
-          if ($build_dir.Contains(" ")) {
-            Write-Warning "CMake working dir($build_dir) contains space"
-          }
-          
-          "build_dir=$build_dir" |
-            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+#     - name: Set build dir
+#       id: set_build_dir
+#       run: |
+#         $build_dir = (Join-Path "${{ github.workspace }}" "build").ToString()
+#         
+#         if ($build_dir.Contains(" ")) {
+#           Write-Warning "CMake working dir($build_dir) contains space"
+#         }
+#         
+#         "build_dir=$build_dir" |
+#           Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
       
-      - name: CMake Generate For MSVC
-        if: matrix.cpp_compiler == 'cl'
-#       TODO: working-directory
+      - name: CMake Workflow
         run: |
-          $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
+          $preset_array = @(
+            "${{ matrix.compiler }}",
+            "${{ matrix.build_type }}"
+          )
+          $preset = $preset_array -join "_"
           
-          if (-not (Test-Path -Path $build_dir)) {
-            New-Item -Path $build_dir -ItemType "Directory" | Out-Null
+          cmake --workflow --preset "$preset"
+          
+      - name: Gather result of CMake detecting
+        run: |
+          $build_dir = "build"
+          if ("${{ inputs.compiler }}" -ne "msvc") {
+            $build_dir = Join-Path "$build_dir" "${{ matrix.build_type }}"
           }
           
-          Push-Location "$build_dir"
-          
-          cmake -S ..
-          
-          Pop-Location
-      
-      - name: CMake Generate For GCC && Clang
-        if: matrix.cpp_compiler != 'cl'
-#       TODO: working-directory
-        run: |
-          $build_type = "${{ matrix.build_type }}"
-          $build_dir = (Join-Path "${{ steps.set_build_dir.outputs.build_dir }}" "$build_type").ToString()
-          
-          if (-not (Test-Path -Path $build_dir)) {
-            New-Item -Path $build_dir -ItemType "Directory" | Out-Null
-          }
-          
-          Push-Location "$build_dir"
-          
-          cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
-          
-          Pop-Location
-          
-      - name: Gather result of CMake deteching
-        working-directory: "${{ steps.set_build_dir.outputs.build_dir }}"
-        run: |
-          $detech_result = Get-Content -Path cmake_detech.json
+          $detech_result = Get-Content -Path $build_dir/cmake_detech.json
             | ConvertFrom-Json
           Write-Host $detech_result
-      
+          
+#     - name: CMake Generate For MSVC
+#       if: false #matrix.cpp_compiler == 'cl'
+#       TODO: working-directory
+#       run: |
+#         $build_dir = "${{ steps.set_build_dir.outputs.build_dir }}"
+#         
+#         if (-not (Test-Path -Path $build_dir)) {
+#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
+#         }
+#         
+#         Push-Location "$build_dir"
+#         
+#         cmake -S ..
+#         
+#         Pop-Location
+#     
+#     - name: CMake Generate For GCC && Clang
+#       if: false #matrix.cpp_compiler != 'cl'
+#       TODO: working-directory
+#       run: |
+#         $build_type = "${{ matrix.build_type }}"
+#         $build_dir = (Join-Path "${{ steps.set_build_dir.outputs.build_dir }}" "$build_type").ToString()
+#         
+#         if (-not (Test-Path -Path $build_dir)) {
+#           New-Item -Path $build_dir -ItemType "Directory" | Out-Null
+#         }
+#         
+#         Push-Location "$build_dir"
+#         
+#         cmake -S ../../ -G "Unix Makefiles" -DCMAKE_CXX_COMPILER="${{ matrix.cpp_compiler }}" -DCMAKE_C_COMPILER="${{ matrix.c_compiler }}" -DCMAKE_BUILD_TYPE="$build_type"
+#         
+#         Pop-Location
+#     
 #     - name: Run CTest
 #       shell: pwsh
 #       run: |
@@ -124,29 +130,29 @@ jobs:
 #         }
 #         
 #         Pop-Location
-  
-  ci:
-    name: CI
-    if: false
-    runs-on: windows-latest
-    steps:
-      - name: Run checkout
-        uses: actions/checkout@v4
-      
-      - name: CMake Generate
-        run: |
-          g++ --help=target
-          clang++ --help
-          
-          Import-Module VSSetup
-          
-          $vs_instance = Get-VSSetupInstance | Select-VSSetupInstance -Latest
-          $vs_dev_shell = Join-Path $vs_instance.InstallationPath "Common7\Tools\Launch-VsDevShell.ps1"
-          if (-not (Test-Path -Path $vs_dev_shell)) {
-            Write-Error "vs_dev_shell $vs_dev_shell is invalid."
-          }
-          & $vs_dev_shell -Arch amd64
-          cl.exe
+# 
+# ci:
+#   name: CI
+#   if: false
+#   runs-on: windows-latest
+#   steps:
+#     - name: Run checkout
+#       uses: actions/checkout@v4
+#     
+#     - name: CMake Generate
+#       run: |
+#         g++ --help=target
+#         clang++ --help
+#         
+#         Import-Module VSSetup
+#         
+#         $vs_instance = Get-VSSetupInstance | Select-VSSetupInstance -Latest
+#         $vs_dev_shell = Join-Path $vs_instance.InstallationPath "Common7\Tools\Launch-VsDevShell.ps1"
+#         if (-not (Test-Path -Path $vs_dev_shell)) {
+#           Write-Error "vs_dev_shell $vs_dev_shell is invalid."
+#         }
+#         & $vs_dev_shell -Arch amd64
+#         cl.exe
 #         $vs = Get-VSSetupInstance | Where-Object {
 #           $_.InstallationPath.Contains("Launch-VsDevShell.ps1")
 #         }

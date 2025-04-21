@@ -2,3 +2,6 @@
 .git/
 build/
 external_project/
+Testing/
+CMakeUserPresets.json
+CMakePresets.json.bak

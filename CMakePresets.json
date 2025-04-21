@@ -1,0 +1,138 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 30,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "msvc",
+      "displayName": "VS 2022 x64",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "toolset": "v143",
+      "binaryDir": "${sourceDir}/build"
+    },
+    {
+      "name": "gcc_debug",
+      "displayName": "GCC Debug",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/Debug",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "gcc_release",
+      "displayName": "GCC Release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/Release",
+      "cacheVariables": {
+      "CMAKE_CXX_COMPILER": "g++",
+      "CMAKE_C_COMPILER": "gcc",
+      "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "msvc_build_debug",
+      "configurePreset": "msvc",
+      "configuration": "Debug"
+    },
+    {
+      "name": "msvc_build_release",
+      "configurePreset": "msvc",
+      "configuration": "Release"
+    },
+    {
+      "name": "gcc_build_debug",
+      "configurePreset": "gcc_debug"
+    },
+    {
+      "name": "gcc_build_release",
+      "configurePreset": "gcc_release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "msvc_test_debug",
+      "configurePreset": "msvc",
+      "configuration": "Debug",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "msvc_test_release",
+      "configurePreset": "msvc",
+      "configuration": "Release",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "gcc_test_debug",
+      "configurePreset": "gcc_debug",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "gcc_test_release",
+      "configurePreset": "gcc_release",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "msvc_debug",
+      "steps": [
+        {"type": "configure", "name": "msvc"},
+        {"type": "build", "name": "msvc_build_debug"},
+        {"type": "test", "name": "msvc_test_debug"}
+      ]
+    },
+    {
+      "name": "msvc_release",
+      "steps": [
+        {"type": "configure", "name": "msvc"},
+        {"type": "build", "name": "msvc_build_release"},
+        {"type": "test", "name": "msvc_test_release"}
+      ]
+    },
+    {
+      "name": "gcc_debug",
+      "steps": [
+        {"type": "configure", "name": "gcc_debug"},
+        {"type": "build", "name": "gcc_build_debug"},
+        {"type": "test", "name": "gcc_test_debug"}
+      ]
+    },
+    {
+      "name": "gcc_release",
+      "steps": [
+        {"type": "configure", "name": "gcc_release"},
+        {"type": "build", "name": "gcc_build_release"},
+        {"type": "test", "name": "gcc_test_release"}
+      ]
+    },
+    {
+      "name": "clang_debug",
+      "steps": [
+        {"type": "configure", "name": "msvc"},
+        {"type": "build", "name": "msvc_build_debug"},
+        {"type": "test", "name": "msvc_test_debug"}
+      ]
+    },
+    {
+      "name": "clang_release",
+      "steps": [
+        {"type": "configure", "name": "msvc"},
+        {"type": "build", "name": "msvc_build_release"},
+        {"type": "test", "name": "msvc_test_release"}
+      ]
+    }
+  ]
+}

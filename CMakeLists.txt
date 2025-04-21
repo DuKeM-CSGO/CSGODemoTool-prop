@@ -1,8 +1,9 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.30)
-ENABLE_TESTING()
 
 PROJECT(main_project)
 
-INCLUDE("cmake/detech.cmake")
+INCLUDE("cmake/detect.cmake")
+
+ENABLE_TESTING()
 
 ADD_SUBDIRECTORY("src")
