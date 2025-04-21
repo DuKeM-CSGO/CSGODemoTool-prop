@@ -78,7 +78,7 @@ jobs:
         id: cache-module
         uses: actions/cache@v4
         with:
-          path: ${{ $HOME/.local/share/powershell/Modules }}
+          path: ${{ ~/.local/share/powershell/Modules }}
           key: markdownps-${{ runner.os }}
       
       - name: Install MarkdownPS
