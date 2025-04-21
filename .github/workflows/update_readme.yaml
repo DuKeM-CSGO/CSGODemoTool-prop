@@ -58,6 +58,7 @@ jobs:
               
               $footnote = "Last updated: " + $_.LastWriteTimeUtc.ToString("u")
               $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
+              $markdown += New-MDParagraph -Lines ""
             }
           
           $markdown | Out-File -FilePath readme.md -Force -Encoding utf8

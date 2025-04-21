@@ -93,11 +93,14 @@ jobs:
         with:
           path: steps.pwsh_module_dir.outputs.pwsh_module_dir
           key: markdownps-${{ runner.os }}
-          
+        run: |
+          Write-Host ${{ steps.pwsh_module_dir.outputs.pwsh_module_dir }}
+      
       - name: Gather result of CMake detecting
         id: cmake_detection
         run: |
           Import-Module MarkdownPS
+          Write-Host (Get-Module -ListAvailable -Name MarkdownPS).Path
           $markdown = ""
           
           $build_dir = "build"
