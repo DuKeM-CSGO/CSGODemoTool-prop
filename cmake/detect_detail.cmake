@@ -151,5 +151,6 @@ FUNCTION(process_detect)
 	check_source_compiles("${internal_SOURCE_COMPILES}")
 	write_cpp_features(KEY "cpp_features" VALUE "${checked_source_compiles}")
 	
+	message(STATUS "JSON_STR: ${JSON_STR}")
 	FILE(WRITE "${CMAKE_BINARY_DIR}/cmake_detect.json" "${JSON_STR}")
 ENDFUNCTION()
