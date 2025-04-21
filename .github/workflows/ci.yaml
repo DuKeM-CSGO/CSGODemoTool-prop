@@ -41,10 +41,9 @@ jobs:
         os: [windows-latest, ubuntu-latest, macos-latest]
         compiler: [gcc] #, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
-        include:
-          - os: windows-latest
+        exclude:
+          - os: [ubuntu-latest, macos-latest]
             compiler: msvc
-            build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
     
     steps:
       - name: Run checkout
@@ -80,7 +79,7 @@ jobs:
             else { $build_dir = "build/Release" }
           }
           
-          $detech_result = Get-Content -Path $build_dir/cmake_detech.json
+          $detech_result = Get-Content -Path $build_dir/cmake_detect.json
             | ConvertFrom-Json
           Write-Host $detech_result
           
