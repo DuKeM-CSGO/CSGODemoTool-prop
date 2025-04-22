@@ -61,115 +61,15 @@ jobs:
           
           cmake --workflow --preset "$preset"
       
-      - name: Install MarkdownPS
-        if: ${{ matrix.os != 'windows-latest' && steps.cache_module.outputs.cache-hit != 'true'}}
-        shell: pwsh
-        run: |
-          Install-Module MarkdownPS `
-            -Scope CurrentUser `
-            -Force `
-            -AllowClobber `
-            -Repository PSGallery
-      
-#     - name: Find PWSH Module Dir(Windows)
-#       if: matrix.os == 'windows-latest'
-#       run: |
-#         $pwsh_module_dir = [Environment]::GetFolderPath('MyDocuments') + "/WindowsPowerShell/Modules/"
-#         "pwsh_module_dir=$pwsh_module_dir" |
-#               Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-      
-      - name: Find PWSH Module Dir(Ubuntu/macOS)
-        if: matrix.os != 'windows-latest'
-        id: pwsh_module_dir
-        run: |
-          $pwsh_module_dir = $(Resolve-Path ~/.local/share/powershell/Modules/)
-          "pwsh_module_dir=$pwsh_module_dir" |
-                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-          
-      - name: Cache MarkdownPS module
-        if: matrix.os != 'windows-latest'
-        id: cache_module
-        uses: actions/cache@v4
-        with:
-          path: steps.pwsh_module_dir.outputs.pwsh_module_dir
-          key: markdownps-${{ runner.os }}
-      
       - name: Gather result of CMake detecting
         id: cmake_detection
         run: |
-          Import-Module MarkdownPS
-          Write-Host "Cache Dir: "
-          Write-Host ${{ steps.pwsh_module_dir.outputs.pwsh_module_dir }}
-          Write-Host "Install Dir: "
-          Write-Host (Get-Module -ListAvailable -Name MarkdownPS).Path
-          $markdown = ""
-          
           $build_dir = "build"
           if ("${{ matrix.compiler }}" -ne "msvc") {
             if ("${{ matrix.build_type }}" -eq "debug") { $build_dir = "build/Debug" }
             else { $build_dir = "build/Release" }
           }
-          
-          $detect_result = Get-Content -Path $build_dir/cmake_detect.json -Raw -Encoding utf8 | ConvertFrom-Json
-          
-          # Format JSON
-          $markdown = ""
-          $emoji_yes = ":heavy_check_mark:"
-          $emoji_no = ":x:"
-          
-          # CMake Detection
-          
-          $markdown += New-MDParagraph -Lines "CMake Detection"
-          $markdown += $detect_result.cmake_variables.PSObject.Properties |
-            Select-Object Name, Value |
-            Sort-Object -Property name |
-            New-MDTable -Shrink
-          $markdown += New-MDParagraph -Lines ""
-          
-          # Compiler Flags
-          
-          $markdown += New-MDParagraph -Lines "Compiler Flags"
-          $markdown += $detect_result.compiler_flags.PSObject.Properties |
-            Select-Object Name, Value |
-            Foreach-Object {
-              [PSCustomObject]@{
-                Name = $_.Name
-                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
-              }
-            } |
-            Sort-Object -Property name |
-            New-MDTable -Shrink
-          $markdown += New-MDParagraph -Lines ""
-          
-          # C++ Features
-          
-          $markdown += New-MDParagraph -Lines "C++ Features"
-          $markdown += $detect_result.cpp_features.PSObject.Properties |
-            Select-Object Name, Value |
-            Foreach-Object {
-              [PSCustomObject]@{
-                Name = $_.Name
-                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
-              }
-            } |
-            Sort-Object -Property name |
-            New-MDTable -Shrink
-          $markdown += New-MDParagraph -Lines ""
-          
-          # Headers
-          
-          $markdown += New-MDParagraph -Lines "Headers"
-          $markdown += $detect_result.headers.PSObject.Properties |
-            Select-Object Name, Value |
-            Foreach-Object {
-              [PSCustomObject]@{
-                Name = $_.Name
-                Value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
-              }
-            } |
-            Sort-Object -Property name |
-            New-MDTable -Shrink
-          $markdown += New-MDParagraph -Lines ""
+          $detect_result = $build_dir + "/cmake_detect.json"
           
           $filename_array = @(
             "cmake_detection",
@@ -178,22 +78,138 @@ jobs:
             "${{ matrix.compiler }}",
             "${{ matrix.build_type }}"
           )
-          $filename = ($filename_array -join "_").ToLower()
-          "result_file=$filename" |
+          $filename_short = ($filename_array -join "_").ToLower()
+          "filename_short=$filename_short" |
                 Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
           
-          $filename += ".md"
-          $filename = "doc/auto_gen/" + $filename
-          $markdown | Out-File -FilePath "$filename" -Force -Encoding utf8
+          $filename_full = "doc/auto_gen/" + $filename_short + ".json"
+          "filename_full=$filename_full" |
+                Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          
+          Move-Item -Path $detect_result -Destination $filename_full
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{steps.cmake_detection.outputs.result_file}}_result_file
-          path: doc/auto_gen/${{steps.cmake_detection.outputs.result_file}}.md
+          name: ${{steps.cmake_detection.outputs.filename_short}}_result_file
+          path: ${{steps.cmake_detection.outputs.filename_full}}
+  gather_cmake_detection:
+    name: Gather CMake Detection
+    needs: cmake
+    runs-on: windows-latest
+    steps: 
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '*_result_file'
+          path: doc/auto_gen
+          merge-multiple: true
+      
+      - name: Delete artifact
+        uses: actions/delete-artifact@v5
+        with:
+          name: '*_result_file'
+      
+#     - name: Install MarkdownPS
+#       if: ${{ matrix.os != 'windows-latest' && steps.cache_module.outputs.cache-hit != 'true'}}
+#       shell: pwsh
+#       run: |
+#         Install-Module MarkdownPS `
+#           -Scope CurrentUser `
+#           -Force `
+#           -AllowClobber `
+#           -Repository PSGallery
+#     
+#     - name: Find PWSH Module Dir(Windows)
+#       if: matrix.os == 'windows-latest'
+#       run: |
+#         $pwsh_module_dir = [Environment]::GetFolderPath('MyDocuments') + "/WindowsPowerShell/Modules"
+#         "pwsh_module_dir=$pwsh_module_dir" |
+#               Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+#     
+#     - name: Find PWSH Module Dir(Ubuntu/macOS)
+#       if: matrix.os != 'windows-latest'
+#       id: pwsh_module_dir
+#       run: |
+#         $pwsh_module_dir = $(Resolve-Path ~/.local/share/powershell/Modules)
+#         "pwsh_module_dir=$pwsh_module_dir" |
+#               Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+#         
+#     - name: Cache MarkdownPS module
+#       if: matrix.os != 'windows-latest'
+#       id: cache_module
+#       uses: actions/cache@v4
+#       with:
+#         path: |
+#           ${{ steps.pwsh_module_dir.outputs.pwsh_module_dir }}/MarkdownPS
+#           ${{ steps.pwsh_module_dir.outputs.pwsh_module_dir }}/*
+#         key: markdownps-${{ runner.os }}-${{ hashFiles('**/MarkdownPS.psd1') }}
+      
+      - name: Merge data
+        run: |
+          # $json_result structure:
+          # content name - key - file name - value
+          # cpp_features - __cpp_modules - macos_arm64 - 0
+          
+          $json_result = @{}
+          Get-ChildItem "doc/auto_gen" -File |
+            Select-Object FullName, Name |
+            Foreach-Object {
+              # "cmake_detection_win_debug.md" -> "win_debug"
+              $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).TrimStart("cmake_detection_")
+              
+              $json_file = Get-Content -Path $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
+              $json_file.PSObject.Properties |
+                # Name = content names, Value = @{}
+                Select-Object Name, Value |
+                Foreach-Object {
+                  $content_name = $_.Name
+                  
+                  if (-not $json_result.ContainsKey($content_name)){
+                    $json_result[$content_name] = @{}
+                  }
+                  
+                  $_.Value.PSObject.Properties |
+                    # Name = key, Value = value
+                    Select-Object Name, Value |
+                    Foreach-Object {
+                      if (-not $json_result[$content_name].ContainsKey($_.Name)){
+                        $json_result[$content_name][$_.Name] = @{}
+                      }
+                      
+                      $emoji_yes = ":heavy_check_mark:"
+                      $emoji_no = ":x:"
+                      $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
+                      $json_result[$content_name][$_.Name][$file_name] = $value
+                    }
+                }
+            }
+          
+          # Generate Github Flavored Markdown
+          
+          Import-Module MarkdownPS
+          $markdown = ""
+          $json_result.PSObject.Properties |
+            Select-Object Name, Value |
+            Foreach-Object {
+              $markdown += "<details>\n<summary>" + $_.Name + "</summary>\n"
+              
+              $markdown += $_.Value |
+                Sort-Object -Property Name |
+                New-MDTable -Shrink
+              
+              $markdown += "\n</details>\n"
+            }
+          
+          $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmake_detection_result_file
+          path: cmake_detection.md
   upload_readme:
     name: Upload Readme
-    needs: cmake
+    needs: gather_cmake_detection
     uses: ./.github/workflows/update_readme.yaml
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
