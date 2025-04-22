@@ -157,12 +157,8 @@ jobs:
           Get-ChildItem "doc/auto_gen" -File |
             Select-Object FullName, Name |
             Foreach-Object {
-              # "cmake_detection_win_debug.md" -> "win_debug"
-              $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).TrimStart("cmake_detection_")
-              Write-Host $_.Name
-              [System.IO.Path]::GetFileNameWithoutExtension($_.Name) | Write-Host
-              Write-Host $file_name
-              [System.IO.Path]::GetFileNameWithoutExtension($_.Name).Substring("cmake_detection_".Length) | Write-Host
+              # "cmake_detection_win_debug.json" -> "win_debug"
+              $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).Substring("cmake_detection_".Length)
               
               $json_file = Get-Content -Path $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
               $json_file.PSObject.Properties |
@@ -171,19 +167,26 @@ jobs:
                   $content_name = $_.Name
                   
                   if (-not $json_result.ContainsKey($content_name)){
-                    $json_result[$content_name] = @{}
+                    $json_result[$content_name] = @{
+                      display_name = $_.Value.display_name
+                    }
                   }
                   
-                  $_.Value.PSObject.Properties |
+                  $value_type = $_.Value.type
+                  
+                  $_.Value.values.PSObject.Properties |
                     Select-Object Name, Value |
                     Foreach-Object {
                       if (-not $json_result[$content_name].ContainsKey($_.Name)){
                         $json_result[$content_name][$_.Name] = @{}
                       }
                       
-                      $emoji_yes = ":heavy_check_mark:"
-                      $emoji_no = ":x:"
-                      $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
+                      $value = $_.Value
+                      if ($value_type -ne "bool") {
+                        $emoji_yes = ":heavy_check_mark:"
+                        $emoji_no = ":x:"
+                        $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
+                      }
                       $json_result[$content_name][$_.Name][$file_name] = $value
                     }
                 }
@@ -217,6 +220,7 @@ jobs:
               $markdown += $content_processed |
                 ConvertTo-Json |
                 ConvertFrom-Json |
+                Sort-Object -Property Name |
                 New-MDTable -Shrink
               
               $markdown += New-MDParagraph -Lines ""
@@ -224,15 +228,15 @@ jobs:
             }
           
           Write-Host $markdown
-#         $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
-#     - name: Upload artifact
-#       uses: actions/upload-artifact@v4
-#       with:
-#         name: cmake_detection_result_file
-#         path: cmake_detection.md
-# upload_readme:
-#   name: Upload Readme
-#   needs: gather_cmake_detection
-#   uses: ./.github/workflows/update_readme.yaml
-#   secrets:
-#     github-token: ${{ secrets.GITHUB_TOKEN }}
+          $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmake_detection_result_file
+          path: cmake_detection.md
+  upload_readme:
+    name: Upload Readme
+    needs: gather_cmake_detection
+    uses: ./.github/workflows/update_readme.yaml
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -99,17 +99,18 @@ FUNCTION(process_detect)
 	
 	# Format results
 	SET(JSON_STR [[{
-		"cmake_variables": {},
-		"headers": {},
-		"compiler_flags": {},
-		"cpp_features": {}
+		"cmake_variables": { "display_name": "CMake Variables", "type": "string" },
+		"headers": { "display_name": "Headers", "type": "bool" },
+		"compiler_flags": { "display_name": "Compiler Flags", "type": "bool" },
+		"cpp_features": { "display_name": "C++ Features", "type": "bool" }
 	}]])
 	
 	MACRO(write_vars)
 		CMAKE_PARSE_ARGUMENTS(json "" "KEY" "VALUE" ${ARGN})
+		STRING(JSON JSON_STR SET "${JSON_STR}" "${json_KEY}" "values" "{}")
 		
 		FOREACH(i IN LISTS json_VALUE)
-			STRING(JSON JSON_STR SET "${JSON_STR}" "${json_KEY}" "${i}" \"${${i}}\")
+			STRING(JSON JSON_STR SET "${JSON_STR}" "${json_KEY}" "values" "${i}" \"${${i}}\")
 		ENDFOREACH()
 	ENDMACRO()
 	
@@ -122,6 +123,7 @@ FUNCTION(process_detect)
 	
 	MACRO(write_cpp_features)
 		CMAKE_PARSE_ARGUMENTS(json "" "KEY" "VALUE" ${ARGN})
+		STRING(JSON JSON_STR SET "${JSON_STR}" "${json_KEY}" "values" "{}")
 		
 		FOREACH(i IN LISTS json_VALUE)
 			STRING(LENGTH "HAVE_" prefix_len)
@@ -144,7 +146,7 @@ FUNCTION(process_detect)
 				STRING(APPEND key "${postfix}")
 			ENDIF()
 			
-			STRING(JSON JSON_STR SET "${JSON_STR}" ${json_KEY} ${key} \"${${i}}\")
+			STRING(JSON JSON_STR SET "${JSON_STR}" "${json_KEY}" "values" "${key}" \"${${i}}\")
 		ENDFOREACH()
 	ENDMACRO()
 	
