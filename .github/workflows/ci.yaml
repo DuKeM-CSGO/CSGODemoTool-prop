@@ -38,8 +38,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
-        compiler: [msvc, gcc] #, clang]
+#       os: [windows-latest, ubuntu-latest, macos-latest]
+#       compiler: [msvc, gcc] #, clang]
+        os: [ubuntu-latest, macos-latest]
+        compiler: [gcc] #, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         exclude:
           - os: macos-latest
@@ -194,10 +196,23 @@ jobs:
               $markdown += New-MDParagraph -Lines $summary
               $markdown += New-MDParagraph -Lines ""
               
-              Write-Host $json_result[$_]
-              $markdown += $json_result[$_] |
-                Sort-Object -Property Name |
-                New-MDTable -Shrink
+              $content_original = $json_result[$_]
+              $content_processed = [System.Collections.Generic.List[System.Collections.Specialized.OrderedDictionary]]::new()
+              
+              $content_original.Keys |
+                Foreach-Object {
+                  $map = [ordered]@{ Name = $_ }
+                  $key = $content_original[$_]
+                  $key.Keys |
+                    Foreach-Object {
+                      $map[$_] = $key[$_]
+                    }
+                  $content_processed.Add($map)
+                }
+              
+              #Write-Host $json_result[$_]
+              #$markdown += $json_result[$_] |
+              #  New-MDTable -Shrink
               
               $markdown += New-MDParagraph -Lines ""
               $markdown += New-MDParagraph -Lines "</details>"
@@ -209,9 +224,9 @@ jobs:
         with:
           name: cmake_detection_result_file
           path: cmake_detection.md
-  upload_readme:
-    name: Upload Readme
-    needs: gather_cmake_detection
-    uses: ./.github/workflows/update_readme.yaml
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+# upload_readme:
+#   name: Upload Readme
+#   needs: gather_cmake_detection
+#   uses: ./.github/workflows/update_readme.yaml
+#   secrets:
+#     github-token: ${{ secrets.GITHUB_TOKEN }}
