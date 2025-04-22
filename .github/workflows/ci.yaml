@@ -190,7 +190,8 @@ jobs:
           $json_result.Keys |
             Foreach-Object {
               $markdown += New-MDParagraph -Lines "<details>"
-              $markdown += New-MDParagraph -Lines "<summary>" + $_ + "</summary>"
+              $summary = "<summary>" + $_ + "</summary>"
+              $markdown += New-MDParagraph -Lines $summary
               $markdown += New-MDParagraph -Lines ""
               
               $markdown += $json_result[$_] |
