@@ -210,7 +210,9 @@ jobs:
                   $content_processed.Add($map)
                 }
               
-              #Write-Host $json_result[$_]
+              Write-Host $content_processed
+              Write-Host "Format Table:"
+              Write-Host $content_processed | Format-Table
               #$markdown += $json_result[$_] |
               #  New-MDTable -Shrink
               
@@ -218,12 +220,12 @@ jobs:
               $markdown += New-MDParagraph -Lines "</details>"
             }
           
-          $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cmake_detection_result_file
-          path: cmake_detection.md
+#         $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
+#     - name: Upload artifact
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: cmake_detection_result_file
+#         path: cmake_detection.md
 # upload_readme:
 #   name: Upload Readme
 #   needs: gather_cmake_detection
