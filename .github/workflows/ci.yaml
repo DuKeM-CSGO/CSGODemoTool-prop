@@ -164,12 +164,10 @@ jobs:
               $json_file.PSObject.Properties |
                 Select-Object Name, Value |
                 Foreach-Object {
-                  $content_name = $_.Name
+                  $content_name = $_.Value.display_name
                   
                   if (-not $json_result.ContainsKey($content_name)){
-                    $json_result[$content_name] = @{
-                      display_name = $_.Value.display_name
-                    }
+                    $json_result[$content_name] = @{}
                   }
                   
                   $value_type = $_.Value.type
@@ -182,7 +180,7 @@ jobs:
                       }
                       
                       $value = $_.Value
-                      if ($value_type -ne "bool") {
+                      if ($value_type -eq "bool") {
                         $emoji_yes = ":heavy_check_mark:"
                         $emoji_no = ":x:"
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
@@ -206,8 +204,11 @@ jobs:
               $content_original = $json_result[$_]
               $content_processed = [System.Collections.Generic.List[System.Collections.Specialized.OrderedDictionary]]::new()
               
+              $content_original.Keys | Write-Host
+              
               $content_original.Keys |
                 Foreach-Object {
+                  $_ | Write-Host
                   $map = [ordered]@{ Name = $_ }
                   $key = $content_original[$_]
                   $key.Keys |
