@@ -106,7 +106,7 @@ jobs:
           merge-multiple: true
       
       - name: Delete artifact
-        uses: actions/delete-artifact@v5
+        uses: GeekyEggo/delete-artifact@v5
         with:
           name: '*_result_file'
       
