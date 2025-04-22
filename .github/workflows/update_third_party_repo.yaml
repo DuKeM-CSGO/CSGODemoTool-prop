@@ -69,6 +69,7 @@ jobs:
           $markdown = New-MDHeader "Third-party Repos" -Level 2
           $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
           
+          $markdown += New-MDParagraph -Lines ""
           $footnote = "Last updated: UTC " + (Get-Date).ToUniversalTime().ToString("u")
           $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
           
