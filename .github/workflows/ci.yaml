@@ -147,6 +147,18 @@ jobs:
       
       - name: Merge data
         run: |
+          $emoji_empty = ":wavy_dash:"
+          $emoji_yes = ":heavy_check_mark:"
+          $emoji_no = ":x:"
+          
+          $result_template = [ordered]@{}
+          Get-ChildItem "doc/auto_gen" -File |
+            Select-Object Name |
+            Foreach-Object {
+              $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).Substring("cmake_detection_".Length)
+              $result_template[$file_name] = "$emoji_empty"
+            }
+          
           # $json_result structure:
           # content name - key - file name - value
           # cpp_features - __cpp_modules - macos_arm64 - 0
@@ -174,13 +186,11 @@ jobs:
                     Select-Object Name, Value |
                     Foreach-Object {
                       if (-not $json_result[$content_name].ContainsKey($_.Name)){
-                        $json_result[$content_name][$_.Name] = @{}
+                        $json_result[$content_name][$_.Name] = $result_template
                       }
                       
                       $value = $_.Value
                       if ($value_type -eq "bool") {
-                        $emoji_yes = ":heavy_check_mark:"
-                        $emoji_no = ":x:"
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
                       }
                       $json_result[$content_name][$_.Name][$file_name] = $value
@@ -191,10 +201,19 @@ jobs:
           # Generate Github Flavored Markdown
           
           Import-Module MarkdownPS
+          
+          $result_columns = [ordered]@{ "Name" = "left" }
+          $result_template.GetEnumerator() |
+            Sort-Object -Property Name |
+            ForEach-Object {
+              $result_columns[$_.Name] = "center"
+            } |
+            Out-Null
+          
           $markdown = New-MDHeader "CMake Detection" -Level 2
           $json_result.Keys |
             Foreach-Object {
-              $markdown += New-MDParagraph -Lines "<details>"
+              $markdown += New-MDParagraph -Lines "<details open>"
               $summary = "<summary>" + $_ + "</summary>"
               $markdown += New-MDParagraph -Lines $summary
               $markdown += New-MDParagraph -Lines ""
@@ -212,6 +231,7 @@ jobs:
                     }
                   $content_processed.Add($map)
                 }
+              
               $content_processed |
                 ConvertTo-Json |
                 Write-Host
@@ -219,14 +239,14 @@ jobs:
                 ConvertTo-Json |
                 ConvertFrom-Json |
                 Sort-Object -Property Name |
-                New-MDTable -Shrink |
+                New-MDTable -Shrink -Columns $result_columns |
                 Write-Host
               
               $markdown += $content_processed |
                 ConvertTo-Json |
                 ConvertFrom-Json |
                 Sort-Object -Property Name |
-                New-MDTable -Shrink
+                New-MDTable -Shrink -Columns $result_columns
               
               $markdown += New-MDParagraph -Lines ""
               $markdown += New-MDParagraph -Lines "</details>"
