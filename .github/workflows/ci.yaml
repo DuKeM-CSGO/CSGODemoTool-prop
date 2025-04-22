@@ -212,6 +212,15 @@ jobs:
                     }
                   $content_processed.Add($map)
                 }
+              $content_processed |
+                ConvertTo-Json |
+                Write-Host
+              $content_processed |
+                ConvertTo-Json |
+                ConvertFrom-Json |
+                Sort-Object -Property Name |
+                New-MDTable -Shrink |
+                Write-Host
               
               $markdown += $content_processed |
                 ConvertTo-Json |

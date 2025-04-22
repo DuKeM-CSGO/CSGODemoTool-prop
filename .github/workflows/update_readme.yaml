@@ -95,15 +95,15 @@ jobs:
           body: |
             Readme: updated to ${{ steps.commit.outputs.commit_sha }}
 
-      - name: Check Github REST API
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-            $headers = @{
-              "Authorization" = "Bearer ${{ env.GH_TOKEN }}"
-              "Accept" = "application/vnd.github+json"
-            }
-            $response = Invoke-RestMethod -Uri "https://api.github.com/rate_limit" -Headers $headers -Method Get
-            $response |
-              ConvertTo-Json -Depth 5 |
-              Write-Host
+#     - name: Check Github REST API
+#       env:
+#         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       run: |
+#           $headers = @{
+#             "Authorization" = "Bearer ${{ env.GH_TOKEN }}"
+#             "Accept" = "application/vnd.github+json"
+#           }
+#           $response = Invoke-RestMethod -Uri "https://api.github.com/rate_limit" -Headers $headers -Method Get
+#           $response |
+#             ConvertTo-Json -Depth 5 |
+#             Write-Host
