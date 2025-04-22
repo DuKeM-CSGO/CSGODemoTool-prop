@@ -38,10 +38,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-#       os: [windows-latest, ubuntu-latest, macos-latest]
-#       compiler: [msvc, gcc] #, clang]
-        os: [ubuntu-latest, macos-latest]
-        compiler: [gcc] #, clang]
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        compiler: [msvc, gcc, clang]
         build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         exclude:
           - os: macos-latest
@@ -189,11 +187,11 @@ jobs:
                     }
                 }
             }
-          $json_result | ConvertTo-Json | Write-Host
+          
           # Generate Github Flavored Markdown
           
           Import-Module MarkdownPS
-          $markdown = ""
+          $markdown = New-MDHeader "CMake Detection" -Level 2
           $json_result.Keys |
             Foreach-Object {
               $markdown += New-MDParagraph -Lines "<details>"
@@ -204,11 +202,8 @@ jobs:
               $content_original = $json_result[$_]
               $content_processed = [System.Collections.Generic.List[System.Collections.Specialized.OrderedDictionary]]::new()
               
-              $content_original.Keys | Write-Host
-              
               $content_original.Keys |
                 Foreach-Object {
-                  $_ | Write-Host
                   $map = [ordered]@{ Name = $_ }
                   $key = $content_original[$_]
                   $key.Keys |
@@ -228,7 +223,9 @@ jobs:
               $markdown += New-MDParagraph -Lines "</details>"
             }
           
-          Write-Host $markdown
+          $footnote = "Last updated: UTC " + (Get-Date).ToUniversalTime().ToString("u")
+          $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
+          
           $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
       - name: Upload artifact
         uses: actions/upload-artifact@v4

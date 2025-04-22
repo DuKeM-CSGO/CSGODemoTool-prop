@@ -27,7 +27,6 @@ jobs:
         id: generate_readme
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: pwsh
         run: |
           Import-Module MarkdownPS
           $markdown = ""
@@ -38,16 +37,16 @@ jobs:
           $markdown += New-MDHeader "Readme"
           
           $url = "$yaml_url/ci.yaml"
-          $svg = "[![CI]($url/badge.svg)]($url)"
-          $markdown += New-MDParagraph -Lines $svg
+          $svg = "[![CI]($url/badge.svg)]($url)`n"
+          $markdown += $svg
           
           $url = "$yaml_url/track_cs2.yaml"
-          $svg = "[![Track CS2]($url/badge.svg)]($url)"
-          $markdown += New-MDParagraph -Lines $svg
+          $svg = "[![Track CS2]($url/badge.svg)]($url)`n"
+          $markdown += $svg
           
           $url = "$yaml_url/update_readme.yaml"
-          $svg = "[![Track CS2]($url/badge.svg)]($url)"
-          $markdown += New-MDParagraph -Lines $svg
+          $svg = "[![Track CS2]($url/badge.svg)]($url)`n"
+          $markdown += $svg
           
           #region auto-gen
           Get-ChildItem "doc/auto_gen" -File |
@@ -55,9 +54,6 @@ jobs:
             Foreach-Object {
               $content = Get-Content -Path $_.FullName -Raw -Encoding utf8
               $markdown += $content
-              
-              $footnote = "Last updated: " + $_.LastWriteTimeUtc.ToString("u")
-              $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
               $markdown += New-MDParagraph -Lines ""
             }
           
@@ -79,7 +75,6 @@ jobs:
       - name: Commit changes
         id: commit
         if: steps.generate_readme.outputs.readme_changed == 'true'
-        shell: pwsh
         run: |
           $commit_sha = git rev-parse HEAD
           "commit_sha=$commit_sha" |
@@ -92,10 +87,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "Readme: updated to ${{ steps.commit.outputs.commit_sha }}"
           base: master
-          branch: update-readme
+          branch: update-readme-${{ steps.commit.outputs.commit_sha }}
           delete-branch: true
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           commit-message: |
             Readme: updated to ${{ steps.commit.outputs.commit_sha }}
           body: |
             Readme: updated to ${{ steps.commit.outputs.commit_sha }}
+
+      - name: Check Github REST API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            $headers = @{
+              "Authorization" = "Bearer ${{ env.GH_TOKEN }}"
+              "Accept" = "application/vnd.github+json"
+            }
+            $response = Invoke-RestMethod -Uri "https://api.github.com/rate_limit" -Headers $headers -Method Get
+            $response |
+              ConvertTo-Json -Depth 5 |
+              Write-Host

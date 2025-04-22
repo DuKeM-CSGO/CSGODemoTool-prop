@@ -35,6 +35,28 @@
       "CMAKE_C_COMPILER": "gcc",
       "CMAKE_BUILD_TYPE": "Release"
       }
+    },
+    {
+      "name": "clang_debug",
+      "displayName": "GCC Debug",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/Debug",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "clang_release",
+      "displayName": "Clang Release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/Release",
+      "cacheVariables": {
+      "CMAKE_CXX_COMPILER": "clang++",
+      "CMAKE_C_COMPILER": "clang",
+      "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
@@ -55,6 +77,14 @@
     {
       "name": "gcc_build_release",
       "configurePreset": "gcc_release"
+    },
+    {
+      "name": "clang_build_debug",
+      "configurePreset": "clang_debug"
+    },
+    {
+      "name": "clang_build_release",
+      "configurePreset": "clang_release"
     }
   ],
   "testPresets": [
@@ -81,6 +111,18 @@
     {
       "name": "gcc_test_release",
       "configurePreset": "gcc_release",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "clang_test_debug",
+      "configurePreset": "clang_debug",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "clang_test_release",
+      "configurePreset": "clang_release",
       "output": {"outputOnFailure": true},
       "execution": {"noTestsAction": "error", "stopOnFailure": true}
     }
@@ -121,17 +163,17 @@
     {
       "name": "clang_debug",
       "steps": [
-        {"type": "configure", "name": "msvc"},
-        {"type": "build", "name": "msvc_build_debug"},
-        {"type": "test", "name": "msvc_test_debug"}
+        {"type": "configure", "name": "clang_debug"},
+        {"type": "build", "name": "clang_build_debug"},
+        {"type": "test", "name": "clang_test_debug"}
       ]
     },
     {
       "name": "clang_release",
       "steps": [
-        {"type": "configure", "name": "msvc"},
-        {"type": "build", "name": "msvc_build_release"},
-        {"type": "test", "name": "msvc_test_release"}
+        {"type": "configure", "name": "clang_release"},
+        {"type": "build", "name": "clang_build_release"},
+        {"type": "test", "name": "clang_test_release"}
       ]
     }
   ]

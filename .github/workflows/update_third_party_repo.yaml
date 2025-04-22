@@ -66,9 +66,11 @@ jobs:
           
           $content = Get-Content -Path result.json | ConvertFrom-Json
           
-          $markdown = ""
-          $markdown += New-MDHeader "Third-party Repos" -Level 2
+          $markdown = New-MDHeader "Third-party Repos" -Level 2
           $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
+          
+          $footnote = "Last updated: UTC " + (Get-Date).ToUniversalTime().ToString("u")
+          $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
           
           $markdown | Out-File -FilePath third_party_repo.md -Encoding utf8
       
