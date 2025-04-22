@@ -159,6 +159,8 @@ jobs:
             Foreach-Object {
               # "cmake_detection_win_debug.md" -> "win_debug"
               $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).TrimStart("cmake_detection_")
+              Write-Host $_.Name
+              Write-Host $file_name
               
               $json_file = Get-Content -Path $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
               $json_file.PSObject.Properties |
@@ -209,7 +211,7 @@ jobs:
                     }
                   $content_processed.Add($map)
                 }
-              Write-Host $content_processed | ConvertTo-Json
+              
               $markdown += $content_processed |
                 ConvertTo-Json |
                 ConvertFrom-Json |
