@@ -191,7 +191,7 @@ jobs:
                     }
                 }
             }
-          
+          $json_result | ConvertTo-Json | Write-Host
           # Generate Github Flavored Markdown
           
           Import-Module MarkdownPS
