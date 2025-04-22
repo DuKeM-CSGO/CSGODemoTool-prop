@@ -160,7 +160,6 @@ jobs:
               
               $json_file = Get-Content -Path $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
               $json_file.PSObject.Properties |
-                # Name = content names, Value = @{}
                 Select-Object Name, Value |
                 Foreach-Object {
                   $content_name = $_.Name
@@ -170,7 +169,6 @@ jobs:
                   }
                   
                   $_.Value.PSObject.Properties |
-                    # Name = key, Value = value
                     Select-Object Name, Value |
                     Foreach-Object {
                       if (-not $json_result[$content_name].ContainsKey($_.Name)){
@@ -189,16 +187,18 @@ jobs:
           
           Import-Module MarkdownPS
           $markdown = ""
-          $json_result.PSObject.Properties |
-            Select-Object Name, Value |
+          $json_result.Keys |
             Foreach-Object {
-              $markdown += "<details>\n<summary>" + $_.Name + "</summary>\n"
+              $markdown += New-MDParagraph -Lines "<details>"
+              $markdown += New-MDParagraph -Lines "<summary>" + $_ + "</summary>"
+              $markdown += New-MDParagraph -Lines ""
               
-              $markdown += $_.Value |
+              $markdown += $json_result[$_] |
                 Sort-Object -Property Name |
                 New-MDTable -Shrink
               
-              $markdown += "\n</details>\n"
+              $markdown += New-MDParagraph -Lines ""
+              $markdown += New-MDParagraph -Lines "</summary>"
             }
           
           $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
