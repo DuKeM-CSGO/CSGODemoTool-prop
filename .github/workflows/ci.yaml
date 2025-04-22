@@ -209,15 +209,17 @@ jobs:
                     }
                   $content_processed.Add($map)
                 }
-              Write-Host $content_processed
+              Write-Host $content_processed | ConvertTo-Json
               $markdown += $content_processed |
+                ConvertTo-Json |
+                ConvertFrom-Json |
                 New-MDTable -Shrink
               
               $markdown += New-MDParagraph -Lines ""
               $markdown += New-MDParagraph -Lines "</details>"
             }
           
-          
+          Write-Host $markdown
 #         $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@v4
