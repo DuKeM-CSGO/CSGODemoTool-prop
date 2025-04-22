@@ -209,7 +209,7 @@ jobs:
                     }
                   $content_processed.Add($map)
                 }
-              
+              Write-Host $content_processed
               $markdown += $content_processed |
                 New-MDTable -Shrink
               
@@ -217,7 +217,7 @@ jobs:
               $markdown += New-MDParagraph -Lines "</details>"
             }
           
-          Write-Host $markdown
+          
 #         $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
 #     - name: Upload artifact
 #       uses: actions/upload-artifact@v4
