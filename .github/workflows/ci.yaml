@@ -194,12 +194,13 @@ jobs:
               $markdown += New-MDParagraph -Lines $summary
               $markdown += New-MDParagraph -Lines ""
               
+              Write-Host $json_result[$_]
               $markdown += $json_result[$_] |
                 Sort-Object -Property Name |
                 New-MDTable -Shrink
               
               $markdown += New-MDParagraph -Lines ""
-              $markdown += New-MDParagraph -Lines "</summary>"
+              $markdown += New-MDParagraph -Lines "</details>"
             }
           
           $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
