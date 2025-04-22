@@ -160,7 +160,9 @@ jobs:
               # "cmake_detection_win_debug.md" -> "win_debug"
               $file_name = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).TrimStart("cmake_detection_")
               Write-Host $_.Name
+              Write-Host [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
               Write-Host $file_name
+              Write-Host [System.IO.Path]::GetFileNameWithoutExtension($_.Name).Substring("cmake_detection_".Length)
               
               $json_file = Get-Content -Path $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
               $json_file.PSObject.Properties |
