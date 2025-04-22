@@ -80,10 +80,6 @@ jobs:
           name: third_party_repo_result_file
           path: third_party_repo.md
           
-      - name: Upload Readme
-        uses: ./.github/workflows/update_readme.yaml
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
   upload_readme:
     name: Upload Readme
     needs: update_third_party_repo
