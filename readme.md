@@ -1,10 +1,7 @@
 # Readme
 [![CI](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/ci.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/ci.yaml)
-
 [![Track CS2](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/track_cs2.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/track_cs2.yaml)
-
 [![Track CS2](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml)
-
 ## Third-party Repos
 | Name | RealName | Version | PublishTime | License |
 | ---- | -------- | ------- | ----------- | ------- |
@@ -22,5 +19,7 @@
 | microsoft_stl | microsoft/stl | vs-2022-17.13 | 02/16/2025 |  |
 | yalantinglibs | alibaba/yalantinglibs | 0.4.0 | 03/11/2025 | apache-2.0 |
 | openexr | AcademySoftwareFoundation/openexr | v3.3.3 | 03/24/2025 | bsd-3-clause |
+*Last updated: UTC 2025-04-22 12:04:11Z*
+
 
 
