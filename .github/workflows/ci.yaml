@@ -210,8 +210,8 @@ jobs:
                   $content_processed.Add($map)
                 }
               
-              #$markdown += $json_result[$_] |
-              #  New-MDTable -Shrink
+              $markdown += $content_processed |
+                New-MDTable -Shrink
               
               $markdown += New-MDParagraph -Lines ""
               $markdown += New-MDParagraph -Lines "</details>"
