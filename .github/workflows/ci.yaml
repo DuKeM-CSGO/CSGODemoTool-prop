@@ -186,7 +186,12 @@ jobs:
                     Select-Object Name, Value |
                     Foreach-Object {
                       if (-not $json_result[$content_name].ContainsKey($_.Name)){
-                        $json_result[$content_name][$_.Name] = $result_template
+                        $new = [ordered]@{}
+                        $result_template.GetEnumerator() |
+                          Foreach-Object{
+                            $new[$_.Key] = $_.Value
+                          }
+                        $json_result[$content_name][$_.Name] = $new
                       }
                       
                       $value = $_.Value
