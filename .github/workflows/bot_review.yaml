@@ -1,7 +1,7 @@
 name: Bot Review
 on:
-  pull_request:
-    types: [opened]
+  pull_request #:
+#    types: [opened]
 defaults:
   run:
     shell: pwsh
@@ -10,6 +10,7 @@ env:
 jobs:
   bot_review:
     name: Bot Review
+    if: false
     runs-on: windows-latest
     steps:
       - name: Verify PR committer
@@ -35,3 +36,13 @@ jobs:
         if: steps.verify.outputs.bot_pr == 'true'
         run: |
           gh pr delete-branch ${{ github.event.pull_request.number }} --confirm
+  report:
+    name: Report Event
+    runs-on: windows-latest
+    steps:
+      - name: Report Event
+        run: |
+          Write-Host ${{ github.event.pull_request.type }}
+          Write-Host ${{ github.event.pull_request.number }}
+          Write-Host ${{ github.event.pull_request.user.id }}
+          Write-Host ${{ github.event.pull_request.user.login }}
