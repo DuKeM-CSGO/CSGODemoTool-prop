@@ -1,4 +1,6 @@
 name: macos_clang
+on:
+  workflow_dispatch
 jobs:
   macos_clang:
     name: macos_clang
