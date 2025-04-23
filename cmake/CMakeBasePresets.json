@@ -1,0 +1,77 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 30,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "ninja",
+      "hidden": true,
+      "generator": "Ninja Multi-Config"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build_debug_for_multi_cfg",
+      "hidden": true,
+      "configuration": "Debug"
+    },
+    {
+      "name": "build_release_for_multi_cfg",
+      "hidden": true,
+      "configuration": "Release"
+    },
+    {
+      "name": "build_msvc",
+      "hidden": true,
+      "configurePreset": "msvc"
+    },
+    {
+      "name": "build_gcc",
+      "hidden": true,
+      "configurePreset": "gcc"
+    },
+    {
+      "name": "build_clang",
+      "hidden": true,
+      "configurePreset": "clang"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "test_base",
+      "description": "Draft. Maybe use test_debug_base in the future",
+      "hidden": true,
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    },
+    {
+      "name": "test_msvc",
+      "hidden": true,
+      "configurePreset": "msvc"
+    },
+    {
+      "name": "test_gcc",
+      "hidden": true,
+      "configurePreset": "gcc"
+    },
+    {
+      "name": "test_clang",
+      "hidden": true,
+      "configurePreset": "clang"
+    },
+    {
+      "name": "test_debug_for_multi_cfg",
+      "hidden": true,
+      "configuration": "Debug"
+    },
+    {
+      "name": "test_release_for_multi_cfg",
+      "hidden": true,
+      "configuration": "Release"
+    }
+  ],
+  "workflowPresets": []
+}

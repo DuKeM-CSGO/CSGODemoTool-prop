@@ -5,6 +5,7 @@
     "minor": 30,
     "patch": 0
   },
+  "include": ["cmake/CMakeBasePresets.json"],
   "configurePresets": [
     {
       "name": "msvc",
@@ -12,168 +13,193 @@
       "generator": "Visual Studio 17 2022",
       "architecture": "x64",
       "toolset": "v143",
-      "binaryDir": "${sourceDir}/build"
+      "binaryDir": "${sourceDir}/build",
+	  "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
     },
     {
-      "name": "gcc_debug",
-      "displayName": "GCC Debug",
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build/Debug",
+      "name": "gcc",
+      "displayName": "GCC",
+      "inherits": "ninja",
       "cacheVariables": {
         "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_C_COMPILER": "gcc"
       }
     },
     {
-      "name": "gcc_release",
-      "displayName": "GCC Release",
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build/Release",
+      "name": "clang",
+      "displayName": "Clang",
+      "inherits": "ninja",
       "cacheVariables": {
-      "CMAKE_CXX_COMPILER": "g++",
-      "CMAKE_C_COMPILER": "gcc",
-      "CMAKE_BUILD_TYPE": "Release"
-      }
-    },
-    {
-      "name": "clang_debug",
-      "displayName": "GCC Debug",
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build/Debug",
-      "cacheVariables": {
-        "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_BUILD_TYPE": "Debug"
-      }
-    },
-    {
-      "name": "clang_release",
-      "displayName": "Clang Release",
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build/Release",
-      "cacheVariables": {
-      "CMAKE_CXX_COMPILER": "clang++",
-      "CMAKE_C_COMPILER": "clang",
-      "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_C_COMPILER": "clang"
       }
     }
   ],
   "buildPresets": [
     {
-      "name": "msvc_build_debug",
-      "configurePreset": "msvc",
-      "configuration": "Debug"
+      "name": "build_msvc_debug",
+      "inherits": [
+	    "build_msvc",
+		"build_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "msvc_build_release",
-      "configurePreset": "msvc",
-      "configuration": "Release"
+      "name": "build_msvc_release",
+      "inherits": [
+	    "build_msvc",
+		"build_release_for_multi_cfg"
+	  ]
     },
     {
-      "name": "gcc_build_debug",
-      "configurePreset": "gcc_debug"
+      "name": "build_gcc_debug",
+      "inherits": [
+	    "build_gcc",
+		"build_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "gcc_build_release",
-      "configurePreset": "gcc_release"
+      "name": "build_gcc_release",
+      "inherits": [
+	    "build_gcc",
+		"build_release_for_multi_cfg"
+	  ]
     },
     {
-      "name": "clang_build_debug",
-      "configurePreset": "clang_debug"
+      "name": "build_clang_debug",
+      "inherits": [
+	    "build_clang",
+		"build_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "clang_build_release",
-      "configurePreset": "clang_release"
+      "name": "build_clang_release",
+      "inherits": [
+	    "build_clang",
+		"build_release_for_multi_cfg"
+	  ]
     }
   ],
   "testPresets": [
     {
-      "name": "msvc_test_debug",
+      "name": "test_msvc_debug",
       "configurePreset": "msvc",
       "configuration": "Debug",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "inherits": [
+	    "test_base",
+	    "test_msvc",
+		"test_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "msvc_test_release",
-      "configurePreset": "msvc",
-      "configuration": "Release",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "name": "test_msvc_release",
+      "inherits": [
+	    "test_base",
+	    "test_msvc",
+		"test_release_for_multi_cfg"
+	  ]
     },
     {
-      "name": "gcc_test_debug",
-      "configurePreset": "gcc_debug",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "name": "test_gcc_debug",
+      "inherits": [
+	    "test_base",
+	    "test_gcc",
+		"test_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "gcc_test_release",
-      "configurePreset": "gcc_release",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "name": "test_gcc_release",
+      "inherits": [
+	    "test_base",
+	    "test_gcc",
+		"test_release_for_multi_cfg"
+	  ]
     },
     {
-      "name": "clang_test_debug",
-      "configurePreset": "clang_debug",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "name": "test_clang_debug",
+      "inherits": [
+	    "test_base",
+	    "test_clang",
+		"test_debug_for_multi_cfg"
+	  ]
     },
     {
-      "name": "clang_test_release",
-      "configurePreset": "clang_release",
-      "output": {"outputOnFailure": true},
-      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      "name": "test_clang_release",
+      "inherits": [
+	    "test_base",
+	    "test_clang",
+		"test_release_for_multi_cfg"
+	  ]
     }
   ],
   "workflowPresets": [
     {
+      "name": "msvc_configure",
+      "steps": [
+        {"type": "configure", "name": "msvc"}
+      ]
+    },
+    {
+      "name": "gcc_configure",
+      "steps": [
+        {"type": "configure", "name": "gcc"}
+      ]
+    },
+    {
+      "name": "clang_configure",
+      "steps": [
+        {"type": "configure", "name": "clang"}
+      ]
+    },
+    {
       "name": "msvc_debug",
       "steps": [
         {"type": "configure", "name": "msvc"},
-        {"type": "build", "name": "msvc_build_debug"},
-        {"type": "test", "name": "msvc_test_debug"}
+        {"type": "build", "name": "build_msvc_debug"},
+        {"type": "test", "name": "test_msvc_debug"}
       ]
     },
     {
       "name": "msvc_release",
       "steps": [
         {"type": "configure", "name": "msvc"},
-        {"type": "build", "name": "msvc_build_release"},
-        {"type": "test", "name": "msvc_test_release"}
+        {"type": "build", "name": "build_msvc_release"},
+        {"type": "test", "name": "test_msvc_release"}
       ]
     },
     {
       "name": "gcc_debug",
       "steps": [
-        {"type": "configure", "name": "gcc_debug"},
-        {"type": "build", "name": "gcc_build_debug"},
-        {"type": "test", "name": "gcc_test_debug"}
+        {"type": "configure", "name": "gcc"},
+        {"type": "build", "name": "build_gcc_debug"},
+        {"type": "test", "name": "test_gcc_debug"}
       ]
     },
     {
       "name": "gcc_release",
       "steps": [
-        {"type": "configure", "name": "gcc_release"},
-        {"type": "build", "name": "gcc_build_release"},
-        {"type": "test", "name": "gcc_test_release"}
+        {"type": "configure", "name": "gcc"},
+        {"type": "build", "name": "build_gcc_release"},
+        {"type": "test", "name": "test_gcc_release"}
       ]
     },
     {
       "name": "clang_debug",
       "steps": [
-        {"type": "configure", "name": "clang_debug"},
-        {"type": "build", "name": "clang_build_debug"},
-        {"type": "test", "name": "clang_test_debug"}
+        {"type": "configure", "name": "clang"},
+        {"type": "build", "name": "build_clang_debug"},
+        {"type": "test", "name": "test_clang_debug"}
       ]
     },
     {
       "name": "clang_release",
       "steps": [
-        {"type": "configure", "name": "clang_release"},
-        {"type": "build", "name": "clang_build_release"},
-        {"type": "test", "name": "clang_test_release"}
+        {"type": "configure", "name": "clang"},
+        {"type": "build", "name": "build_clang_release"},
+        {"type": "test", "name": "test_clang_release"}
       ]
     }
   ]

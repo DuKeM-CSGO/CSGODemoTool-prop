@@ -199,11 +199,9 @@ jobs:
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
                       }
                       
-                      Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Key: ", $_.Name, "Workflow: ", $file_name, "Result: ", $value
+                      #Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Key: ", $_.Name, "Workflow: ", $file_name, "Result: ", $value
                       
                       $json_result[$content_name][$_.Name][$file_name] = $value
-                      $json_result[$content_name][$_.Name] |
-                        Format-Table
                     }
                 }
             }
@@ -243,10 +241,6 @@ jobs:
                   $content_processed.Add($map)
                 }
               
-              #$content_processed |
-              #  ConvertTo-Json |
-              #  Write-Host
-              
               $markdown += $content_processed |
                 ConvertTo-Json |
                 ConvertFrom-Json |
@@ -261,14 +255,14 @@ jobs:
           $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
           
           $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
-#     - name: Upload artifact
-#       uses: actions/upload-artifact@v4
-#       with:
-#         name: cmake_detection_result_file
-#         path: cmake_detection.md
-# upload_readme:
-#   name: Upload Readme
-#   needs: gather_cmake_detection
-#   uses: ./.github/workflows/update_readme.yaml
-#   secrets:
-#     github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmake_detection_result_file
+          path: cmake_detection.md
+  upload_readme:
+    name: Upload Readme
+    needs: gather_cmake_detection
+    uses: ./.github/workflows/update_readme.yaml
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}

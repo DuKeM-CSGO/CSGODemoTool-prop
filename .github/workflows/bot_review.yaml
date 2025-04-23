@@ -1,0 +1,37 @@
+name: Bot Review
+on:
+  pull_request:
+    types: [opened]
+defaults:
+  run:
+    shell: pwsh
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  bot_review:
+    name: Bot Review
+    runs-on: windows-latest
+    steps:
+      - name: Verify PR committer
+        id: verify
+        run: |
+          if ((${{ github.event.pull_request.user.id }} -eq "41898282") &&
+              (${{ github.event.pull_request.user.login }} -eq "github-actions[bot]")){
+            "bot_pr=true" |
+              Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+          
+      - name: Auto Approve
+        if: steps.verify.outputs.bot_pr == 'true'
+        run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approved by bot"
+      
+      - name: Merge PR
+        if: steps.verify.outputs.bot_pr == 'true'
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --merge
+      
+      - name: Cleanup Branch
+        if: steps.verify.outputs.bot_pr == 'true'
+        run: |
+          gh pr delete-branch ${{ github.event.pull_request.number }} --confirm
