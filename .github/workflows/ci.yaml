@@ -193,6 +193,7 @@ jobs:
                       if ($value_type -eq "bool") {
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
                       }
+                      Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Result: ", $value
                       $json_result[$content_name][$_.Name][$file_name] = $value
                     }
                 }
@@ -212,6 +213,7 @@ jobs:
           
           $markdown = New-MDHeader "CMake Detection" -Level 2
           $json_result.Keys |
+            Sort-Object |
             Foreach-Object {
               $markdown += New-MDParagraph -Lines "<details open>"
               $summary = "<summary>" + $_ + "</summary>"
@@ -256,14 +258,14 @@ jobs:
           $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
           
           $markdown | Out-File -FilePath cmake_detection.md -Encoding utf8
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cmake_detection_result_file
-          path: cmake_detection.md
-  upload_readme:
-    name: Upload Readme
-    needs: gather_cmake_detection
-    uses: ./.github/workflows/update_readme.yaml
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Upload artifact
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: cmake_detection_result_file
+#         path: cmake_detection.md
+# upload_readme:
+#   name: Upload Readme
+#   needs: gather_cmake_detection
+#   uses: ./.github/workflows/update_readme.yaml
+#   secrets:
+#     github-token: ${{ secrets.GITHUB_TOKEN }}
