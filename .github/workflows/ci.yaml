@@ -194,7 +194,7 @@ jobs:
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
                       }
                       
-                      Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Result: ", $value
+                      Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Key: ", $_.Name, "Workflow: ", $file_name, "Result: ", $value
                       
                       $json_result[$content_name][$_.Name][$file_name] = $value
                       $json_result[$content_name][$_.Name] |
