@@ -9,7 +9,8 @@
     {
       "name": "ninja",
       "hidden": true,
-      "generator": "Ninja Multi-Config"
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build"
     }
   ],
   "buildPresets": [
