@@ -197,8 +197,10 @@ jobs:
                       #Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Result: ", $value
                       
                       $json_result[$content_name][$_.Name][$file_name] = $value
+                      $json_result[$content_name][$_.Name] |
+                        ConvertTo-Json |
+                        Write-Host
                     }
-                  Write-Host $json_result[$content_name]
                 }
             }
           
