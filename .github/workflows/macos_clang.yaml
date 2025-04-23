@@ -10,3 +10,5 @@ jobs:
         run: |
           which clang++
           which g++-14
+          which clang
+          which gcc-14
