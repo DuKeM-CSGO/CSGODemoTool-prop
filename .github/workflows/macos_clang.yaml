@@ -1,0 +1,10 @@
+name: macos_clang
+jobs:
+  macos_clang:
+    name: macos_clang
+    runs-on: macos-latest
+    steps:
+      - name: macos_clang
+        run: |
+          which clang++
+          which g++-14
