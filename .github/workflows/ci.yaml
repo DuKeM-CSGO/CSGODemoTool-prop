@@ -64,12 +64,7 @@ jobs:
       - name: Gather result of CMake detecting
         id: cmake_detection
         run: |
-          $build_dir = "build"
-          if ("${{ matrix.compiler }}" -ne "msvc") {
-            if ("${{ matrix.build_type }}" -eq "debug") { $build_dir = "build/Debug" }
-            else { $build_dir = "build/Release" }
-          }
-          $detect_result = $build_dir + "/cmake_detect.json"
+          $detect_result = "build/cmake_detect.json"
           
           $filename_array = @(
             "cmake_detection",
