@@ -198,8 +198,7 @@ jobs:
                       
                       $json_result[$content_name][$_.Name][$file_name] = $value
                       $json_result[$content_name][$_.Name] |
-                        ConvertTo-Json |
-                        Write-Host
+                        Format-Table
                     }
                 }
             }
