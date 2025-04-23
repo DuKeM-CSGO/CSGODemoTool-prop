@@ -194,9 +194,10 @@ jobs:
                         $value = if ( $_.Value.Length -gt 0 ) { "$emoji_yes" } else { "$emoji_no" }
                       }
                       
-                      #Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Result: ", $value
+                      Write-Host "Original: ", $_.Value, "Type: ", $value_type, "Result: ", $value
                       
                       $json_result[$content_name][$_.Name][$file_name] = $value
+                      Write-Host $json_result[$content_name][$_.Name][$file_name]
                     }
                 }
             }
@@ -223,7 +224,6 @@ jobs:
               $markdown += New-MDParagraph -Lines ""
               
               $content_original = $json_result[$_]
-              $content_original | Write-Host
               $content_processed = [System.Collections.Generic.List[System.Collections.Specialized.OrderedDictionary]]::new()
               
               $content_original.Keys |
