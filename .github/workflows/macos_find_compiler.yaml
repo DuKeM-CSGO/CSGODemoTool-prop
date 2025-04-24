@@ -1,0 +1,14 @@
+name: macos_find_compiler
+on:
+  workflow_dispatch
+jobs:
+  macos_find_compiler:
+    name: macos_find_compiler
+    runs-on: macos-latest
+    steps:
+      - name: macos_find_compiler
+        run: |
+          echo $(brew --prefix llvm@15)/bin/clang++
+          echo $(brew --prefix llvm@15)/bin/clang
+          which g++-14
+          which gcc-14
