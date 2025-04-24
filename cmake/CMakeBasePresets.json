@@ -35,6 +35,11 @@
       "configurePreset": "gcc"
     },
     {
+      "name": "build_gcc_macos",
+      "hidden": true,
+      "configurePreset": "gcc_macos"
+    },
+    {
       "name": "build_clang",
       "hidden": true,
       "configurePreset": "clang"
@@ -57,6 +62,11 @@
       "name": "test_gcc",
       "hidden": true,
       "configurePreset": "gcc"
+    },
+    {
+      "name": "test_gcc_macos",
+      "hidden": true,
+      "configurePreset": "gcc_macos"
     },
     {
       "name": "test_clang",

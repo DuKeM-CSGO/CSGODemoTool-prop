@@ -16,21 +16,6 @@ defaults:
   run:
     shell: pwsh
 jobs:
-  setup-matrix:
-    runs-on: windows-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - name: Set Matrix
-        id: set-matrix
-        run: |
-          $matrix = [System.Collections.Generic.List[object]]::new()
-          if ("${{ inputs.build_debug }}" -eq "true") { $matrix.Add("debug") }
-          if ("${{ inputs.build_release }}" -eq "true") { $matrix.Add("release") }
-          $res = $matrix | ConvertTo-Json -AsArray -Compress
-          "matrix=$res" |
-            Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
-  
   cmake:
     name: CMake
     needs: setup-matrix
@@ -40,7 +25,6 @@ jobs:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
         compiler: [msvc, gcc, clang]
-        build_type: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
         exclude:
           - os: macos-latest
             compiler: msvc
@@ -54,12 +38,28 @@ jobs:
       - name: CMake Workflow
         run: |
           $preset_array = @(
-            "${{ matrix.compiler }}",
-            "${{ matrix.build_type }}"
+            "${{ matrix.compiler }}"
           )
-          $preset = $preset_array -join "_"
+          if ((${{ matrix.compiler }} -eq "gcc") &&
+              (${{ matrix.os }} -eq "macos-latest")) {
+            $preset_array.Add("macos")
+          }
+          $preset_base = $preset_array -join "_"
           
-          cmake --workflow --preset "$preset"
+          if ("${{ inputs.build_debug }}" -eq "true") {
+            $preset = $preset_base + "_debug"
+            cmake --workflow --preset "$preset"
+          }
+          if ("${{ inputs.build_release }}" -eq "true") {
+            $preset = $preset_base + "_release"
+            cmake --workflow --preset "$preset"
+          }
+          
+          if (("${{ inputs.build_debug }}" -ne "true") &&
+              ("${{ inputs.build_release }}" -ne "true")) {
+            $preset = $preset_base + "_configure"
+            cmake --workflow --preset "$preset"
+          }
       
       - name: Gather result of CMake detecting
         id: cmake_detection
@@ -70,8 +70,7 @@ jobs:
             "cmake_detection",
             "${{ runner.os }}",
             "${{ runner.arch }}",
-            "${{ matrix.compiler }}",
-            "${{ matrix.build_type }}"
+            "${{ matrix.compiler }}"
           )
           $filename_short = ($filename_array -join "_").ToLower()
           "filename_short=$filename_short" |

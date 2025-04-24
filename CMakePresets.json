@@ -5,7 +5,9 @@
     "minor": 30,
     "patch": 0
   },
-  "include": ["cmake/CMakeBasePresets.json"],
+  "include": [
+    "cmake/CMakeBasePresets.json"
+  ],
   "configurePresets": [
     {
       "name": "msvc",
@@ -27,6 +29,25 @@
       "cacheVariables": {
         "CMAKE_CXX_COMPILER": "g++",
         "CMAKE_C_COMPILER": "gcc"
+      },
+	  "condition": {
+        "type": "notEquals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      }
+    },
+    {
+      "name": "gcc_macos",
+      "displayName": "GCC",
+      "inherits": "ninja",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/opt/homebrew/bin/g++-14",
+        "CMAKE_C_COMPILER": "/opt/homebrew/bin/gcc-14"
+      },
+	  "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
       }
     },
     {
@@ -65,6 +86,20 @@
       "name": "build_gcc_release",
       "inherits": [
 	    "build_gcc",
+		"build_release_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "build_gcc_macos_debug",
+      "inherits": [
+	    "build_gcc_macos",
+		"build_debug_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "build_gcc_macos_release",
+      "inherits": [
+	    "build_gcc_macos",
 		"build_release_for_multi_cfg"
 	  ]
     },
@@ -119,6 +154,22 @@
 	  ]
     },
     {
+      "name": "test_gcc_macos_debug",
+      "inherits": [
+	    "test_base",
+	    "test_gcc_macos",
+		"test_debug_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "test_gcc_macos_release",
+      "inherits": [
+	    "test_base",
+	    "test_gcc_macos",
+		"test_release_for_multi_cfg"
+	  ]
+    },
+    {
       "name": "test_clang_debug",
       "inherits": [
 	    "test_base",
@@ -146,6 +197,12 @@
       "name": "gcc_configure",
       "steps": [
         {"type": "configure", "name": "gcc"}
+      ]
+    },
+    {
+      "name": "gcc_macos_configure",
+      "steps": [
+        {"type": "configure", "name": "gcc_macos"}
       ]
     },
     {
@@ -184,6 +241,22 @@
         {"type": "configure", "name": "gcc"},
         {"type": "build", "name": "build_gcc_release"},
         {"type": "test", "name": "test_gcc_release"}
+      ]
+    },
+    {
+      "name": "gcc_macos_debug",
+      "steps": [
+        {"type": "configure", "name": "gcc_macos"},
+        {"type": "build", "name": "build_gcc_macos_debug"},
+        {"type": "test", "name": "test_gcc_macos_debug"}
+      ]
+    },
+    {
+      "name": "gcc_macos_release",
+      "steps": [
+        {"type": "configure", "name": "gcc_macos"},
+        {"type": "build", "name": "build_gcc_macos_release"},
+        {"type": "test", "name": "test_gcc_macos_release"}
       ]
     },
     {
