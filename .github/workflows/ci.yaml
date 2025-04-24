@@ -39,7 +39,7 @@ jobs:
           $preset_array = @(
             "${{ matrix.compiler }}"
           )
-          if (("${{ matrix.compiler }}" -eq "gcc") && ("${{ matrix.os }}" -eq "macos-latest")) {
+          if (("${{ matrix.compiler }}" -eq "gcc") -and ("${{ matrix.os }}" -eq "macos-latest")) {
             Write-Host ("${{ matrix.compiler }}" -eq "gcc")
             Write-Host ("${{ matrix.os }}" -eq "macos-latest")
             $preset_array += "macos"
@@ -55,8 +55,7 @@ jobs:
             cmake --workflow --preset "$preset"
           }
           
-          if (("${{ inputs.build_debug }}" -ne "true") &&
-              ("${{ inputs.build_release }}" -ne "true")) {
+          if (("${{ inputs.build_debug }}" -ne "true") -and ("${{ inputs.build_release }}" -ne "true")) {
             $preset = $preset_base + "_configure"
             cmake --workflow --preset "$preset"
           }

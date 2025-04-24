@@ -16,7 +16,7 @@ jobs:
       - name: Verify PR committer
         id: verify
         run: |
-          if ((${{ github.event.pull_request.user.id }} -eq "41898282") &&
+          if ((${{ github.event.pull_request.user.id }} -eq "41898282") -and
               (${{ github.event.pull_request.user.login }} -eq "github-actions[bot]")){
             "bot_pr=true" |
               Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
