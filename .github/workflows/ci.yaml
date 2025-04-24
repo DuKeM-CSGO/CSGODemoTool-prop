@@ -40,6 +40,8 @@ jobs:
             "${{ matrix.compiler }}"
           )
           if (("${{ matrix.compiler }}" -eq "gcc") && ("${{ matrix.os }}" -eq "macos-latest")) {
+            Write-Host ("${{ matrix.compiler }}" -eq "gcc")
+            Write-Host ("${{ matrix.os }}" -eq "macos-latest")
             $preset_array += "macos"
           }
           $preset_base = $preset_array -join "_"
