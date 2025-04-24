@@ -36,15 +36,11 @@ jobs:
       
       - name: CMake Workflow
         run: |
-          $preset_array = @(
-            "${{ matrix.compiler }}"
-          )
-          if (("${{ matrix.compiler }}" -eq "gcc") -and ("${{ matrix.os }}" -eq "macos-latest")) {
-            Write-Host ("${{ matrix.compiler }}" -eq "gcc")
-            Write-Host ("${{ matrix.os }}" -eq "macos-latest")
-            $preset_array += "macos"
+          $preset_base = "${{ matrix.compiler }}"
+          
+          if ("${{ matrix.os }}" -eq "macos-latest") {
+            $preset_base += "_macos"
           }
-          $preset_base = $preset_array -join "_"
           
           if ("${{ inputs.build_debug }}" -eq "true") {
             $preset = $preset_base + "_debug"

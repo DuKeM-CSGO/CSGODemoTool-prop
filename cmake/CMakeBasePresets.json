@@ -43,6 +43,11 @@
       "name": "build_clang",
       "hidden": true,
       "configurePreset": "clang"
+    },
+    {
+      "name": "build_clang_macos",
+      "hidden": true,
+      "configurePreset": "clang_macos"
     }
   ],
   "testPresets": [
@@ -72,6 +77,11 @@
       "name": "test_clang",
       "hidden": true,
       "configurePreset": "clang"
+    },
+    {
+      "name": "test_clang_macos",
+      "hidden": true,
+      "configurePreset": "clang_macos"
     },
     {
       "name": "test_debug_for_multi_cfg",

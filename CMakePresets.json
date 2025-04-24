@@ -58,6 +58,20 @@
         "CMAKE_CXX_COMPILER": "clang++",
         "CMAKE_C_COMPILER": "clang"
       }
+    },
+    {
+      "name": "clang_macos",
+      "displayName": "Clang",
+      "inherits": "ninja",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "$(brew --prefix llvm@15)/bin/clang++",
+        "CMAKE_C_COMPILER": "$(brew --prefix llvm@15)/bin/clang"
+      },
+	  "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      }
     }
   ],
   "buildPresets": [
@@ -114,6 +128,20 @@
       "name": "build_clang_release",
       "inherits": [
 	    "build_clang",
+		"build_release_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "build_clang_macos_debug",
+      "inherits": [
+	    "build_clang_macos",
+		"build_debug_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "build_clang_macos_release",
+      "inherits": [
+	    "build_clang_macos",
 		"build_release_for_multi_cfg"
 	  ]
     }
@@ -184,6 +212,22 @@
 	    "test_clang",
 		"test_release_for_multi_cfg"
 	  ]
+    },
+    {
+      "name": "test_clang_macos_debug",
+      "inherits": [
+	    "test_base",
+	    "test_clang_macos",
+		"test_debug_for_multi_cfg"
+	  ]
+    },
+    {
+      "name": "test_clang_macos_release",
+      "inherits": [
+	    "test_base",
+	    "test_clang_macos",
+		"test_release_for_multi_cfg"
+	  ]
     }
   ],
   "workflowPresets": [
@@ -209,6 +253,12 @@
       "name": "clang_configure",
       "steps": [
         {"type": "configure", "name": "clang"}
+      ]
+    },
+    {
+      "name": "clang_macos_configure",
+      "steps": [
+        {"type": "configure", "name": "clang_macos"}
       ]
     },
     {
@@ -273,6 +323,22 @@
         {"type": "configure", "name": "clang"},
         {"type": "build", "name": "build_clang_release"},
         {"type": "test", "name": "test_clang_release"}
+      ]
+    },
+    {
+      "name": "clang_macos_debug",
+      "steps": [
+        {"type": "configure", "name": "clang_macos"},
+        {"type": "build", "name": "build_clang_macos_debug"},
+        {"type": "test", "name": "test_clang_macos_debug"}
+      ]
+    },
+    {
+      "name": "clang_macos_release",
+      "steps": [
+        {"type": "configure", "name": "clang_macos"},
+        {"type": "build", "name": "build_clang_macos_release"},
+        {"type": "test", "name": "test_clang_macos_release"}
       ]
     }
   ]
