@@ -45,7 +45,15 @@ jobs:
           $markdown += $svg
           
           $url = "$yaml_url/update_readme.yaml"
-          $svg = "[![Track CS2]($url/badge.svg)]($url)`n"
+          $svg = "[![Update Readme]($url/badge.svg)]($url)`n"
+          $markdown += $svg
+          
+          $url = "cmake_detection.md&logo=cmake&label=CMake%20Detection)](#cmake-detection)"
+          $svg = "[![](https://img.shields.io/github/last-commit/DuKeM-CSGO/CSGODemoTool-prop?path=doc%2Fauto_gen%2F$url`n"
+          $markdown += $svg
+          
+          $url = "third_party_repo.md&logo=github&label=Third-party%20Repos)](#third-party-repos)"
+          $svg = "[![](https://img.shields.io/github/last-commit/DuKeM-CSGO/CSGODemoTool-prop?path=doc%2Fauto_gen%2F$url`n"
           $markdown += $svg
           
           #region auto-gen
