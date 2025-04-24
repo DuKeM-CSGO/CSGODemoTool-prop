@@ -1,14 +1,23 @@
-name: macos_find_compiler
+name: Find Compilers
 on:
   workflow_dispatch
 jobs:
   macos_find_compiler:
-    name: macos_find_compiler
+    name: Find Compilers on macOS
     runs-on: macos-latest
     steps:
       - name: macos_find_compiler
         run: |
           echo $(brew --prefix llvm@15)/bin/clang++
           echo $(brew --prefix llvm@15)/bin/clang
+          which g++-14
+          which gcc-14
+  
+  ubuntu_find_compiler:
+    name: Find Compilers on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: ubuntu_find_compiler
+        run: |
           which g++-14
           which gcc-14
