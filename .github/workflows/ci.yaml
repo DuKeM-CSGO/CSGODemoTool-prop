@@ -39,8 +39,7 @@ jobs:
           $preset_array = @(
             "${{ matrix.compiler }}"
           )
-          if (("${{ matrix.compiler }}" -eq "gcc") &&
-              ("${{ matrix.os }}" -eq "macos-latest")) {
+          if (("${{ matrix.compiler }}" -eq "gcc") && ("${{ matrix.os }}" -eq "macos-latest")) {
             $preset_array += "macos"
           }
           $preset_base = $preset_array -join "_"
