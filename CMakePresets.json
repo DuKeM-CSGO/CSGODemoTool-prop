@@ -64,8 +64,8 @@
       "displayName": "Clang",
       "inherits": "ninja",
       "cacheVariables": {
-        "CMAKE_CXX_COMPILER": "$(brew --prefix llvm@15)/bin/clang++",
-        "CMAKE_C_COMPILER": "$(brew --prefix llvm@15)/bin/clang"
+        "CMAKE_CXX_COMPILER": "/opt/homebrew/opt/llvm@15/bin/clang++",
+        "CMAKE_C_COMPILER": "/opt/homebrew/opt/llvm@15/bin/clang"
       },
 	  "condition": {
         "type": "equals",
