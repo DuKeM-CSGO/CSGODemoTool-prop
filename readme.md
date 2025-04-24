@@ -1,7 +1,9 @@
 # Readme
 [![CI](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/ci.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/ci.yaml)
 [![Track CS2](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/track_cs2.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/track_cs2.yaml)
-[![Track CS2](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml)
+[![Update Readme](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml/badge.svg)](https://github.com/DuKeM-CSGO/CSGODemoTool-prop/actions/workflows/update_readme.yaml)
+[![](https://img.shields.io/github/last-commit/DuKeM-CSGO/CSGODemoTool-prop?path=doc%2Fauto_gen%2Fcmake_detection.md&logo=cmake&label=CMake%20Detection)](#cmake-detection)
+[![](https://img.shields.io/github/last-commit/DuKeM-CSGO/CSGODemoTool-prop?path=doc%2Fauto_gen%2Fthird_party_repo.md&logo=github&label=Third-party%20Repos)](#third-party-repos)
 ## CMake Detection
 <details open>
 
@@ -95,7 +97,7 @@
 
 </details>
 
-*Last updated: UTC 2025-04-24 04:14:29Z*
+*Last updated: UTC 2025-04-24 07:44:16Z*
 
 
 ## Third-party Repos
