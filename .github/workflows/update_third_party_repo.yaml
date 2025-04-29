@@ -70,8 +70,8 @@ jobs:
           $markdown += $content | Sort-Object -Property display_name | New-MDTable -Shrink
           
           $markdown += New-MDParagraph -Lines ""
-          $footnote = "Last updated: UTC " + (Get-Date).ToUniversalTime().ToString("u")
-          $markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
+          #$footnote = "Last updated: UTC " + (Get-Date).ToUniversalTime().ToString("u")
+          #$markdown += New-MDCharacterStyle -Text "$footnote" -Style Italic
           
           $markdown | Out-File -FilePath third_party_repo.md -Encoding utf8
       
