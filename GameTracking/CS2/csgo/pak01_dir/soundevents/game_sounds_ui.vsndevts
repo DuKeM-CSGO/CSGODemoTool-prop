@@ -5403,7 +5403,7 @@
 	UIPanorama.tab_mainmenu_watch = 
 	{
 		type = "csgo_mega"
-		volume = 0.300000
+		volume = 0.350000
 		pitch = 1.000000
 		mixgroup = "UI"
 		block_duration = 0.010000
@@ -5483,7 +5483,7 @@
 		reverb_source_wet = 1.000000
 		position_relative_to_player = false
 		is_ui_sound = false
-		vsnd_files_track_01 = "sounds/ui/panorama/mainmenu_press_watch_02.vsnd"
+		vsnd_files_track_01 = "sounds/ui/panorama/mainmenu_press_watch_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
 			
@@ -5526,7 +5526,7 @@
 				3.000000,
 			],
 		]
-		vsnd_duration = 0.725125
+		vsnd_duration = 0.543129
 	}
 	UIPanorama.sidemenu_slidein = 
 	{
@@ -19518,7 +19518,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -19533,6 +19533,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_swamp_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -19625,7 +19629,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -19640,6 +19644,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_anubis_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -19732,7 +19740,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -19747,6 +19755,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_blacksite_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -19839,7 +19851,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -19854,6 +19866,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_cache_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -19946,7 +19962,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -19961,6 +19977,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_cobble_night_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20053,7 +20073,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20068,6 +20088,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_chlorine_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20160,7 +20184,7 @@
 		type = "csgo_mega"
 		volume = 1.000000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20175,6 +20199,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_dust2_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20267,7 +20295,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20282,6 +20310,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_phoenixfacility_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20374,7 +20406,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20389,6 +20421,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_inferno_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20481,7 +20517,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20496,6 +20532,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_italy_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20588,7 +20628,7 @@
 		type = "csgo_mega"
 		volume = 0.500000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20603,6 +20643,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_mirage_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20695,7 +20739,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20710,6 +20754,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_mutiny_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20802,7 +20850,7 @@
 		type = "csgo_mega"
 		volume = 0.400000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20817,6 +20865,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_nuke_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -20909,7 +20961,7 @@
 		type = "csgo_mega"
 		volume = 0.200000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -20924,6 +20976,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_office_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21016,7 +21072,7 @@
 		type = "csgo_mega"
 		volume = 1.000000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21031,6 +21087,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_overpass_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21123,7 +21183,7 @@
 		type = "csgo_mega"
 		volume = 0.500000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21138,6 +21198,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_vertigo_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21499,7 +21563,7 @@
 		type = "csgo_mega"
 		volume = 0.040000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21515,6 +21579,10 @@
 		enable_child_events = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_baggage_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21612,7 +21680,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21627,6 +21695,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_anubis_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21719,7 +21791,7 @@
 		type = "csgo_mega"
 		volume = 0.300000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21734,6 +21806,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_anubis_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -21824,7 +21900,7 @@
 	ar_baggage_airplanes = 
 	{
 		type = "csgo_mega"
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		volume = 0.050000
 		use_distance_unfiltered_stereo_mapping_curve = true
 		enable_retrigger = true
@@ -21834,6 +21910,8 @@
 		randomize_position_min_radius = 1000.000000
 		randomize_position_max_radius = 3000.000000
 		use_time_volume_mapping_curve = true
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
 		is_ui_sound = false
 		position_relative_to_player = false
 		vsnd_files_track_01 = 
@@ -21935,7 +22013,7 @@
 		type = "csgo_mega"
 		volume = 0.010000
 		pitch = 0.900000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -21963,6 +22041,8 @@
 		]
 		position_offset_relative = false
 		delay = 1.500000
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
 		is_ui_sound = false
 		position_relative_to_player = false
 		vsnd_files_track_01 = 
@@ -22658,7 +22738,7 @@
 		type = "csgo_mega"
 		volume = 0.100000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -22674,6 +22754,10 @@
 		enable_child_events = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ambient/train/train_warehouse_loop.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -22767,7 +22851,7 @@
 		type = "csgo_mega"
 		volume = 0.200000
 		pitch = 0.900000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -22782,6 +22866,8 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
 		vsnd_files_track_01 = "sounds/ambient/survival/interior_04.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -23691,7 +23777,7 @@
 		type = "csgo_mega"
 		volume = 0.025000
 		pitch = 1.000000
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		block_duration = 0.010000
 		use_distance_volume_mapping_curve = true
 		use_distance_unfiltered_stereo_mapping_curve = true
@@ -23706,6 +23792,10 @@
 		use_time_volume_mapping_curve = true
 		position_relative_to_player = false
 		is_ui_sound = false
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		vsnd_files_track_01 = "sounds/ui/panorama/bg_train_01.vsnd"
 		distance_volume_mapping_curve = 
 		[
@@ -23796,7 +23886,7 @@
 	UIPanorama.BG_de_train.WheelLoop = 
 	{
 		type = "csgo_mega"
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		position = 
 		[
 			0.000000,
@@ -23808,6 +23898,10 @@
 		pitch_random_min = -0.050000
 		pitch_random_max = 0.030000
 		use_distance_unfiltered_stereo_mapping_curve = true
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		distance_volume_mapping_curve = 
 		[
 			
@@ -23934,7 +24028,7 @@
 	UIPanorama.BG_de_train.StartStop = 
 	{
 		type = "csgo_mega"
-		mixgroup = "UI"
+		mixgroup = "UI_Amb"
 		position = 
 		[
 			0.000000,
@@ -23946,6 +24040,10 @@
 		distance_effect_mix = 0.000000
 		volume = 0.100000
 		use_distance_unfiltered_stereo_mapping_curve = true
+		use_volume_convar = true
+		volume_convar = "snd_menumap_volume"
+		override_dsp_preset = true
+		dsp_preset = "reverb_29_UI"
 		distance_volume_mapping_curve = 
 		[
 			
@@ -24048,5 +24146,143 @@
 			],
 		]
 		vsnd_duration = 5.643152
+	}
+	UI.Mission.QuotaUp = 
+	{
+		type = "csgo_mega"
+		mixgroup = "UI"
+		use_distance_unfiltered_stereo_mapping_curve = true
+		delay = 0.200000
+		volume = 0.500000
+		pitch = 1.100000
+		distance_unfiltered_stereo_mapping_curve = 
+		[
+			
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+			
+			[
+				300.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+		]
+		distance_volume_mapping_curve = 
+		[
+			
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+			
+			[
+				300.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+		]
+		vsnd_files_track_01 = "sounds/ui/panorama/round_report_odds_up_01.vsnd"
+		fadetime_volume_mapping_curve = 
+		[
+			
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+			
+			[
+				1.000000,
+				0.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+		]
+		vsnd_duration = 0.430272
+	}
+	UI.Mission.Complete = 
+	{
+		type = "csgo_mega"
+		volume = 0.700000
+		pitch = 1.000000
+		mixgroup = "UI"
+		block_duration = 0.010000
+		use_distance_volume_mapping_curve = true
+		use_distance_unfiltered_stereo_mapping_curve = true
+		ducking_bypass = 1.000000
+		reverb_wet = 1.000000
+		instance_limit = 1.000000
+		vsnd_pause_with_game = false
+		use_world_position = false
+		distance_effect_mix = 0.000000
+		occlusion_frequency_scale = 0.000000
+		position_relative_to_player = false
+		is_ui_sound = false
+		delay = 0.300000
+		vsnd_files_track_01 = "sounds/ui/panorama/round_report_round_won_01.vsnd"
+		distance_volume_mapping_curve = 
+		[
+			
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+			
+			[
+				300.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+		]
+		distance_unfiltered_stereo_mapping_curve = 
+		[
+			
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+			
+			[
+				300.000000,
+				1.000000,
+				0.000000,
+				0.000000,
+				2.000000,
+				3.000000,
+			],
+		]
+		vsnd_duration = 2.523152
 	}
 }
